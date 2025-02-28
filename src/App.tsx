@@ -29,8 +29,6 @@ function App() {
             <Routes>
               <Route path="/" element={<MainPage />} />
               <Route path="/groups" element={<GroupsPage />} />
-              {/* <Route path="/users/:userId" element={<UserInfoPage />} /> */}
-              {/* <Route path="/teachers" element={<TeachersPage />} /> */}
               <Route path="/groups/:groupId" element={<GroupsInfoPage />} />
             </Routes>
           </main>
