@@ -1,0 +1,1 @@
+export { GroupsInfoPage } from "./GroupsInfoPage";
