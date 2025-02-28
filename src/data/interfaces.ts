@@ -1,11 +1,31 @@
-export interface IUser {
-  id: number;
-  email: string;
-  fullName: string;
-  jobTitle: string;
-  avatar: string;
-  bio: string;
-  playlist?: TPlaylist;
+export enum ParityWeek {
+  EVEN = "EVEN",
+  ODD = "ODD",
+  EVERYWEEK = "EVERYWEEK",
+}
+
+export enum TypeOfLesson {
+  LECTURE = "LECTURE",
+  PRACTICE = "PRACTICE",
+}
+
+export interface ILesson {
+  name: string;
+  teacher: string;
+  audience: number;
+  week?: ParityWeek;
+  typeOfLesson: TypeOfLesson;
+}
+
+export interface ISchedule {
+  first?: ILesson;
+  second?: ILesson;
+  third?: ILesson;
+  fourth?: ILesson;
+  fifth?: ILesson;
+  sixth?: ILesson;
+  seventh?: ILesson;
+  eighth?: ILesson;
 }
 
 export interface IGroup {
@@ -13,20 +33,5 @@ export interface IGroup {
   courseNumber: number;
   typeOfEducation: string;
   groupNumber: number;
+  // schedule: ISchedule;
 }
-
-interface IPlaylistFull {
-  id: number;
-  genre: string;
-  name: string;
-  songs: string[];
-}
-
-interface IPlaylistEmty {
-  id: number;
-  genre: "Non Music";
-  name: "";
-  songs: [];
-}
-
-export type TPlaylist = IPlaylistFull | IPlaylistEmty;

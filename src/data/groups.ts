@@ -1,4 +1,4 @@
-import { IGroup, TPlaylist } from "./interfaces";
+import { IGroup } from "./interfaces";
 
 export const GROUPS: IGroup[] = [
   {
