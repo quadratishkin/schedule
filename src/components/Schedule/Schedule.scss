@@ -1,15 +1,18 @@
 .schedule {
-  width: 100%;
-  gap: 0;
-  border-spacing: 0;
-  border-collapse: collapse;
-
   &__headers {
-    background-color: rgb(237, 91, 91);
+    display: flex;
+    background-color: rgb(246, 95, 95);
   }
 
-  &__col {
+  &__row {
+    display: flex;
+  }
+
+  &__cell {
+    min-height: 100px;
     width: calc(100% / 7);
-    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }

@@ -1,12 +1,14 @@
 .schedule-cell {
   display: flex;
   flex-direction: column;
-  height: 100%;
   padding: 5px;
   margin: 0;
 
-  &--even {
-    background-color: rgb(230, 176, 111);
+  &__wrapper {
+    height: 100%;
+    &--even {
+      background-color: rgba(203, 68, 10, 0.427);
+    }
   }
 
   &__subject-name {

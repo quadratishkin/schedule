@@ -1,10 +1,15 @@
+import { IScheduleDay } from "../../data/interfaces";
 import { ScheduleCell } from "../ScheduleCell/ScheduleCell";
 import "./Schedule.scss";
 
-export function Schedule() {
+interface ScheduleProps {
+  scheduleTest: IScheduleDay[];
+}
+
+export function Schedule({ scheduleTest }: ScheduleProps) {
   const scheduleTime = ["8:00", "9:40", "11:30", "13:15", "15:00", "16:40"];
   const headerNames = [
-    "начало занятий",
+    "начало занятия",
     "понедельник",
     "вторник",
     "среда",
@@ -12,29 +17,35 @@ export function Schedule() {
     "пятница",
     "суббота",
   ];
-  const testArray = [0, 0, 0, 0, 0, 0];
+  const days = ["first", "second", "third", "fourth", "fifth", "sixth"];
 
   return (
-    <table className="schedule">
-      <thead className="schedule__headers">
-        <tr>
-          {headerNames.map((item) => (
-            <th className="schedule__col">{item}</th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {testArray.map((item, index1) => (
-          <tr>
-            <td>{scheduleTime[index1]}</td>
-            {testArray.map((index2) => (
-              <td>
-                <ScheduleCell isEven={(index1 + index2) % 2 === 0} />
-              </td>
-            ))}
-          </tr>
+    <div className="schedule">
+      <div className="schedule__headers">
+        {headerNames.map((_, index) => (
+          <div className="schedule__cell">{headerNames[index]}</div>
         ))}
-      </tbody>
-    </table>
+      </div>
+
+      {scheduleTime.map((_, index) => (
+        <div className="schedule__row">
+          <div className="schedule__cell">{scheduleTime[index]}</div>
+          {scheduleTest.map((day, index1) =>
+            day.hasOwnProperty(days[index]) === true ? (
+              <div className="schedule__cell">
+                <ScheduleCell
+                  isEven={(index + index1) % 2 === 0}
+                  scheduleDay={day[days[index] as keyof typeof day]}
+                />
+              </div>
+            ) : (
+              <div className="schedule__cell">
+                <ScheduleCell isEven={(index + index1) % 2 === 0} />
+              </div>
+            )
+          )}
+        </div>
+      ))}
+    </div>
   );
 }

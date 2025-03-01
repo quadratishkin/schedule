@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import "./GroupsInfoPage.scss";
 import { GROUPS } from "../../data/groups";
 import { Schedule } from "../../components/Schedule";
+import { scheduleTest } from "../../data/interfaces";
 
 export function GroupsInfoPage() {
   const { groupId } = useParams();
@@ -30,7 +31,7 @@ export function GroupsInfoPage() {
           Вид образования: <b>{group.typeOfEducation}</b>
         </p>
       </div>
-      <Schedule />
+      <Schedule scheduleTest={scheduleTest} />
     </div>
   );
 }
