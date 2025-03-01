@@ -1,4 +1,4 @@
-import "./MainPage.css";
+import "./MainPage.scss";
 
 export function MainPage() {
   return (

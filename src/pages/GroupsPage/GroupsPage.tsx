@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import "./GroupsPage.css";
+import "./GroupsPage.scss";
 import { Link, useSearchParams } from "react-router-dom";
 import { GROUPS } from "../../data/groups";
 
@@ -27,7 +27,7 @@ export function GroupsPage() {
           введите номер группы:{" "}
           <input type="text" value={searchGroup} onChange={handleSearchGroup} />
         </label>
-        <div className="groups_number">
+        <div className="groups__number">
           {fillteredGroups.map(({ id, groupNumber }) => (
             <Link to={`/groups/${id}`} key={id}>
               {groupNumber}

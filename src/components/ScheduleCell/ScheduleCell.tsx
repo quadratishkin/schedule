@@ -1,4 +1,4 @@
-import "./ScheduleCell.css";
+import "./ScheduleCell.scss";
 
 interface ScheduleCellProps {
   isEven: boolean;

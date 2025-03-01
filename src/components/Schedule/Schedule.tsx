@@ -1,5 +1,5 @@
 import { ScheduleCell } from "../ScheduleCell/ScheduleCell";
-import "./Schedule.css";
+import "./Schedule.scss";
 
 export function Schedule() {
   const scheduleTime = ["8:00", "9:40", "11:30", "13:15", "15:00", "16:40"];

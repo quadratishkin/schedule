@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import "./GroupsInfoPage.css";
+import "./GroupsInfoPage.scss";
 import { GROUPS } from "../../data/groups";
 import { Schedule } from "../../components/Schedule";
 

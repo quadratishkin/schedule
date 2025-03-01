@@ -8,17 +8,17 @@
   justify-content: center;
   gap: 50px;
   margin: 0 0 40px;
+
+  &__block {
+    margin: 0;
+  }
 }
 
 .group a {
   text-decoration: none;
   cursor: pointer;
-}
 
-.group__block {
-  margin: 0;
-}
-
-.group a:hover {
-  color: rgb(72, 111, 184);
+  &:hover {
+    color: rgb(72, 111, 184);
+  }
 }

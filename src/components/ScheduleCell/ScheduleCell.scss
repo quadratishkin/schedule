@@ -1,0 +1,21 @@
+.schedule-cell {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 5px;
+  margin: 0;
+
+  &--even {
+    background-color: rgb(230, 176, 111);
+  }
+
+  &__subject-name {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__teacher-name {
+    margin: 0;
+    padding: 0;
+  }
+}

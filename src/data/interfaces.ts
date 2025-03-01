@@ -18,14 +18,14 @@ export interface ILesson {
 }
 
 export interface ISchedule {
-  first?: ILesson;
-  second?: ILesson;
-  third?: ILesson;
-  fourth?: ILesson;
-  fifth?: ILesson;
-  sixth?: ILesson;
-  seventh?: ILesson;
-  eighth?: ILesson;
+  first?: ILesson | ILesson[];
+  second?: ILesson | ILesson[];
+  third?: ILesson | ILesson[];
+  fourth?: ILesson | ILesson[];
+  fifth?: ILesson | ILesson[];
+  sixth?: ILesson | ILesson[];
+  seventh?: ILesson | ILesson[];
+  eighth?: ILesson | ILesson[];
 }
 
 export interface IGroup {

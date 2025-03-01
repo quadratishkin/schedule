@@ -1,9 +1,9 @@
 .groupsPage {
   margin: 0 20px 20px;
-}
 
-.groupsPage__header {
-  margin: 0 0 20px;
+  &__header {
+    margin: 0 0 20px;
+  }
 }
 
 .groups {
@@ -11,19 +11,19 @@
   flex-direction: column;
   gap: 10px;
   align-items: flex-start;
+
+  &__number {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
 }
 
 .groups a {
   text-decoration: none;
   cursor: pointer;
-}
 
-.groups a:hover {
-  color: rgb(72, 111, 184);
-}
-
-.groups_number {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+  &:hover {
+    color: rgb(72, 111, 184);
+  }
 }
