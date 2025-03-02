@@ -1,6 +1,6 @@
 import "./MainPage.scss";
 
-export function MainPage() {
+export const MainPage = () => {
   return (
     <div className="mainPage">
       <p className="mainPage__text">
@@ -9,4 +9,4 @@ export function MainPage() {
       </p>
     </div>
   );
-}
+};

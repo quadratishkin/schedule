@@ -1,3 +1,5 @@
+import { TEACHERS } from "./teachers";
+
 export enum ParityWeek {
   EVEN = "EVEN",
   ODD = "ODD",
@@ -9,9 +11,14 @@ export enum TypeOfLesson {
   PRACTICE = "PRACTICE",
 }
 
+export interface ITeacher {
+  id: number;
+  name: string;
+}
+
 export interface ILesson {
   name: string;
-  teacher: string;
+  teacher: ITeacher;
   audience: string | number;
   week?: ParityWeek;
   typeOfLesson: TypeOfLesson;
@@ -40,14 +47,14 @@ export const scheduleTest: IScheduleDay[] = [
   {
     first: {
       name: "понедельник первая пара",
-      teacher: "матан тиачхер",
+      teacher: TEACHERS[0],
       audience: "а13",
       week: ParityWeek.EVERYWEEK,
       typeOfLesson: TypeOfLesson.LECTURE,
     },
     second: {
       name: "понедельник вторая пара",
-      teacher: "прога тиачхер",
+      teacher: TEACHERS[1],
       audience: 132,
       week: ParityWeek.EVEN,
       typeOfLesson: TypeOfLesson.PRACTICE,
@@ -57,14 +64,14 @@ export const scheduleTest: IScheduleDay[] = [
   {
     first: {
       name: "среда первая пара",
-      teacher: "матан тиачхер",
+      teacher: TEACHERS[0],
       audience: "а13",
       week: ParityWeek.EVERYWEEK,
       typeOfLesson: TypeOfLesson.LECTURE,
     },
     second: {
       name: "среда вторая пара",
-      teacher: "прога тиачхер",
+      teacher: TEACHERS[1],
       audience: 132,
       week: ParityWeek.EVEN,
       typeOfLesson: TypeOfLesson.PRACTICE,
@@ -73,7 +80,7 @@ export const scheduleTest: IScheduleDay[] = [
   {
     fifth: {
       name: "четверг 5 пара",
-      teacher: "матан тиачхер",
+      teacher: TEACHERS[0],
       audience: "а13",
       week: ParityWeek.EVERYWEEK,
       typeOfLesson: TypeOfLesson.LECTURE,
@@ -82,14 +89,14 @@ export const scheduleTest: IScheduleDay[] = [
   {
     fourth: {
       name: "пятница 4 пара",
-      teacher: "матан тиачхер",
+      teacher: TEACHERS[0],
       audience: "а13",
       week: ParityWeek.EVERYWEEK,
       typeOfLesson: TypeOfLesson.LECTURE,
     },
     sixth: {
       name: "пятница 6 пара",
-      teacher: "матан тиачхер",
+      teacher: TEACHERS[0],
       audience: "а13",
       week: ParityWeek.EVERYWEEK,
       typeOfLesson: TypeOfLesson.LECTURE,
@@ -98,7 +105,7 @@ export const scheduleTest: IScheduleDay[] = [
   {
     sixth: {
       name: "суббота 6 пара",
-      teacher: "матан тиачхер",
+      teacher: TEACHERS[0],
       audience: "а13",
       week: ParityWeek.EVERYWEEK,
       typeOfLesson: TypeOfLesson.LECTURE,

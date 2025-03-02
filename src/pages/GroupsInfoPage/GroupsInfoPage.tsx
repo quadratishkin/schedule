@@ -4,7 +4,7 @@ import { GROUPS } from "../../data/groups";
 import { Schedule } from "../../components/Schedule";
 import { scheduleTest } from "../../data/interfaces";
 
-export function GroupsInfoPage() {
+export const GroupsInfoPage = () => {
   const { groupId } = useParams();
   const group = GROUPS[Number(groupId)];
 
@@ -34,4 +34,4 @@ export function GroupsInfoPage() {
       <Schedule scheduleTest={scheduleTest} />
     </div>
   );
-}
+};

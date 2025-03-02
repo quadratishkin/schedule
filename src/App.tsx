@@ -3,6 +3,8 @@ import "./App.css";
 import { MainPage } from "./pages/MainPage";
 import { GroupsPage } from "./pages/GroupsPage";
 import { GroupsInfoPage } from "./pages/GroupsInfoPage";
+import { TeachersPage } from "./pages/TeachersPage";
+import { TeachersInfoPage } from "./pages/TeachersInfoPage";
 
 function App() {
   return (
@@ -30,6 +32,11 @@ function App() {
               <Route path="/" element={<MainPage />} />
               <Route path="/groups" element={<GroupsPage />} />
               <Route path="/groups/:groupId" element={<GroupsInfoPage />} />
+              <Route path="/teachers" element={<TeachersPage />} />
+              <Route
+                path="/teachers/:teacherId"
+                element={<TeachersInfoPage />}
+              />
             </Routes>
           </main>
         </div>

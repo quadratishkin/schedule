@@ -3,7 +3,7 @@ import "./GroupsPage.scss";
 import { Link, useSearchParams } from "react-router-dom";
 import { GROUPS } from "../../data/groups";
 
-export function GroupsPage() {
+export const GroupsPage = () => {
   const [searchParam, setSearchParam] = useSearchParams();
 
   const searchGroup = searchParam.get("searchGroup")?.toLowerCase() || "";
@@ -37,4 +37,4 @@ export function GroupsPage() {
       </div>
     </div>
   );
-}
+};
