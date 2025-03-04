@@ -19,7 +19,7 @@ function App() {
             <nav className="navMenu">
               <Link
                 className="navMenu__text navMenu__text--center"
-                to={"/schedule/"}
+                to={"/schedule"}
               >
                 Главная
               </Link>
@@ -33,7 +33,7 @@ function App() {
 
             <main className="content">
               <Routes>
-                <Route path="/schedule/" element={<MainPage />} />
+                <Route path="/schedule" element={<MainPage />} />
                 <Route path="/schedule/groups" element={<GroupsPage />} />
                 <Route
                   path="/schedule/groups/:groupId"
