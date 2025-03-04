@@ -1,0 +1,24 @@
+.teacherInfoPage__header {
+  margin: 0 0 20px;
+}
+
+.teacher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin: 0 0 40px;
+
+  &__block {
+    margin: 0;
+  }
+}
+
+.teacher a {
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(72, 111, 184);
+  }
+}

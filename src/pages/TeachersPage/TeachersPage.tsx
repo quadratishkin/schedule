@@ -1,6 +1,7 @@
 import { Link, useSearchParams } from "react-router-dom";
 import { TEACHERS } from "../../data/teachers";
 import { ChangeEvent } from "react";
+import "./TeachersPage.scss";
 
 export const TeachersPage = () => {
   const [searchParam, setSearchParam] = useSearchParams();
@@ -20,7 +21,7 @@ export const TeachersPage = () => {
     <div className="teachersPage">
       <h2 className="teachersPage__header">TeachersPage</h2>
 
-      <div className="teacherss">
+      <div className="teachers">
         <label>
           введите имя преподавателя:{" "}
           <input
@@ -29,7 +30,7 @@ export const TeachersPage = () => {
             onChange={handleSearchTeacher}
           />
         </label>
-        <div className="groups__number">
+        <div className="teachers__number">
           {fillteredTeachers.map(({ id, name }) => (
             <Link to={`/teachers/${id}`} key={id}>
               {name}

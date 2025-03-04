@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { Schedule } from "../../components/Schedule";
 import { scheduleTest } from "../../data/interfaces";
 import { TEACHERS } from "../../data/teachers";
+import "./TeachersInfoPage.scss";
 
 export const TeachersInfoPage = () => {
   const { teacherId } = useParams();

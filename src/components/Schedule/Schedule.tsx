@@ -1,5 +1,13 @@
+import { useEffect, useState } from "react";
 import { IScheduleDay } from "../../data/interfaces";
 import { ScheduleCell } from "../ScheduleCell/ScheduleCell";
+import {
+  DAYS,
+  HEADER_NAMES,
+  SCHEDULE_TIMES,
+  SMALL_SCREEN,
+  WEEK_DAYS_NAMES,
+} from "./const";
 import "./Schedule.scss";
 
 interface ScheduleProps {
@@ -7,48 +15,93 @@ interface ScheduleProps {
 }
 
 export const Schedule = ({ scheduleTest }: ScheduleProps) => {
-  const scheduleTime = ["8:00", "9:40", "11:30", "13:15", "15:00", "16:40"];
-  const headerNames = [
-    "начало занятия",
-    "понедельник",
-    "вторник",
-    "среда",
-    "четверг",
-    "пятница",
-    "суббота",
-  ];
-  const days = ["first", "second", "third", "fourth", "fifth", "sixth"];
+  const [width, setWidth] = useState(window.innerWidth);
+  const [currentDay, setCurrentDay] = useState(0);
 
-  return (
-    <table className="schedule">
-      <thead className="schedule__headers">
-        {headerNames.map((_, index) => (
-          <th className="schedule__cell schedule__cell--headers">
-            {headerNames[index]}
-          </th>
-        ))}
-      </thead>
-      <tbody>
-        {scheduleTime.map((_, index) => (
-          <tr className="schedule__row">
-            <td className="schedule__cell">{scheduleTime[index]}</td>
-            {scheduleTest.map((day, index1) =>
-              day.hasOwnProperty(days[index]) === true ? (
-                <td className="schedule__cell">
-                  <ScheduleCell
-                    isEven={(index + index1) % 2 === 0}
-                    scheduleDay={day[days[index] as keyof typeof day]}
-                  />
-                </td>
-              ) : (
-                <td className="schedule__cell">
-                  <ScheduleCell isEven={(index + index1) % 2 === 0} />
-                </td>
-              )
-            )}
+  useEffect(() => {
+    const handleResizeWindow = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResizeWindow);
+    return () => {
+      window.removeEventListener("resize", handleResizeWindow);
+    };
+  }, []);
+
+  if (width > SMALL_SCREEN) {
+    return (
+      <table className="schedule">
+        <thead className="schedule__headers">
+          <tr className="schedule__row schedule__row--headers">
+            {HEADER_NAMES.map((_, index) => (
+              <th
+                className="schedule__cell schedule__cell--headers"
+                key={index}
+              >
+                {HEADER_NAMES[index]}
+              </th>
+            ))}
           </tr>
+        </thead>
+        <tbody>
+          {SCHEDULE_TIMES.map((_, index) => (
+            <tr className="schedule__row" key={index}>
+              <td className="schedule__cell">{SCHEDULE_TIMES[index]}</td>
+              {scheduleTest.map((day, index1) =>
+                day.hasOwnProperty(DAYS[index]) === true ? (
+                  <td className="schedule__cell" key={index1}>
+                    <ScheduleCell
+                      isEven={(index + index1) % 2 === 0}
+                      scheduleLesson={day[DAYS[index] as keyof typeof day]}
+                    />
+                  </td>
+                ) : (
+                  <td className="schedule__cell">
+                    <ScheduleCell isEven={(index + index1) % 2 === 0} />
+                  </td>
+                )
+              )}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    );
+  } else {
+    return (
+      <div className="schedule">
+        <div className="schedule__headers schedule__headers--mobile">
+          {WEEK_DAYS_NAMES.map((weekDay, index) => (
+            <div
+              className="schedule__cell schedule__cell--headers schedule__cell--mobile"
+              key={index}
+            >
+              <button
+                className="schedule__btn"
+                type="button"
+                onClick={() => setCurrentDay(index)}
+              >
+                {weekDay}
+              </button>
+            </div>
+          ))}
+        </div>
+        {SCHEDULE_TIMES.map((scheduleTime, index) => (
+          <div className="schedule__row schedule__row--mobile" key={index}>
+            <div className="schedule__cell schedule__cell--mobile">
+              {scheduleTime}
+            </div>
+            {scheduleTest[currentDay].hasOwnProperty(DAYS[index]) === true ? (
+              <ScheduleCell
+                isEven={index % 2 === 0}
+                isMobile={true}
+                scheduleLesson={
+                  scheduleTest[currentDay][DAYS[index] as keyof typeof Schedule]
+                }
+              />
+            ) : (
+              <ScheduleCell isEven={index % 2 === 0} isMobile={true} />
+            )}
+          </div>
         ))}
-      </tbody>
-    </table>
-  );
+      </div>
+    );
+  }
 };

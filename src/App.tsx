@@ -11,34 +11,36 @@ function App() {
     <BrowserRouter>
       <div className="app">
         <div className="container">
-          <h1 className="app__header">
-            Расписание Челябинского Государственного Университета
-          </h1>
+          <div className="app__wrapper">
+            <h1 className="app__header">
+              Расписание Челябинского Государственного Университета
+            </h1>
 
-          <nav className="navMenu">
-            <Link className="navMenu__text navMenu__text--center" to={"/"}>
-              Главная
-            </Link>
-            <Link className="navMenu__text" to={"/groups"}>
-              Расписание групп
-            </Link>
-            <Link className="navMenu__text" to={"/teachers"}>
-              Расписание преподавателей
-            </Link>
-          </nav>
+            <nav className="navMenu">
+              <Link className="navMenu__text navMenu__text--center" to={"/"}>
+                Главная
+              </Link>
+              <Link className="navMenu__text" to={"/groups"}>
+                Расписание групп
+              </Link>
+              <Link className="navMenu__text" to={"/teachers"}>
+                Расписание преподавателей
+              </Link>
+            </nav>
 
-          <main className="content">
-            <Routes>
-              <Route path="/" element={<MainPage />} />
-              <Route path="/groups" element={<GroupsPage />} />
-              <Route path="/groups/:groupId" element={<GroupsInfoPage />} />
-              <Route path="/teachers" element={<TeachersPage />} />
-              <Route
-                path="/teachers/:teacherId"
-                element={<TeachersInfoPage />}
-              />
-            </Routes>
-          </main>
+            <main className="content">
+              <Routes>
+                <Route path="/" element={<MainPage />} />
+                <Route path="/groups" element={<GroupsPage />} />
+                <Route path="/groups/:groupId" element={<GroupsInfoPage />} />
+                <Route path="/teachers" element={<TeachersPage />} />
+                <Route
+                  path="/teachers/:teacherId"
+                  element={<TeachersInfoPage />}
+                />
+              </Routes>
+            </main>
+          </div>
         </div>
       </div>
     </BrowserRouter>

@@ -1,0 +1,29 @@
+.teachersPage {
+  margin: 0 20px 20px;
+
+  &__header {
+    margin: 0 0 20px;
+  }
+}
+
+.teachers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+
+  &__number {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+}
+
+.teachers a {
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(72, 111, 184);
+  }
+}

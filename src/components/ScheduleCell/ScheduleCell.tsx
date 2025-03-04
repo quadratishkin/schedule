@@ -1,30 +1,73 @@
 import { Link } from "react-router-dom";
-import { ILesson, IScheduleDay } from "../../data/interfaces";
+import { ILesson } from "../../data/interfaces";
 import "./ScheduleCell.scss";
 
 interface ScheduleCellProps {
   isEven: boolean;
-  scheduleDay?: ILesson | null;
+  scheduleLesson?: ILesson | null;
+  isMobile?: boolean;
 }
 
 export const ScheduleCell = ({
   isEven,
-  scheduleDay = null,
+  scheduleLesson = null,
+  isMobile,
 }: ScheduleCellProps) => {
-  if (isEven) {
-    if (scheduleDay) {
+  if (isMobile) {
+    if (isEven && scheduleLesson) {
       return (
-        <div className="schedule-cell__wrapper schedule-cell__wrapper--even">
-          <h3 className="schedule-cell__subject-name">{scheduleDay.name}</h3>
+        <div className="schedule-cell__wrapper schedule-cell__wrapper--even schedule-cell__wrapper--mobile">
+          <h3 className="schedule-cell__subject-name">{scheduleLesson.name}</h3>
           <Link
             className="schedule-cell__teacher-name"
-            to={`/teachers/${scheduleDay.teacher.id}`}
+            to={`/teachers/${scheduleLesson.teacher.id}`}
           >
-            {scheduleDay.teacher.name}
+            {scheduleLesson.teacher.name}
           </Link>
-          {/* <p className="schedule-cell__teacher-name">{scheduleDay.teacher}</p> */}
           <div className="schedule-cell__type-of-lesson">
-            {scheduleDay.typeOfLesson}
+            {scheduleLesson.typeOfLesson}
+          </div>
+        </div>
+      );
+    } else if (isEven && !scheduleLesson) {
+      return (
+        <div className="schedule-cell__wrapper schedule-cell__wrapper--even schedule-cell__wrapper--mobile" />
+      );
+    } else if (!isEven && scheduleLesson) {
+      return (
+        <div className="schedule-cell__wrapper schedule-cell__wrapper--mobile">
+          <h3 className="schedule-cell__subject-name">{scheduleLesson.name}</h3>
+          <Link
+            className="schedule-cell__teacher-name"
+            to={`/teachers/${scheduleLesson.teacher.id}`}
+          >
+            {scheduleLesson.teacher.name}
+          </Link>
+          <div className="schedule-cell__type-of-lesson">
+            {scheduleLesson.typeOfLesson}
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="schedule-cell__wrapper schedule-cell__wrapper--mobile" />
+      );
+    }
+  }
+
+  if (isEven) {
+    if (scheduleLesson) {
+      return (
+        <div className="schedule-cell__wrapper schedule-cell__wrapper--even">
+          <h3 className="schedule-cell__subject-name">{scheduleLesson.name}</h3>
+          <Link
+            className="schedule-cell__teacher-name"
+            to={`/teachers/${scheduleLesson.teacher.id}`}
+          >
+            {scheduleLesson.teacher.name}
+          </Link>
+          <div className="schedule-cell__type-of-lesson">
+            {scheduleLesson.typeOfLesson}
           </div>
         </div>
       );
@@ -34,18 +77,18 @@ export const ScheduleCell = ({
       );
     }
   }
-  if (scheduleDay) {
+  if (scheduleLesson) {
     return (
       <div className="schedule-cell__wrapper">
-        <h3 className="schedule-cell__subject-name">{scheduleDay.name}</h3>
+        <h3 className="schedule-cell__subject-name">{scheduleLesson.name}</h3>
         <Link
           className="schedule-cell__teacher-name"
-          to={`/teachers/${scheduleDay.teacher.id}`}
+          to={`/teachers/${scheduleLesson.teacher.id}`}
         >
-          {scheduleDay.teacher.name}
+          {scheduleLesson.teacher.name}
         </Link>
         <div className="schedule-cell__type-of-lesson">
-          {scheduleDay.typeOfLesson}
+          {scheduleLesson.typeOfLesson}
         </div>
       </div>
     );
