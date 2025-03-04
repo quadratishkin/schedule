@@ -50,6 +50,12 @@
     &:hover {
       background-color: rgb(190, 81, 81);
     }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: rgb(190, 81, 81);
+      }
+    }
     transition: background-color ease-in 0.2s;
   }
 }
