@@ -33,9 +33,12 @@
       width: calc((100% - 50px) / 6);
       box-shadow: 6px 6px 8px 0px rgba(34, 60, 80, 0.2);
       border: 0;
-      background-color: rgb(192, 187, 187);
       margin: 0;
       width: calc((100% - 50px) / 6);
+    }
+
+    &--gray {
+      background-color: rgb(192, 187, 187);
     }
   }
 
@@ -46,17 +49,11 @@
     cursor: pointer;
     width: 100%;
     height: 100%;
+    transition: background-color ease-in 0.2s;
     &:focus-visible,
     &:hover {
       background-color: rgb(190, 81, 81);
     }
-
-    @media (hover: hover) {
-      &:hover {
-        background-color: rgb(190, 81, 81);
-      }
-    }
-    transition: background-color ease-in 0.2s;
   }
 }
 

@@ -20,7 +20,7 @@ export const ScheduleCell = ({
           <h3 className="schedule-cell__subject-name">{scheduleLesson.name}</h3>
           <Link
             className="schedule-cell__teacher-name"
-            to={`/teachers/${scheduleLesson.teacher.id}`}
+            to={`/schedule/teachers/${scheduleLesson.teacher.id}`}
           >
             {scheduleLesson.teacher.name}
           </Link>
@@ -39,7 +39,7 @@ export const ScheduleCell = ({
           <h3 className="schedule-cell__subject-name">{scheduleLesson.name}</h3>
           <Link
             className="schedule-cell__teacher-name"
-            to={`/teachers/${scheduleLesson.teacher.id}`}
+            to={`/schedule/teachers/${scheduleLesson.teacher.id}`}
           >
             {scheduleLesson.teacher.name}
           </Link>
@@ -62,7 +62,7 @@ export const ScheduleCell = ({
           <h3 className="schedule-cell__subject-name">{scheduleLesson.name}</h3>
           <Link
             className="schedule-cell__teacher-name"
-            to={`/teachers/${scheduleLesson.teacher.id}`}
+            to={`/schedule/teachers/${scheduleLesson.teacher.id}`}
           >
             {scheduleLesson.teacher.name}
           </Link>
@@ -83,7 +83,7 @@ export const ScheduleCell = ({
         <h3 className="schedule-cell__subject-name">{scheduleLesson.name}</h3>
         <Link
           className="schedule-cell__teacher-name"
-          to={`/teachers/${scheduleLesson.teacher.id}`}
+          to={`/schedule/teachers/${scheduleLesson.teacher.id}`}
         >
           {scheduleLesson.teacher.name}
         </Link>

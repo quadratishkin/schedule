@@ -84,8 +84,8 @@ export const Schedule = ({ scheduleTest }: ScheduleProps) => {
           ))}
         </div>
         {SCHEDULE_TIMES.map((scheduleTime, index) => (
-          <div className="schedule__row schedule__row--mobile" key={index}>
-            <div className="schedule__cell schedule__cell--mobile">
+          <div className="schedule__row schedule__row--mobile " key={index}>
+            <div className="schedule__cell schedule__cell--mobile schedule__cell--gray">
               {scheduleTime}
             </div>
             {scheduleTest[currentDay].hasOwnProperty(DAYS[index]) === true ? (

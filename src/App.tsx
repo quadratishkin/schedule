@@ -17,25 +17,31 @@ function App() {
             </h1>
 
             <nav className="navMenu">
-              <Link className="navMenu__text navMenu__text--center" to={"/"}>
+              <Link
+                className="navMenu__text navMenu__text--center"
+                to={"/schedule/"}
+              >
                 Главная
               </Link>
-              <Link className="navMenu__text" to={"/groups"}>
+              <Link className="navMenu__text" to={"/schedule/groups"}>
                 Расписание групп
               </Link>
-              <Link className="navMenu__text" to={"/teachers"}>
+              <Link className="navMenu__text" to={"/schedule/teachers"}>
                 Расписание преподавателей
               </Link>
             </nav>
 
             <main className="content">
               <Routes>
-                <Route path="/" element={<MainPage />} />
-                <Route path="/groups" element={<GroupsPage />} />
-                <Route path="/groups/:groupId" element={<GroupsInfoPage />} />
-                <Route path="/teachers" element={<TeachersPage />} />
+                <Route path="/schedule/" element={<MainPage />} />
+                <Route path="/schedule/groups" element={<GroupsPage />} />
                 <Route
-                  path="/teachers/:teacherId"
+                  path="/schedule/groups/:groupId"
+                  element={<GroupsInfoPage />}
+                />
+                <Route path="/schedule/teachers" element={<TeachersPage />} />
+                <Route
+                  path="/schedule/teachers/:teacherId"
                   element={<TeachersInfoPage />}
                 />
               </Routes>
