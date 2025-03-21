@@ -54,7 +54,7 @@ export const Schedule = ({ scheduleTest }: ScheduleProps) => {
                     />
                   </td>
                 ) : (
-                  <td className="schedule__cell">
+                  <td className="schedule__cell" key={index1}>
                     <ScheduleCell isEven={(index + index1) % 2 === 0} />
                   </td>
                 )
