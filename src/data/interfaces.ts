@@ -47,23 +47,23 @@ export const scheduleTest: IScheduleDay[] = [
   {
     first: [
       {
-        name: "понедельник первая пара",
+        name: "понедельник первая пара нечетная",
         teacher: TEACHERS[0],
         audience: "а13",
-        week: ParityWeek.EVERYWEEK,
+        week: ParityWeek.ODD,
         typeOfLesson: TypeOfLesson.LECTURE,
       },
       {
         name: "понедельник первая пара типа четная неделя",
         teacher: TEACHERS[0],
         audience: "а13",
-        week: ParityWeek.EVERYWEEK,
+        week: ParityWeek.EVEN,
         typeOfLesson: TypeOfLesson.LECTURE,
       },
     ],
     second: [
       {
-        name: "понедельник вторая пара",
+        name: "понедельник вторая пара четная",
         teacher: TEACHERS[1],
         audience: 132,
         week: ParityWeek.EVEN,
