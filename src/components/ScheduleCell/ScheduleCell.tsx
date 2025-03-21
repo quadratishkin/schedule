@@ -17,8 +17,8 @@ export const ScheduleCell = ({
     if (isEven && scheduleLesson) {
       return (
         <div className="schedule-cell__wrapper schedule-cell__wrapper--even schedule-cell__wrapper--mobile">
-          {scheduleLesson.map((subject) => (
-            <div className="schedule-cell__subject">
+          {scheduleLesson.map((subject, index) => (
+            <div className="schedule-cell__subject" key={index}>
               <h3 className="schedule-cell__subject-name">{subject.name}</h3>
               <Link
                 className="schedule-cell__teacher-name"
@@ -40,8 +40,8 @@ export const ScheduleCell = ({
     } else if (!isEven && scheduleLesson) {
       return (
         <div className="schedule-cell__wrapper schedule-cell__wrapper--mobile">
-          {scheduleLesson.map((subject) => (
-            <div className="schedule-cell__subject">
+          {scheduleLesson.map((subject, index) => (
+            <div className="schedule-cell__subject" key={index}>
               <h3 className="schedule-cell__subject-name">{subject.name}</h3>
               <Link
                 className="schedule-cell__teacher-name"
@@ -67,8 +67,8 @@ export const ScheduleCell = ({
     if (scheduleLesson) {
       return (
         <div className="schedule-cell__wrapper schedule-cell__wrapper--even">
-          {scheduleLesson.map((subject) => (
-            <div className="schedule-cell__subject">
+          {scheduleLesson.map((subject, index) => (
+            <div className="schedule-cell__subject" key={index}>
               <h3 className="schedule-cell__subject-name">{subject.name}</h3>
               <Link
                 className="schedule-cell__teacher-name"
@@ -92,8 +92,8 @@ export const ScheduleCell = ({
   if (scheduleLesson) {
     return (
       <div className="schedule-cell__wrapper">
-        {scheduleLesson.map((subject) => (
-          <div className="schedule-cell__subject">
+        {scheduleLesson.map((subject, index) => (
+          <div className="schedule-cell__subject" key={index}>
             <h3 className="schedule-cell__subject-name">{subject.name}</h3>
             <Link
               className="schedule-cell__teacher-name"
