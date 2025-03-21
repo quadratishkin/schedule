@@ -5,7 +5,7 @@ export const scheduleTest: IScheduleDay[] = [
   {
     first: [
       {
-        name: "понедельник первая пара нечетная",
+        name: "понедельник первая пара тестирование ",
         teacher: TEACHERS[0],
         audience: "а13",
         week: ParityWeek.ODD,
