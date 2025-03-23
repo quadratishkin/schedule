@@ -25,14 +25,14 @@ export interface ILesson {
 }
 
 export interface IScheduleDay {
-  first?: ILesson;
-  second?: ILesson;
-  third?: ILesson;
-  fourth?: ILesson;
-  fifth?: ILesson;
-  sixth?: ILesson;
-  seventh?: ILesson;
-  eighth?: ILesson;
+  first?: ILesson[];
+  second?: ILesson[];
+  third?: ILesson[];
+  fourth?: ILesson[];
+  fifth?: ILesson[];
+  sixth?: ILesson[];
+  seventh?: ILesson[];
+  eighth?: ILesson[];
 }
 
 export interface IGroup {
@@ -43,108 +43,3 @@ export interface IGroup {
   // schedule: ISchedule;
 }
 
-export const scheduleTest: IScheduleDay[] = [
-  {
-    third: {
-      name: "Физическая культура и спорт",
-      teacher: TEACHERS[4],
-      audience: "100 (4К.)",
-      week: ParityWeek.EVEN,
-      typeOfLesson: TypeOfLesson.PRACTICE,
-    },
-    fourth: {
-      name: "История России",
-      teacher: TEACHERS[1],
-      audience: 432,
-      week: ParityWeek.EVEN,
-      typeOfLesson: TypeOfLesson.PRACTICE,
-    },
-    fifth: {
-      name: "Информатика и программирование",
-      teacher: TEACHERS[2],
-      audience: 132,
-      week: ParityWeek.EVERYWEEK,
-      typeOfLesson: TypeOfLesson.PRACTICE
-    },
-    sixth: {
-      name: "Информатика и программирование",
-      teacher: TEACHERS[2],
-      audience: 132,
-      week: ParityWeek.EVERYWEEK,
-      typeOfLesson: TypeOfLesson.PRACTICE
-    }
-  },
-  {
-    first: {
-        name: "Архитектура вычислительных систем",
-        teacher: TEACHERS[3],
-        audience: "132А",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE
-    },
-    second: {
-      name: "Архитектура вычислительных систем",
-        teacher: TEACHERS[3],
-        audience: "132А",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE
-    },
-    third: {
-      name: "Математический анализ",
-        teacher: TEACHERS[5],
-        audience: 432,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE
-    }
-  },
-  {
-    first: {
-      name: "среда первая пара",
-      teacher: TEACHERS[0],
-      audience: "а13",
-      week: ParityWeek.EVERYWEEK,
-      typeOfLesson: TypeOfLesson.LECTURE,
-    },
-    second: {
-      name: "среда вторая пара",
-      teacher: TEACHERS[1],
-      audience: 132,
-      week: ParityWeek.EVEN,
-      typeOfLesson: TypeOfLesson.PRACTICE,
-    },
-  },
-  {
-    fifth: {
-      name: "четверг 6 пара",
-      teacher: TEACHERS[0],
-      audience: "а13",
-      week: ParityWeek.EVERYWEEK,
-      typeOfLesson: TypeOfLesson.LECTURE,
-    },
-  },
-  {
-    fourth: {
-      name: "пятница 2 пара",
-      teacher: TEACHERS[0],
-      audience: "а13",
-      week: ParityWeek.EVERYWEEK,
-      typeOfLesson: TypeOfLesson.LECTURE,
-    },
-    sixth: {
-      name: "пятница 6 пара",
-      teacher: TEACHERS[0],
-      audience: "а13",
-      week: ParityWeek.EVERYWEEK,
-      typeOfLesson: TypeOfLesson.LECTURE,
-    },
-  },
-  {
-    sixth: {
-      name: "суббота 6 пара",
-      teacher: TEACHERS[0],
-      audience: "а13",
-      week: ParityWeek.EVERYWEEK,
-      typeOfLesson: TypeOfLesson.LECTURE,
-    },
-  },
-];
