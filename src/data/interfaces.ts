@@ -124,7 +124,7 @@ export const scheduleTest: IScheduleDay[] = [
   },
   {
     fourth: {
-      name: "пятница 4 пара",
+      name: "пятница 2 пара",
       teacher: TEACHERS[0],
       audience: "а13",
       week: ParityWeek.EVERYWEEK,
