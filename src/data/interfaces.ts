@@ -1,3 +1,5 @@
+import { TEACHERS } from "./teachers";
+
 export enum ParityWeek {
   EVEN = "EVEN",
   ODD = "ODD",
@@ -40,3 +42,4 @@ export interface IGroup {
   groupNumber: number;
   // schedule: ISchedule;
 }
+
