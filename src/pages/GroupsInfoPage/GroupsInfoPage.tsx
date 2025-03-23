@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import "./GroupsInfoPage.scss";
 import { GROUPS } from "../../data/groups";
 import { Schedule } from "../../components/Schedule";
-import { scheduleTest } from "../../data/interfaces";
+import { scheduleTest } from "../../data/schedules";
 
 export const GroupsInfoPage = () => {
   const { groupId } = useParams();

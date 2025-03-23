@@ -4,7 +4,7 @@ import "./ScheduleCell.scss";
 
 interface ScheduleCellProps {
   isEven: boolean;
-  scheduleLesson?: ILesson | null;
+  scheduleLesson?: ILesson[] | null;
   isMobile?: boolean;
 }
 
@@ -17,16 +17,20 @@ export const ScheduleCell = ({
     if (isEven && scheduleLesson) {
       return (
         <div className="schedule-cell__wrapper schedule-cell__wrapper--even schedule-cell__wrapper--mobile">
-          <h3 className="schedule-cell__subject-name">{scheduleLesson.name}</h3>
-          <Link
-            className="schedule-cell__teacher-name"
-            to={`/schedule/teachers/${scheduleLesson.teacher.id}`}
-          >
-            {scheduleLesson.teacher.name}
-          </Link>
-          <div className="schedule-cell__type-of-lesson">
-            {scheduleLesson.typeOfLesson}
-          </div>
+          {scheduleLesson.map((subject, index) => (
+            <div className="schedule-cell__subject" key={index}>
+              <h3 className="schedule-cell__subject-name">{subject.name}</h3>
+              <Link
+                className="schedule-cell__teacher-name"
+                to={`/schedule/teachers/${subject.teacher.id}`}
+              >
+                {subject.teacher.name}
+              </Link>
+              <div className="schedule-cell__type-of-lesson">
+                {subject.typeOfLesson}
+              </div>
+            </div>
+          ))}
         </div>
       );
     } else if (isEven && !scheduleLesson) {
@@ -36,16 +40,20 @@ export const ScheduleCell = ({
     } else if (!isEven && scheduleLesson) {
       return (
         <div className="schedule-cell__wrapper schedule-cell__wrapper--mobile">
-          <h3 className="schedule-cell__subject-name">{scheduleLesson.name}</h3>
-          <Link
-            className="schedule-cell__teacher-name"
-            to={`/schedule/teachers/${scheduleLesson.teacher.id}`}
-          >
-            {scheduleLesson.teacher.name}
-          </Link>
-          <div className="schedule-cell__type-of-lesson">
-            {scheduleLesson.typeOfLesson}
-          </div>
+          {scheduleLesson.map((subject, index) => (
+            <div className="schedule-cell__subject" key={index}>
+              <h3 className="schedule-cell__subject-name">{subject.name}</h3>
+              <Link
+                className="schedule-cell__teacher-name"
+                to={`/schedule/teachers/${subject.teacher.id}`}
+              >
+                {subject.teacher.name}
+              </Link>
+              <div className="schedule-cell__type-of-lesson">
+                {subject.typeOfLesson}
+              </div>
+            </div>
+          ))}
         </div>
       );
     } else {
@@ -59,16 +67,20 @@ export const ScheduleCell = ({
     if (scheduleLesson) {
       return (
         <div className="schedule-cell__wrapper schedule-cell__wrapper--even">
-          <h3 className="schedule-cell__subject-name">{scheduleLesson.name}</h3>
-          <Link
-            className="schedule-cell__teacher-name"
-            to={`/schedule/teachers/${scheduleLesson.teacher.id}`}
-          >
-            {scheduleLesson.teacher.name}
-          </Link>
-          <div className="schedule-cell__type-of-lesson">
-            {scheduleLesson.typeOfLesson}
-          </div>
+          {scheduleLesson.map((subject, index) => (
+            <div className="schedule-cell__subject" key={index}>
+              <h3 className="schedule-cell__subject-name">{subject.name}</h3>
+              <Link
+                className="schedule-cell__teacher-name"
+                to={`/schedule/teachers/${subject.teacher.id}`}
+              >
+                {subject.teacher.name}
+              </Link>
+              <div className="schedule-cell__type-of-lesson">
+                {subject.typeOfLesson}
+              </div>
+            </div>
+          ))}
         </div>
       );
     } else {
@@ -80,16 +92,20 @@ export const ScheduleCell = ({
   if (scheduleLesson) {
     return (
       <div className="schedule-cell__wrapper">
-        <h3 className="schedule-cell__subject-name">{scheduleLesson.name}</h3>
-        <Link
-          className="schedule-cell__teacher-name"
-          to={`/schedule/teachers/${scheduleLesson.teacher.id}`}
-        >
-          {scheduleLesson.teacher.name}
-        </Link>
-        <div className="schedule-cell__type-of-lesson">
-          {scheduleLesson.typeOfLesson}
-        </div>
+        {scheduleLesson.map((subject, index) => (
+          <div className="schedule-cell__subject" key={index}>
+            <h3 className="schedule-cell__subject-name">{subject.name}</h3>
+            <Link
+              className="schedule-cell__teacher-name"
+              to={`/schedule/teachers/${subject.teacher.id}`}
+            >
+              {subject.teacher.name}
+            </Link>
+            <div className="schedule-cell__type-of-lesson">
+              {subject.typeOfLesson}
+            </div>
+          </div>
+        ))}
       </div>
     );
   }

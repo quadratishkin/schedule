@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IScheduleDay } from "../../data/interfaces";
+import { ILesson, IScheduleDay } from "../../data/interfaces";
 import { ScheduleCell } from "../ScheduleCell/ScheduleCell";
 import {
   DAYS,
@@ -50,11 +50,11 @@ export const Schedule = ({ scheduleTest }: ScheduleProps) => {
                   <td className="schedule__cell" key={index1}>
                     <ScheduleCell
                       isEven={(index + index1) % 2 === 0}
-                      scheduleLesson={day[DAYS[index] as keyof typeof day]}
+                      scheduleLesson={day[DAYS[index] as keyof IScheduleDay]}
                     />
                   </td>
                 ) : (
-                  <td className="schedule__cell">
+                  <td className="schedule__cell" key={index1}>
                     <ScheduleCell isEven={(index + index1) % 2 === 0} />
                   </td>
                 )
