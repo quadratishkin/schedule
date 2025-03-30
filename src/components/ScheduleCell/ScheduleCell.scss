@@ -27,6 +27,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    min-height: 130px;
+
+    &:not(:first-child) {
+      border-top: 3px solid black;
+    }
   }
 
   &__subject-name {
@@ -38,7 +43,7 @@
 
   &__teacher-name {
     font-size: 15px;
-    margin: 0;
+    margin: 0 0 auto;
     padding: 0;
   }
 
@@ -66,5 +71,12 @@
     background-color: #f5e6c7;
     color: black;
     user-select: none;
+  }
+
+  &__week {
+    padding: 5px 10px;
+    background-color: rgb(133, 129, 135);
+    margin: 0 auto;
+    color: white;
   }
 }

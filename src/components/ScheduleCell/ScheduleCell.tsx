@@ -31,6 +31,7 @@ export const ScheduleCell = ({
               ) : (
                 <div className="schedule-cell__audience">Лек</div>
               )}
+              <div className="schedule-cell__week">{subject.week}</div>
             </div>
           ))}
         </div>
@@ -56,6 +57,7 @@ export const ScheduleCell = ({
               ) : (
                 <div className="schedule-cell__audience">Лек</div>
               )}
+              <div className="schedule-cell__week">{subject.week}</div>
             </div>
           ))}
         </div>
@@ -85,6 +87,7 @@ export const ScheduleCell = ({
               ) : (
                 <div className="schedule-cell__audience">Лек</div>
               )}
+              <div className="schedule-cell__week">{subject.week}</div>
             </div>
           ))}
         </div>
@@ -112,6 +115,7 @@ export const ScheduleCell = ({
             ) : (
               <div className="schedule-cell__audience">Лек</div>
             )}
+            <div className="schedule-cell__week">{subject.week}</div>
           </div>
         ))}
       </div>
