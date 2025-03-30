@@ -53,6 +53,7 @@ export const scheduleTest: IScheduleDay[] = [
         name: "Архитектура вычислительных систем",
         teacher: TEACHERS[3],
         audience: "132А",
+
         week: ParityWeek.ODD,
         typeOfLesson: TypeOfLesson.PRACTICE
       },
