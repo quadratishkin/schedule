@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@font-face {
+  font-family: "OfficinaSansBold";
+  src: url("./fonts/OfficinaSansBold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}

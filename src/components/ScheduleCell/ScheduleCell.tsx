@@ -29,6 +29,7 @@ export const ScheduleCell = ({
               <div className="schedule-cell__type-of-lesson">
                 {subject.typeOfLesson}
               </div>
+              <div className="schedule-cell__audience">{subject.audience}</div>
             </div>
           ))}
         </div>
@@ -52,6 +53,7 @@ export const ScheduleCell = ({
               <div className="schedule-cell__type-of-lesson">
                 {subject.typeOfLesson}
               </div>
+              <div className="schedule-cell__audience">{subject.audience}</div>
             </div>
           ))}
         </div>
@@ -79,6 +81,7 @@ export const ScheduleCell = ({
               <div className="schedule-cell__type-of-lesson">
                 {subject.typeOfLesson}
               </div>
+              <div className="schedule-cell__audience">{subject.audience}</div>
             </div>
           ))}
         </div>
@@ -104,6 +107,7 @@ export const ScheduleCell = ({
             <div className="schedule-cell__type-of-lesson">
               {subject.typeOfLesson}
             </div>
+            <div className="schedule-cell__audience">{subject.audience}</div>
           </div>
         ))}
       </div>

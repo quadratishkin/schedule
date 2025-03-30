@@ -2,21 +2,13 @@
   &__header {
     margin: 0 0 20px;
   }
-}
 
-.group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  margin: 0 0 40px;
-
-  &__block {
-    margin: 0;
+  &__number {
+    text-align: left;
+    font-family: "OfficinaSansBoldC";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    margin: 0 0 13px;
   }
-}
-
-.group a {
-  text-decoration: none;
-  cursor: pointer;
 }

@@ -19,14 +19,15 @@ export const TeachersPage = () => {
 
   return (
     <div className="teachersPage">
-      <h2 className="teachersPage__header">TeachersPage</h2>
+      <h2 className="teachersPage__header">Расписание преподавателей</h2>
 
       <div className="teachers">
         <label>
-          введите имя преподавателя:{" "}
           <input
+            className="teachers__input"
             type="text"
             value={searchTeacher}
+            placeholder="Введите ФИО преподавателя"
             onChange={handleSearchTeacher}
           />
         </label>

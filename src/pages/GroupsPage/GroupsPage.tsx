@@ -20,12 +20,17 @@ export const GroupsPage = () => {
 
   return (
     <div className="groupsPage">
-      <h2 className="groupsPage__header">GroupsPage</h2>
+      <h2 className="groupsPage__header">Расписание групп</h2>
 
       <div className="groups">
         <label>
-          введите номер группы:{" "}
-          <input type="text" value={searchGroup} onChange={handleSearchGroup} />
+          <input
+            className="groups__input"
+            type="text"
+            value={searchGroup}
+            onChange={handleSearchGroup}
+            placeholder="Введите номер группы"
+          />
         </label>
         <div className="groups__number">
           {fillteredGroups.map(({ id, groupNumber }) => (

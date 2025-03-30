@@ -21,17 +21,10 @@ export const GroupsInfoPage = () => {
   }
 
   return (
-    <div className="groupInfoPage">
+    <section className="groupInfoPage">
       <h2 className="groupInfoPage__header">GroupInfoPage</h2>
-      <div className="group">
-        <p className="group__block">
-          Номер группы: <b>{group.groupNumber}</b>
-        </p>
-        <p className="group__block">
-          Вид образования: <b>{group.typeOfEducation}</b>
-        </p>
-      </div>
+      <p className="groupInfoPage__number">номер группы: {group.groupNumber}</p>
       <Schedule scheduleTest={scheduleTest} />
-    </div>
+    </section>
   );
 };

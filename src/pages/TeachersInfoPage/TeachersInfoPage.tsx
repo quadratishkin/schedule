@@ -22,11 +22,7 @@ export const TeachersInfoPage = () => {
 
   return (
     <div className="teacherInfoPage">
-      <div className="teacher">
-        <p className="teacher__block">
-          Имя преподавателя: <b>{teacher.name}</b>
-        </p>
-      </div>
+      <p className="teacherInfoPage__name">{teacher.name}</p>
       <Schedule scheduleTest={scheduleTest} />
     </div>
   );
