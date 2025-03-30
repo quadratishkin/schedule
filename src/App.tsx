@@ -5,6 +5,7 @@ import { GroupsPage } from "./pages/GroupsPage";
 import { GroupsInfoPage } from "./pages/GroupsInfoPage";
 import { TeachersPage } from "./pages/TeachersPage";
 import { TeachersInfoPage } from "./pages/TeachersInfoPage";
+import { Header } from "./components/Header/Header";
 
 function App() {
   return (
@@ -12,25 +13,7 @@ function App() {
       <div className="app">
         <div className="container">
           <div className="app__wrapper">
-            <h1 className="app__header">
-              Расписание Челябинского Государственного Университета
-            </h1>
-
-            <nav className="navMenu">
-              <Link
-                className="navMenu__text navMenu__text--center"
-                to={"/schedule"}
-              >
-                Главная
-              </Link>
-              <Link className="navMenu__text" to={"/schedule/groups"}>
-                Расписание групп
-              </Link>
-              <Link className="navMenu__text" to={"/schedule/teachers"}>
-                Расписание преподавателей
-              </Link>
-            </nav>
-
+            <Header />
             <main className="content">
               <Routes>
                 <Route path="/schedule" element={<MainPage />} />

@@ -1,5 +1,16 @@
-.teacherInfoPage__header {
-  margin: 0 0 20px;
+.teacherInfoPage {
+  &__header {
+    margin: 0 0 20px;
+  }
+
+  &__name {
+    text-align: left;
+    font-family: "OfficinaSansBoldC";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    margin: 0 0 13px;
+  }
 }
 
 .teacher {

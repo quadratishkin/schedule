@@ -4,7 +4,9 @@ import { ScheduleCell } from "../ScheduleCell/ScheduleCell";
 import {
   DAYS,
   HEADER_NAMES,
-  SCHEDULE_TIMES,
+  HEADER_NAMES_SHORT,
+  SCHEDULE_TIMES_FINISH,
+  SCHEDULE_TIMES_START,
   SMALL_SCREEN,
   WEEK_DAYS_NAMES,
 } from "./const";
@@ -31,20 +33,38 @@ export const Schedule = ({ scheduleTest }: ScheduleProps) => {
       <table className="schedule">
         <thead className="schedule__headers">
           <tr className="schedule__row schedule__row--headers">
-            {HEADER_NAMES.map((_, index) => (
-              <th
-                className="schedule__cell schedule__cell--headers"
-                key={index}
-              >
-                {HEADER_NAMES[index]}
-              </th>
-            ))}
+            {HEADER_NAMES.map((_, index) => {
+              if (width < 1150)
+                return (
+                  <th
+                    className="schedule__cell schedule__cell--headers"
+                    key={index}
+                  >
+                    {HEADER_NAMES_SHORT[index - 1]}
+                  </th>
+                );
+              return (
+                <th
+                  className="schedule__cell schedule__cell--headers"
+                  key={index}
+                >
+                  {HEADER_NAMES[index]}
+                </th>
+              );
+            })}
           </tr>
         </thead>
         <tbody>
-          {SCHEDULE_TIMES.map((_, index) => (
+          {SCHEDULE_TIMES_START.map((_, index) => (
             <tr className="schedule__row" key={index}>
-              <td className="schedule__cell">{SCHEDULE_TIMES[index]}</td>
+              <td className="schedule__cell schedule__cell--time">
+                <span className="schedule__time">
+                  {SCHEDULE_TIMES_START[index]}
+                </span>
+                <span className="schedule__time">
+                  {SCHEDULE_TIMES_FINISH[index]}
+                </span>
+              </td>
               {scheduleTest.map((day, index1) =>
                 day.hasOwnProperty(DAYS[index]) === true ? (
                   <td className="schedule__cell" key={index1}>
@@ -83,7 +103,7 @@ export const Schedule = ({ scheduleTest }: ScheduleProps) => {
             </div>
           ))}
         </div>
-        {SCHEDULE_TIMES.map((scheduleTime, index) => (
+        {SCHEDULE_TIMES_START.map((scheduleTime, index) => (
           <div className="schedule__row schedule__row--mobile " key={index}>
             <div className="schedule__cell schedule__cell--mobile schedule__cell--gray">
               {scheduleTime}
