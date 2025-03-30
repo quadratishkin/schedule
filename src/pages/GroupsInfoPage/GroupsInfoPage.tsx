@@ -11,8 +11,6 @@ export const GroupsInfoPage = () => {
   if (!group) {
     return (
       <div className="groupInfoPage">
-        <h2 className="groupInfoPage__header">GroupInfoPage</h2>
-
         <div className="playlist">
           <p>Такой группы нет</p>
         </div>
@@ -22,7 +20,6 @@ export const GroupsInfoPage = () => {
 
   return (
     <section className="groupInfoPage">
-      <h2 className="groupInfoPage__header">GroupInfoPage</h2>
       <p className="groupInfoPage__number">номер группы: {group.groupNumber}</p>
       <Schedule scheduleTest={scheduleTest} />
     </section>
