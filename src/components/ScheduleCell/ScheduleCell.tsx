@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ILesson } from "../../data/interfaces";
+import { ILesson, TypeOfLesson } from "../../data/interfaces";
 import "./ScheduleCell.scss";
 
 interface ScheduleCellProps {
@@ -26,10 +26,11 @@ export const ScheduleCell = ({
               >
                 {subject.teacher.name}
               </Link>
-              <div className="schedule-cell__type-of-lesson">
-                {subject.typeOfLesson}
-              </div>
-              <div className="schedule-cell__audience">{subject.audience}</div>
+              {subject.typeOfLesson === TypeOfLesson.PRACTICE ? (
+                <div className="schedule-cell__audience">Пр</div>
+              ) : (
+                <div className="schedule-cell__audience">Лек</div>
+              )}
             </div>
           ))}
         </div>
@@ -50,10 +51,11 @@ export const ScheduleCell = ({
               >
                 {subject.teacher.name}
               </Link>
-              <div className="schedule-cell__type-of-lesson">
-                {subject.typeOfLesson}
-              </div>
-              <div className="schedule-cell__audience">{subject.audience}</div>
+              {subject.typeOfLesson === TypeOfLesson.PRACTICE ? (
+                <div className="schedule-cell__audience">Пр</div>
+              ) : (
+                <div className="schedule-cell__audience">Лек</div>
+              )}
             </div>
           ))}
         </div>
@@ -78,10 +80,11 @@ export const ScheduleCell = ({
               >
                 {subject.teacher.name}
               </Link>
-              <div className="schedule-cell__type-of-lesson">
-                {subject.typeOfLesson}
-              </div>
-              <div className="schedule-cell__audience">{subject.audience}</div>
+              {subject.typeOfLesson === TypeOfLesson.PRACTICE ? (
+                <div className="schedule-cell__audience">Пр</div>
+              ) : (
+                <div className="schedule-cell__audience">Лек</div>
+              )}
             </div>
           ))}
         </div>
@@ -104,10 +107,11 @@ export const ScheduleCell = ({
             >
               {subject.teacher.name}
             </Link>
-            <div className="schedule-cell__type-of-lesson">
-              {subject.typeOfLesson}
-            </div>
-            <div className="schedule-cell__audience">{subject.audience}</div>
+            {subject.typeOfLesson === TypeOfLesson.PRACTICE ? (
+              <div className="schedule-cell__audience">Пр</div>
+            ) : (
+              <div className="schedule-cell__audience">Лек</div>
+            )}
           </div>
         ))}
       </div>
