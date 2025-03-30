@@ -25,8 +25,6 @@ export const HEADER_NAMES = [
   "суббота",
 ];
 
-export const HEADER_NAMES_SHORT = ["пн", "вт", "ср", "чт", "пт", "сб"];
-
 export const WEEK_DAYS_NAMES = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
 export const DAYS = ["first", "second", "third", "fourth", "fifth", "sixth"];
-export const SMALL_SCREEN = 800;
+export const SMALL_SCREEN = 1200;

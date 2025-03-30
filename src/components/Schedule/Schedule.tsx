@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
-import { ILesson, IScheduleDay } from "../../data/interfaces";
+import { IScheduleDay } from "../../data/interfaces";
 import { ScheduleCell } from "../ScheduleCell/ScheduleCell";
 import {
   DAYS,
   HEADER_NAMES,
-  HEADER_NAMES_SHORT,
   SCHEDULE_TIMES_FINISH,
   SCHEDULE_TIMES_START,
   SMALL_SCREEN,
@@ -33,25 +32,14 @@ export const Schedule = ({ scheduleTest }: ScheduleProps) => {
       <table className="schedule">
         <thead className="schedule__headers">
           <tr className="schedule__row schedule__row--headers">
-            {HEADER_NAMES.map((_, index) => {
-              if (width < 1150)
-                return (
-                  <th
-                    className="schedule__cell schedule__cell--headers"
-                    key={index}
-                  >
-                    {HEADER_NAMES_SHORT[index - 1]}
-                  </th>
-                );
-              return (
-                <th
-                  className="schedule__cell schedule__cell--headers"
-                  key={index}
-                >
-                  {HEADER_NAMES[index]}
-                </th>
-              );
-            })}
+            {HEADER_NAMES.map((_, index) => (
+              <th
+                className="schedule__cell schedule__cell--headers"
+                key={index}
+              >
+                {HEADER_NAMES[index]}
+              </th>
+            ))}
           </tr>
         </thead>
         <tbody>
