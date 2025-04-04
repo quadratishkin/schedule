@@ -49,7 +49,7 @@ export const Schedule = ({ scheduleTest }: ScheduleProps) => {
                 <span className="schedule__time">
                   {SCHEDULE_TIMES_START[index]}
                 </span>
-                <span className="schedule__time">
+                <span className="schedule__time schedule__time--finish">
                   {SCHEDULE_TIMES_FINISH[index]}
                 </span>
               </td>

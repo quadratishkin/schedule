@@ -23,6 +23,10 @@
     font-weight: 400;
     font-size: 30.05px;
     line-height: 100%;
+
+    &--finish {
+      color: rgb(117, 116, 116);
+    }
   }
 
   &__cell {
