@@ -24,16 +24,16 @@ export const ScheduleCell = ({
         <div className="schedule-cell__wrapper schedule-cell__wrapper--even schedule-cell__wrapper--mobile">
           {scheduleLesson.map((subject, index) => (
             <div className="schedule-cell__subject" key={index}>
-              <h3 className="schedule-cell__subject-name">{subject.name}</h3>
+              <h3 className="schedule-cell__subject-name">{subject.name}</h3>{" "}
+              <span className="schedule-cell__audience">
+                {subject.audience}
+              </span>
               <Link
                 className="schedule-cell__teacher-name"
                 to={`/teachers/${subject.teacher.id}`}
               >
                 {subject.teacher.name}
               </Link>
-              <span className="schedule-cell__audience">
-                {subject.audience}
-              </span>
               {subject.typeOfLesson === TypeOfLesson.PRACTICE ? (
                 <div className="schedule-cell__lesson-type">Пр</div>
               ) : (
@@ -55,16 +55,16 @@ export const ScheduleCell = ({
         <div className="schedule-cell__wrapper schedule-cell__wrapper--mobile">
           {scheduleLesson.map((subject, index) => (
             <div className="schedule-cell__subject" key={index}>
-              <h3 className="schedule-cell__subject-name">{subject.name}</h3>
+              <h3 className="schedule-cell__subject-name">{subject.name}</h3>{" "}
+              <span className="schedule-cell__audience">
+                {subject.audience}
+              </span>
               <Link
                 className="schedule-cell__teacher-name"
                 to={`/teachers/${subject.teacher.id}`}
               >
                 {subject.teacher.name}
               </Link>
-              <span className="schedule-cell__audience">
-                {subject.audience}
-              </span>
               {subject.typeOfLesson === TypeOfLesson.PRACTICE ? (
                 <div className="schedule-cell__lesson-type">Пр</div>
               ) : (
@@ -91,15 +91,15 @@ export const ScheduleCell = ({
           {scheduleLesson.map((subject, index) => (
             <div className="schedule-cell__subject" key={index}>
               <h3 className="schedule-cell__subject-name">{subject.name}</h3>
+              <span className="schedule-cell__audience">
+                {subject.audience}
+              </span>
               <Link
                 className="schedule-cell__teacher-name"
                 to={`/teachers/${subject.teacher.id}`}
               >
                 {subject.teacher.name}
               </Link>
-              <span className="schedule-cell__audience">
-                {subject.audience}
-              </span>
               {subject.typeOfLesson === TypeOfLesson.PRACTICE ? (
                 <div className="schedule-cell__lesson-type">Пр</div>
               ) : (
@@ -124,13 +124,13 @@ export const ScheduleCell = ({
         {scheduleLesson.map((subject, index) => (
           <div className="schedule-cell__subject" key={index}>
             <h3 className="schedule-cell__subject-name">{subject.name}</h3>
+            <span className="schedule-cell__audience">{subject.audience}</span>
             <Link
               className="schedule-cell__teacher-name"
               to={`/teachers/${subject.teacher.id}`}
             >
               {subject.teacher.name}
             </Link>
-            <span className="schedule-cell__audience">{subject.audience}</span>
             {subject.typeOfLesson === TypeOfLesson.PRACTICE ? (
               <div className="schedule-cell__lesson-type">Пр</div>
             ) : (
