@@ -1,5 +1,5 @@
+import "./global-styles.tsx";
 import { Route, Routes } from "react-router";
-import "./App.css";
 import { MainPage } from "./pages/MainPage";
 import { GroupsPage } from "./pages/GroupsPage";
 import { GroupsInfoPage } from "./pages/GroupsInfoPage";
