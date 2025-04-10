@@ -33,7 +33,7 @@ export const TeachersPage = () => {
         </label>
         <div className="teachers__number">
           {fillteredTeachers.map(({ id, name }) => (
-            <Link to={`/schedule/teachers/${id}`} key={id}>
+            <Link to={`/teachers/${id}`} key={id}>
               {name}
             </Link>
           ))}

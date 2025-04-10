@@ -15,15 +15,12 @@ function App() {
           <Header />
           <main className="content">
             <Routes>
-              <Route path="/schedule" element={<MainPage />} />
-              <Route path="/schedule/groups" element={<GroupsPage />} />
+              <Route path="/" element={<MainPage />} />
+              <Route path="/groups" element={<GroupsPage />} />
+              <Route path="/groups/:groupId" element={<GroupsInfoPage />} />
+              <Route path="/teachers" element={<TeachersPage />} />
               <Route
-                path="/schedule/groups/:groupId"
-                element={<GroupsInfoPage />}
-              />
-              <Route path="/schedule/teachers" element={<TeachersPage />} />
-              <Route
-                path="/schedule/teachers/:teacherId"
+                path="/teachers/:teacherId"
                 element={<TeachersInfoPage />}
               />
             </Routes>

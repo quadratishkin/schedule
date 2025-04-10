@@ -25,28 +25,22 @@ export const Header = () => {
         {currentPage === "main" ? (
           <Link
             className="navMenu__text navMenu__text--center navMenu__text--active"
-            to={"/schedule"}
+            to={"/"}
           >
             Главная
           </Link>
         ) : (
-          <Link
-            className="navMenu__text navMenu__text--center"
-            to={"/schedule"}
-          >
+          <Link className="navMenu__text navMenu__text--center" to={"/"}>
             Главная
           </Link>
         )}
 
         {currentPage === "groups" ? (
-          <Link
-            className="navMenu__text navMenu__text--active"
-            to={"/schedule/groups"}
-          >
+          <Link className="navMenu__text navMenu__text--active" to={"/groups"}>
             Расписание групп
           </Link>
         ) : (
-          <Link className="navMenu__text" to={"/schedule/groups"}>
+          <Link className="navMenu__text" to={"/groups"}>
             Расписание групп
           </Link>
         )}
@@ -54,12 +48,12 @@ export const Header = () => {
         {currentPage === "teachers" ? (
           <Link
             className="navMenu__text navMenu__text--active"
-            to={"/schedule/teachers"}
+            to={"/teachers"}
           >
             Расписание преподавателей
           </Link>
         ) : (
-          <Link className="navMenu__text" to={"/schedule/teachers"}>
+          <Link className="navMenu__text" to={"/teachers"}>
             Расписание преподавателей
           </Link>
         )}

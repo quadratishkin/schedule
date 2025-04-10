@@ -34,7 +34,7 @@ export const GroupsPage = () => {
         </label>
         <div className="groups__number">
           {fillteredGroups.map(({ id, groupNumber }) => (
-            <Link to={`/schedule/groups/${id}`} key={id}>
+            <Link to={`/groups/${id}`} key={id}>
               {groupNumber}
             </Link>
           ))}
