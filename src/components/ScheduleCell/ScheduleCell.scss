@@ -1,0 +1,97 @@
+.schedule-cell {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin: 0;
+  position: relative;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+    height: 100%;
+    &--even {
+      background-color: #f2f2f2;
+    }
+
+    &--mobile {
+      min-height: 82px;
+      width: calc(100% - ((100% - 50px) / 6));
+    }
+  }
+
+  &__subject {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 130px;
+
+    &:not(:first-child) {
+      border-top: 3px solid black;
+    }
+  }
+
+  &__subject-name {
+    font-size: 15px;
+    text-align: left;
+    margin: 0 40px 0 0;
+    padding: 0;
+  }
+
+  &__teacher-name {
+    font-size: 15px;
+    padding: 0;
+  }
+
+  &__type-of-lesson,
+  &__audience {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__audience {
+    margin: 0 0 auto;
+  }
+
+  &__lesson-type {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-family: "OfficinaSansBookC";
+    font-weight: 400;
+    font-size: 11.56px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 6px 8px;
+    border-radius: 50%;
+    background-color: #f5e6c7;
+    color: black;
+    user-select: none;
+
+    &--lection {
+      background-color: #cf805f;
+      color: white;
+    }
+  }
+
+  &__week {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: rgb(14, 14, 14);
+    padding: 5px;
+    margin: 0;
+    color: white;
+  }
+}

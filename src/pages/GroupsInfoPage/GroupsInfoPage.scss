@@ -1,0 +1,19 @@
+.groupInfoPage {
+  &__header {
+    margin: 0 0 20px;
+  }
+
+  &__number {
+    text-align: left;
+    font-family: "OfficinaSansBoldC";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    margin: 0 0 13px;
+
+    @media (max-width: 450px) {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+}

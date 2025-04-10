@@ -1,0 +1,44 @@
+.groupsPage {
+  margin: 0 20px 20px;
+
+  &__header {
+    font-family: OfficinaSansMediumC;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100%;
+    margin: 0 0 24px;
+    text-align: left;
+  }
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+
+  &__number {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  &__input {
+    min-width: 480px;
+
+    &::placeholder {
+      font-family: OfficinaSansBookC;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 100%;
+      margin: 0;
+      padding: 10px;
+      color: #989898;
+    }
+  }
+}
+
+.groups a {
+  text-decoration: none;
+  cursor: pointer;
+}

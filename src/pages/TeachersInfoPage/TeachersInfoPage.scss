@@ -1,0 +1,31 @@
+.teacherInfoPage {
+  &__header {
+    margin: 0 0 20px;
+  }
+
+  &__name {
+    text-align: left;
+    font-family: "OfficinaSansBoldC";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    margin: 0 0 13px;
+  }
+}
+
+.teacher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin: 0 0 40px;
+
+  &__block {
+    margin: 0;
+  }
+}
+
+.teacher a {
+  text-decoration: none;
+  cursor: pointer;
+}

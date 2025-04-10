@@ -1,0 +1,87 @@
+.schedule {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 20px;
+
+  &__headers {
+    background-color: rgb(246, 95, 95);
+
+    &--mobile {
+      display: flex;
+      gap: 10px;
+      background-color: unset;
+      margin: 0 0 30px;
+    }
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__time {
+    font-family: "OfficinaSansBookC";
+    font-weight: 400;
+    font-size: 30.05px;
+    line-height: 100%;
+
+    &--finish {
+      color: rgb(117, 116, 116);
+    }
+  }
+
+  &__cell {
+    min-height: 100px;
+    width: calc(100% / 7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "OfficinaSansExtraBoldC";
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 100%;
+
+    &--headers {
+      min-height: 60px;
+      color: white;
+    }
+
+    &--mobile {
+      min-height: 60px;
+      width: calc((100% - 50px) / 6);
+      box-shadow: 6px 6px 8px 0px rgba(34, 60, 80, 0.2);
+      border: 0;
+      margin: 0;
+    }
+
+    &--time {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+      padding: 0 0 0 20px;
+    }
+
+    &--gray {
+      background-color: rgb(192, 187, 187);
+      min-width: 65px;
+    }
+  }
+
+  &__btn {
+    padding: 5px 10px;
+    background-color: rgb(246, 95, 95);
+    border: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    transition: background-color ease-in 0.2s;
+    &:focus-visible,
+    &:hover {
+      background-color: rgb(190, 81, 81);
+    }
+  }
+}
+
+.card {
+  border: 1px solid black;
+}
