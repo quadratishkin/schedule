@@ -22,15 +22,13 @@ export const TeachersPage = () => {
       <h2 className="teachersPage__header">Расписание преподавателей</h2>
 
       <div className="teachers">
-        <label>
-          <input
-            className="teachers__input"
-            type="text"
-            value={searchTeacher}
-            placeholder="Введите ФИО преподавателя"
-            onChange={handleSearchTeacher}
-          />
-        </label>
+        <input
+          className="teachers__input"
+          type="text"
+          value={searchTeacher}
+          placeholder="Введите ФИО преподавателя"
+          onChange={handleSearchTeacher}
+        />
         <div className="teachers__number">
           {fillteredTeachers.map(({ id, name }) => (
             <Link to={`/teachers/${id}`} key={id}>

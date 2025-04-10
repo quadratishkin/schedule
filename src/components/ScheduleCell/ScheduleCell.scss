@@ -45,6 +45,11 @@
   &__teacher-name {
     font-size: 15px;
     padding: 0;
+
+    &:hover {
+      color: #7f4645;
+      transform: none;
+    }
   }
 
   &__type-of-lesson,

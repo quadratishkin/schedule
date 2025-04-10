@@ -23,15 +23,13 @@ export const GroupsPage = () => {
       <h2 className="groupsPage__header">Расписание групп</h2>
 
       <div className="groups">
-        <label>
-          <input
-            className="groups__input"
-            type="text"
-            value={searchGroup}
-            onChange={handleSearchGroup}
-            placeholder="Введите номер группы"
-          />
-        </label>
+        <input
+          className="groups__input"
+          type="text"
+          value={searchGroup}
+          onChange={handleSearchGroup}
+          placeholder="Введите номер группы"
+        />
         <div className="groups__number">
           {fillteredGroups.map(({ id, groupNumber }) => (
             <Link to={`/groups/${id}`} key={id}>
