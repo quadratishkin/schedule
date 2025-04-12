@@ -1,5 +1,5 @@
 .groupsPage {
-  margin: 0 20px 20px;
+  margin: 0 0 20px;
 
   &__header {
     font-family: OfficinaSansMediumC;
@@ -8,6 +8,11 @@
     line-height: 100%;
     margin: 0 0 24px;
     text-align: left;
+
+    @media (max-width: 450px) {
+      text-align: center;
+      font-size: 24px;
+    }
   }
 }
 
@@ -21,10 +26,11 @@
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
+    padding: 20px;
   }
 
   &__input {
-    min-width: 480px;
+    min-width: 420px;
 
     &::placeholder {
       font-family: OfficinaSansBookC;
@@ -34,6 +40,12 @@
       margin: 0;
       padding: 10px;
       color: #989898;
+    }
+
+    @media (max-width: 450px) {
+      margin: 0 auto;
+      min-width: 280px;
+      width: calc(100% - 30px);
     }
   }
 }

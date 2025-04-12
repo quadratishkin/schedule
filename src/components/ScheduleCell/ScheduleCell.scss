@@ -19,10 +19,32 @@
     &--mobile {
       min-height: 82px;
       width: calc(100% - ((100% - 50px) / 6));
+
+      .schedule-cell__lesson-type,
+      .schedule-cell__week {
+        position: relative;
+        bottom: unset;
+        top: unset;
+      }
+      .schedule-cell__subject-info {
+        min-height: unset;
+      }
+      .schedule-cell__teacher-name,
+      .schedule-cell__subject-name {
+        padding: 0;
+      }
     }
   }
 
   &__subject {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 30px 80px;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__subject-info {
     position: relative;
     width: 100%;
     display: flex;
@@ -38,13 +60,18 @@
   &__subject-name {
     font-size: 15px;
     text-align: left;
-    margin: 0 40px 0 0;
-    padding: 0;
+    padding: 0 40px 0 0;
+    margin: 0;
   }
 
   &__teacher-name {
     font-size: 15px;
-    padding: 0;
+    padding: 0 40px 0 0;
+
+    &:hover {
+      color: #7f4645;
+      transform: none;
+    }
   }
 
   &__type-of-lesson,
@@ -87,6 +114,7 @@
     font-size: 14px;
     background-color: rgb(14, 14, 14);
     padding: 5px;
+    border-radius: 5px;
     margin: 0;
     color: white;
   }

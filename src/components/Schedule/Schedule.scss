@@ -11,6 +11,11 @@
       gap: 10px;
       background-color: unset;
       margin: 0 0 30px;
+
+      @media (max-width: 400px) {
+        gap: 5px;
+        justify-content: space-between;
+      }
     }
   }
 
@@ -78,6 +83,10 @@
     &:focus-visible,
     &:hover {
       background-color: rgb(190, 81, 81);
+    }
+
+    @media (max-width: 400px) {
+      padding: 0;
     }
   }
 }
