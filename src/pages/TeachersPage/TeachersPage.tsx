@@ -2,6 +2,7 @@ import { Link, useSearchParams } from "react-router";
 import { TEACHERS } from "../../data/teachers";
 import { ChangeEvent } from "react";
 import "./TeachersPage.scss";
+import { sortTeachersAlphabet } from "./utils";
 
 export const TeachersPage = () => {
   const [searchParam, setSearchParam] = useSearchParams();
@@ -15,7 +16,7 @@ export const TeachersPage = () => {
 
   const fillteredTeachers = TEACHERS.filter(({ name }) => {
     return name.toLowerCase().includes(searchTeacher);
-  });
+  }).sort(sortTeachersAlphabet);
 
   return (
     <div className="teachersPage">
