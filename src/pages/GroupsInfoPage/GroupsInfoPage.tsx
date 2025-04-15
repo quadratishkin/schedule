@@ -2,7 +2,6 @@ import { useParams } from "react-router";
 import "./GroupsInfoPage.scss";
 import { GROUPS } from "../../data/groups";
 import { Schedule } from "../../components/Schedule";
-import { scheduleTest } from "../../data/schedules";
 
 export const GroupsInfoPage = () => {
   const { groupId } = useParams();
@@ -21,7 +20,7 @@ export const GroupsInfoPage = () => {
   return (
     <section className="groupInfoPage">
       <p className="groupInfoPage__number">номер группы: {group.groupNumber}</p>
-      <Schedule scheduleTest={scheduleTest} />
+      <Schedule scheduleTest={group.schedule} />
     </section>
   );
 };

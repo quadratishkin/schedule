@@ -1,12 +1,11 @@
 import { IScheduleDay, ParityWeek, TypeOfLesson } from "./interfaces";
-import { TEACHERS } from "./teachers";
 
 export const scheduleTest: IScheduleDay[] = [
   {
     third: [
       {
         name: "Физическая культура и спорт",
-        teacher: TEACHERS[4],
+        teacher: 4,
         audience: "100 (4К.)",
         week: ParityWeek.EVEN,
         typeOfLesson: TypeOfLesson.PRACTICE,
@@ -15,14 +14,14 @@ export const scheduleTest: IScheduleDay[] = [
     fourth: [
       {
         name: "(9-16Н) Безопасность жизнедеятельности",
-        teacher: TEACHERS[13],
+        teacher: 13,
         audience: 132,
         week: ParityWeek.ODD,
         typeOfLesson: TypeOfLesson.PRACTICE,
       },
       {
         name: "История России",
-        teacher: TEACHERS[1],
+        teacher: 1,
         audience: 432,
         week: ParityWeek.EVEN,
         typeOfLesson: TypeOfLesson.PRACTICE,
@@ -31,7 +30,7 @@ export const scheduleTest: IScheduleDay[] = [
     fifth: [
       {
         name: "Информатика и программирование",
-        teacher: TEACHERS[2],
+        teacher: 2,
         audience: 132,
         week: ParityWeek.EVERYWEEK,
         typeOfLesson: TypeOfLesson.LECTURE,
@@ -40,7 +39,7 @@ export const scheduleTest: IScheduleDay[] = [
     sixth: [
       {
         name: "Информатика и программирование",
-        teacher: TEACHERS[2],
+        teacher: 2,
         audience: 132,
         week: ParityWeek.EVERYWEEK,
         typeOfLesson: TypeOfLesson.PRACTICE,
@@ -51,7 +50,7 @@ export const scheduleTest: IScheduleDay[] = [
     first: [
       {
         name: "Архитектура вычислительных систем",
-        teacher: TEACHERS[3],
+        teacher: 3,
         audience: "132А",
 
         week: ParityWeek.ODD,
@@ -61,14 +60,14 @@ export const scheduleTest: IScheduleDay[] = [
     second: [
       {
         name: "Архитектура вычислительных систем",
-        teacher: TEACHERS[3],
+        teacher: 3,
         audience: "132А",
         week: ParityWeek.ODD,
         typeOfLesson: TypeOfLesson.PRACTICE,
       },
       {
         name: "(1-8Н) Психология лидерства и командообразование",
-        teacher: TEACHERS[6],
+        teacher: 6,
         audience: "А-25",
         week: ParityWeek.EVEN,
         typeOfLesson: TypeOfLesson.LECTURE,
@@ -77,7 +76,7 @@ export const scheduleTest: IScheduleDay[] = [
     third: [
       {
         name: "Математический анализ",
-        teacher: TEACHERS[5],
+        teacher: 5,
         audience: 432,
         week: ParityWeek.EVERYWEEK,
         typeOfLesson: TypeOfLesson.PRACTICE,
@@ -86,14 +85,14 @@ export const scheduleTest: IScheduleDay[] = [
     fourth: [
       {
         name: "Физическая культура и спорт",
-        teacher: TEACHERS[4],
+        teacher: 4,
         audience: "100 (4К.)",
         week: ParityWeek.ODD,
         typeOfLesson: TypeOfLesson.PRACTICE,
       },
       {
         name: "(1-8Н) Психология лидерства и командообразование",
-        teacher: TEACHERS[6],
+        teacher: 6,
         audience: "132",
         week: ParityWeek.EVEN,
         typeOfLesson: TypeOfLesson.PRACTICE,
@@ -104,7 +103,7 @@ export const scheduleTest: IScheduleDay[] = [
     second: [
       {
         name: "Экономическая теория",
-        teacher: TEACHERS[7],
+        teacher: 7,
         audience: 132,
         week: ParityWeek.EVERYWEEK,
         typeOfLesson: TypeOfLesson.LECTURE,
@@ -113,7 +112,7 @@ export const scheduleTest: IScheduleDay[] = [
     third: [
       {
         name: "Экономическая теория",
-        teacher: TEACHERS[7],
+        teacher: 7,
         audience: 132,
         week: ParityWeek.EVERYWEEK,
         typeOfLesson: TypeOfLesson.PRACTICE,
@@ -122,14 +121,14 @@ export const scheduleTest: IScheduleDay[] = [
     fourth: [
       {
         name: "Архитектура вычислительных систем",
-        teacher: TEACHERS[3],
+        teacher: 3,
         audience: "А-17",
         week: ParityWeek.ODD,
         typeOfLesson: TypeOfLesson.LECTURE,
       },
       {
         name: "Иностранный язык",
-        teacher: TEACHERS[8],
+        teacher: 8,
         audience: "132Б",
         week: ParityWeek.EVEN,
         typeOfLesson: TypeOfLesson.PRACTICE,
@@ -140,7 +139,7 @@ export const scheduleTest: IScheduleDay[] = [
     third: [
       {
         name: "Информатика и программирование",
-        teacher: TEACHERS[2],
+        teacher: 2,
         audience: 132,
         week: ParityWeek.EVERYWEEK,
         typeOfLesson: TypeOfLesson.PRACTICE,
@@ -149,7 +148,7 @@ export const scheduleTest: IScheduleDay[] = [
     fourth: [
       {
         name: "Математический анализ",
-        teacher: TEACHERS[0],
+        teacher: 0,
         audience: "А-17",
         week: ParityWeek.EVERYWEEK,
         typeOfLesson: TypeOfLesson.LECTURE,
@@ -158,7 +157,7 @@ export const scheduleTest: IScheduleDay[] = [
     fifth: [
       {
         name: "История России",
-        teacher: TEACHERS[9],
+        teacher: 9,
         audience: "А-17",
         week: ParityWeek.ODD,
         typeOfLesson: TypeOfLesson.LECTURE,
@@ -169,7 +168,7 @@ export const scheduleTest: IScheduleDay[] = [
     first: [
       {
         name: "Иностранный язык",
-        teacher: TEACHERS[8],
+        teacher: 8,
         audience: "132Б",
         week: ParityWeek.ODD,
         typeOfLesson: TypeOfLesson.PRACTICE,
@@ -178,7 +177,7 @@ export const scheduleTest: IScheduleDay[] = [
     second: [
       {
         name: "Иностранный язык",
-        teacher: TEACHERS[8],
+        teacher: 8,
         audience: "132Б",
         week: ParityWeek.ODD,
         typeOfLesson: TypeOfLesson.PRACTICE,
@@ -187,7 +186,7 @@ export const scheduleTest: IScheduleDay[] = [
     third: [
       {
         name: "Прикладная физическая культура",
-        teacher: TEACHERS[4],
+        teacher: 4,
         audience: "100 (4К.)",
         week: ParityWeek.ODD,
         typeOfLesson: TypeOfLesson.PRACTICE,
@@ -196,7 +195,7 @@ export const scheduleTest: IScheduleDay[] = [
     fourth: [
       {
         name: "Иностранный язык",
-        teacher: TEACHERS[10],
+        teacher: 10,
         audience: "429",
         week: ParityWeek.EVERYWEEK,
         typeOfLesson: TypeOfLesson.PRACTICE,
@@ -205,7 +204,7 @@ export const scheduleTest: IScheduleDay[] = [
     fifth: [
       {
         name: "Иностранный язык",
-        teacher: TEACHERS[10],
+        teacher: 10,
         audience: "429",
         week: ParityWeek.EVEN,
         typeOfLesson: TypeOfLesson.PRACTICE,
@@ -216,14 +215,14 @@ export const scheduleTest: IScheduleDay[] = [
     sixth: [
       {
         name: "История России",
-        teacher: TEACHERS[11],
+        teacher: 11,
         audience: "Онлайн-курс",
         week: ParityWeek.ODD,
         typeOfLesson: TypeOfLesson.LECTURE,
       },
       {
         name: "(9-16Н) Безопасность жизнедеятельности",
-        teacher: TEACHERS[12],
+        teacher: 12,
         audience: "Онлайн-курс",
         week: ParityWeek.EVEN,
         typeOfLesson: TypeOfLesson.LECTURE,
