@@ -172,4 +172,84 @@ export const TEACHERS: ITeacher[] = [
     name: "Козырская И.Н.",
     schedule: scheduleTest,
   },
+  {
+    id: 14,
+    name: "Шепталин А.Г.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 15,
+    name: "Петриченко Ю.В.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 16,
+    name: "Мельников В.А.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 17,
+    name: "Бойко К.В.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 18,
+    name: "Барабанщиков И.В.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 19,
+    name: "Гисс Е.И.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 20,
+    name: "Ботов С.Г.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 21,
+    name: "Воробьев В.И.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 22,
+    name: "Новикова М.В.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 23,
+    name: "Мирасов В.Ф.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 24,
+    name: "Казаков А.А.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 25,
+    name: "Сотникова Е.С.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 26,
+    name: "Мелехина Д.В.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 27,
+    name: "Кирсанов А.А.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 28,
+    name: "Пономарева Д.С.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 29,
+    name: "Бутько Л.Н.",
+    schedule: scheduleTest,
+  },
 ];
