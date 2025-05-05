@@ -5,6 +5,8 @@ export const SCHEDULE_TIMES_START = [
   "13:15",
   "15:00",
   "16:40",
+  "18:20",
+  "19:55",
 ];
 
 export const SCHEDULE_TIMES_FINISH = [
@@ -13,6 +15,9 @@ export const SCHEDULE_TIMES_FINISH = [
   "12:45",
   "14:45",
   "16:30",
+  "18:10",
+  "19:50",
+  "21:25",
 ];
 
 export const HEADER_NAMES = [
@@ -26,5 +31,5 @@ export const HEADER_NAMES = [
 ];
 
 export const WEEK_DAYS_NAMES = ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб"];
-export const DAYS = ["first", "second", "third", "fourth", "fifth", "sixth"];
+export const DAYS = ["first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth"];
 export const SMALL_SCREEN = 1200;
