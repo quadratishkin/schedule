@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { ILesson, ParityWeek, TypeOfLesson } from "../../data/interfaces";
 import "./ScheduleCell.scss";
+import { TEACHERS } from "../../data/teachers";
 
 interface ScheduleCellProps {
   isEven: boolean;
@@ -13,10 +14,10 @@ export const ScheduleCell = ({
   scheduleLesson = null,
   isMobile,
 }: ScheduleCellProps) => {
-  // const determineTeacher = (id: number) => {
-  //   const teacher = TEACHERS.filter((teacher) => teacher.id === id);
-  //   return teacher;
-  // };
+  const determineTeacher = (id: number) => {
+    const teacher = TEACHERS.find((teacher) => teacher.id === id);
+    return teacher;
+  };
 
   if (isMobile) {
     if (isEven && scheduleLesson) {
@@ -31,9 +32,9 @@ export const ScheduleCell = ({
                 </span>
                 <Link
                   className="schedule-cell__teacher-name"
-                  to={`/teachers/${subject.teacher.id}`}
+                  to={`/teachers/${determineTeacher(subject.teacher)?.id}`}
                 >
-                  {subject.teacher.name}
+                  {determineTeacher(subject.teacher)?.name}
                 </Link>
               </div>
               {subject.typeOfLesson === TypeOfLesson.PRACTICE ? (
@@ -66,9 +67,9 @@ export const ScheduleCell = ({
                 </span>
                 <Link
                   className="schedule-cell__teacher-name"
-                  to={`/teachers/${subject.teacher.id}`}
+                  to={`/teachers/${determineTeacher(subject.teacher)?.id}`}
                 >
-                  {subject.teacher.name}
+                  {determineTeacher(subject.teacher)?.name}
                 </Link>
               </div>
               {subject.typeOfLesson === TypeOfLesson.PRACTICE ? (
@@ -104,9 +105,9 @@ export const ScheduleCell = ({
               </span>
               <Link
                 className="schedule-cell__teacher-name"
-                to={`/teachers/${subject.teacher.id}`}
+                to={`/teachers/${determineTeacher(subject.teacher)?.id}`}
               >
-                {subject.teacher.name}
+                {determineTeacher(subject.teacher)?.name}
               </Link>
               {subject.typeOfLesson === TypeOfLesson.PRACTICE ? (
                 <div className="schedule-cell__lesson-type">Пр</div>
@@ -137,9 +138,9 @@ export const ScheduleCell = ({
             <span className="schedule-cell__audience">{subject.audience}</span>
             <Link
               className="schedule-cell__teacher-name"
-              to={`/teachers/${subject.teacher.id}`}
+              to={`/teachers/${determineTeacher(subject.teacher)?.id}`}
             >
-              {subject.teacher.name}
+              {determineTeacher(subject.teacher)?.name}
             </Link>
             {subject.typeOfLesson === TypeOfLesson.PRACTICE ? (
               <div className="schedule-cell__lesson-type">Пр</div>

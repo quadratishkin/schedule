@@ -12,11 +12,12 @@ export enum TypeOfLesson {
 export interface ITeacher {
   id: number;
   name: string;
+  schedule: IScheduleDay[];
 }
 
 export interface ILesson {
   name: string;
-  teacher: ITeacher;
+  teacher: number;
   audience: string | number;
   week?: ParityWeek;
   typeOfLesson: TypeOfLesson;
@@ -37,6 +38,6 @@ export interface IGroup {
   id: number;
   courseNumber: number;
   typeOfEducation: string;
-  groupNumber: number;
-  // schedule: ISchedule;
+  groupNumber: string;
+  schedule: IScheduleDay[];
 }

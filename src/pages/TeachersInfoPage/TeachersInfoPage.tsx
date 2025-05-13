@@ -2,7 +2,6 @@ import { useParams } from "react-router";
 import { Schedule } from "../../components/Schedule";
 import { TEACHERS } from "../../data/teachers";
 import "./TeachersInfoPage.scss";
-import { scheduleTest } from "../../data/schedules";
 
 export const TeachersInfoPage = () => {
   const { teacherId } = useParams();
@@ -23,7 +22,7 @@ export const TeachersInfoPage = () => {
   return (
     <div className="teacherInfoPage">
       <p className="teacherInfoPage__name">{teacher.name}</p>
-      <Schedule scheduleTest={scheduleTest} />
+      <Schedule scheduleTest={teacher.schedule} />
     </div>
   );
 };
