@@ -34,12 +34,10 @@ a {
 
   &:hover,
   &:focus-visible {
-
+    @media (min-width: 1200px) {
     outline: none;
+    color: #b87d7d;
     transform: translateY(-5px);
-    @media (max-width: 1200px) {
-          color: #b87d7d;
-          transform: none;
     }
   }
 }
