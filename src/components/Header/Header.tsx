@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router";
 import "./Header.scss";
+import LOGO from "../../images/logo.svg";
 
 export const Header = () => {
   const [currentPage, setCurrentPage] = useState("main");
@@ -17,9 +18,11 @@ export const Header = () => {
 
   return (
     <header className="header">
-      <h1 className="app__header">
-        Расписание Челябинского Государственного Университета
-      </h1>
+      <img
+        className="header__image"
+        src={LOGO}
+        alt="Логотип Челябинского Государственного Университета"
+      />
 
       <nav className="navMenu">
         {currentPage === "main" ? (

@@ -1,9 +1,50 @@
+.header {
+  padding: 10px 20px;
+  position: relative;
+  margin: 0 0 30px;
+  min-height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+
+    @media (max-width: 1100px) {
+      position: relative;
+      transform: none;
+      margin: 0 20px 0 0;
+    }
+
+    @media (max-width: 600px) {
+      margin: 0 10px 0 0;
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    justify-content: unset;
+    padding: 10px 0;
+  }
+
+  @media (max-width: 600px) {
+    align-items: unset;
+  }
+}
+
 .navMenu {
   display: flex;
   justify-content: center;
   gap: 64px;
   border-radius: 10px;
-  margin: 0 0 30px;
+
+  @media (max-width: 1100px) {
+    gap: 20px;
+  }
 
   &__text {
     text-decoration: none;
@@ -17,16 +58,16 @@
 
     &--active {
       border-bottom: 1px solid #891311;
-      @media (max-width: 450px) {
+
+      @media (max-width: 600px) {
         border: 0;
         font-weight: 900;
       }
     }
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 600px) {
     gap: 5px;
-    margin: 0 0 60px;
     flex-direction: column;
   }
 }

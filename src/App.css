@@ -1,6 +1,9 @@
 .app {
   text-align: center;
   min-height: 100vh;
+  /* background-image: url("./images/theme.svg");
+  background-size: cover;
+  background-repeat: no-repeat; */
 }
 
 .app__header {
