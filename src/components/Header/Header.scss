@@ -32,7 +32,12 @@
   }
 
   @media (max-width: 600px) {
+    justify-content: space-between;
     align-items: unset;
+  }
+
+  @media (max-width: 400px) {
+    padding: 10px 20px;
   }
 }
 
@@ -59,10 +64,14 @@
     &--active {
       border-bottom: 1px solid #891311;
 
-      @media (max-width: 600px) {
+      @media (max-width: 700px) {
         border: 0;
         font-weight: 900;
       }
+    }
+
+    @media (max-width: 600px) {
+      text-align: right;
     }
   }
 
