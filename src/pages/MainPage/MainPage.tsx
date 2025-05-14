@@ -11,7 +11,7 @@ export const MainPage = () => {
       </h2>
       <div className="mainPage__img-block">
         <img
-          className="mainPage__img"
+          className="mainPage__img mainPage__img--first"
           src={First}
           alt="Первое изображение ЧелГУ"
         />
