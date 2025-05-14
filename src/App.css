@@ -1,9 +1,7 @@
 .app {
   text-align: center;
   min-height: 100vh;
-  /* background-image: url("./images/theme.svg");
-  background-size: cover;
-  background-repeat: no-repeat; */
+  background-image: url("./images/themeMy.webp");
 }
 
 .app__header {
@@ -21,4 +19,8 @@
 .app__wrapper {
   min-height: 100vh;
   height: 100%;
+}
+
+.content {
+  min-height: calc(100vh - 56px);
 }

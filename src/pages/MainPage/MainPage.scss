@@ -1,11 +1,56 @@
 .mainPage {
+  min-height: 800px;
   &__text {
-    margin: 0;
+    margin: 0 0 30px 0;
     padding: 0;
     font-family: OfficinaSansExtraBoldC;
     font-weight: 800;
     font-size: 24px;
     line-height: 100%;
     text-align: center;
+  }
+
+  &__img-block {
+    position: relative;
+    min-height: 800px;
+    @media (max-width: 1000px) {
+      min-height: 500px;
+    }
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: 30px;
+    top: 10px;
+
+    @media (max-width: 1000px) {
+      width: 500px;
+    }
+
+    @media (max-width: 600px) {
+      position: relative;
+      left: unset;
+      top: unset;
+      right: unset;
+      bottom: unset;
+      rotate: 1.8deg;
+    }
+
+    &--second {
+      left: unset;
+      top: unset;
+      right: 15px;
+      bottom: 10px;
+
+      @media (max-width: 600px) {
+        rotate: -3.27deg;
+        left: 2px;
+      }
+    }
   }
 }

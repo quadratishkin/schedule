@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router";
 import "./Header.scss";
-import LOGO from "../../images/logo.svg";
+import LOGO from "../../images/Logo.png";
 
 export const Header = () => {
   const [currentPage, setCurrentPage] = useState("main");
