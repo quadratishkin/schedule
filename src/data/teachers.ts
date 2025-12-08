@@ -253,4 +253,39 @@ export const TEACHERS: ITeacher[] = [
     name: "Бутько Л.Н.",
     schedule: scheduleTest,
   },
+  {
+    id: 30,
+    name: "Корецкая Т. П.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 31,
+    name: "Земцова Е. М.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 32,
+    name: "Черепанова Е. А.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 33,
+    name: "Тюрина И. А.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 34,
+    name: "Митина О.В.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 35,
+    name: "Панькин В.Е.",
+    schedule: scheduleTest,
+  },
+  {
+    id: 36,
+    name: "Шайхуллина П.А.",
+    schedule: scheduleTest,
+  },
 ];
