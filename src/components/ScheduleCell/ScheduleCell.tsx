@@ -19,6 +19,18 @@ export const ScheduleCell = ({
     return teacher;
   };
 
+  const renderLessonType = (type: TypeOfLesson) => {
+    switch (type) {
+      case TypeOfLesson.PRACTICE:
+        return <div className="schedule-cell__lesson-type">Пр</div>;
+      case TypeOfLesson.LAB:
+        return <div className="schedule-cell__lesson-type schedule-cell__lesson-type--lab">Лаб</div>;
+      case TypeOfLesson.LECTURE:
+      default:
+        return <div className="schedule-cell__lesson-type schedule-cell__lesson-type--lection">Лек</div>;
+    }
+  };
+
   if (isMobile) {
     if (isEven && scheduleLesson) {
       return (
@@ -37,15 +49,11 @@ export const ScheduleCell = ({
                   {determineTeacher(subject.teacher)?.name}
                 </Link>
               </div>
-              {subject.typeOfLesson === TypeOfLesson.PRACTICE ? (
-                <div className="schedule-cell__lesson-type">Пр</div>
-              ) : (
-                <div className="schedule-cell__lesson-type schedule-cell__lesson-type--lection">
-                  Лек
-                </div>
-              )}
+              
+              {renderLessonType(subject.typeOfLesson)}
+
               {subject.week !== ParityWeek.EVERYWEEK ? (
-                <div className="schedule-cell__week">{subject.week}</div>
+                <div className="schedule-cell__week" title="номер недели">{subject.week}</div>
               ) : null}
             </div>
           ))}
@@ -72,15 +80,11 @@ export const ScheduleCell = ({
                   {determineTeacher(subject.teacher)?.name}
                 </Link>
               </div>
-              {subject.typeOfLesson === TypeOfLesson.PRACTICE ? (
-                <div className="schedule-cell__lesson-type">Пр</div>
-              ) : (
-                <div className="schedule-cell__lesson-type schedule-cell__lesson-type--lection">
-                  Лек
-                </div>
-              )}
+
+              {renderLessonType(subject.typeOfLesson)}
+
               {subject.week !== ParityWeek.EVERYWEEK ? (
-                <div className="schedule-cell__week">{subject.week}</div>
+                <div className="schedule-cell__week" title="номер недели">{subject.week}</div>
               ) : null}
             </div>
           ))}
@@ -109,15 +113,11 @@ export const ScheduleCell = ({
               >
                 {determineTeacher(subject.teacher)?.name}
               </Link>
-              {subject.typeOfLesson === TypeOfLesson.PRACTICE ? (
-                <div className="schedule-cell__lesson-type">Пр</div>
-              ) : (
-                <div className="schedule-cell__lesson-type schedule-cell__lesson-type--lection">
-                  Лек
-                </div>
-              )}
+              
+              {renderLessonType(subject.typeOfLesson)}
+
               {subject.week !== ParityWeek.EVERYWEEK ? (
-                <div className="schedule-cell__week">{subject.week}</div>
+                <div className="schedule-cell__week" title="номер недели">{subject.week}</div>
               ) : null}
             </div>
           ))}
@@ -129,6 +129,7 @@ export const ScheduleCell = ({
       );
     }
   }
+  
   if (scheduleLesson) {
     return (
       <div className="schedule-cell__wrapper">
@@ -142,15 +143,11 @@ export const ScheduleCell = ({
             >
               {determineTeacher(subject.teacher)?.name}
             </Link>
-            {subject.typeOfLesson === TypeOfLesson.PRACTICE ? (
-              <div className="schedule-cell__lesson-type">Пр</div>
-            ) : (
-              <div className="schedule-cell__lesson-type schedule-cell__lesson-type--lection">
-                Лек
-              </div>
-            )}
+            
+            {renderLessonType(subject.typeOfLesson)}
+
             {subject.week !== ParityWeek.EVERYWEEK ? (
-              <div className="schedule-cell__week">{subject.week}</div>
+              <div className="schedule-cell__week" title="номер недели">{subject.week}</div>
             ) : null}
           </div>
         ))}

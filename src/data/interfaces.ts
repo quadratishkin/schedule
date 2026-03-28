@@ -1,12 +1,13 @@
 export enum ParityWeek {
-  EVEN = "EVEN",
-  ODD = "ODD",
+  EVEN = "2Н.",
+  ODD = "1Н.",
   EVERYWEEK = "EVERYWEEK",
 }
 
 export enum TypeOfLesson {
   LECTURE = "LECTURE",
   PRACTICE = "PRACTICE",
+  LAB = "LAB"
 }
 
 export interface ITeacher {

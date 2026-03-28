@@ -1,4 +1,4 @@
-import { useParams } from "react-router";
+import { useParams, Link } from "react-router";
 import "./GroupsInfoPage.scss";
 import { GROUPS } from "../../data/groups";
 import { Schedule } from "../../components/Schedule";
@@ -19,7 +19,12 @@ export const GroupsInfoPage = () => {
 
   return (
     <section className="groupInfoPage">
-      <p className="groupInfoPage__number">номер группы: {group.groupNumber}</p>
+      <div className="groupInfoPage__header">
+        <p className="groupInfoPage__number">{group.groupNumber}</p>
+        <Link to="/groups" className="groupInfoPage__back-btn">
+          &#8592; Назад
+        </Link>
+      </div>
       <Schedule scheduleTest={group.schedule} />
     </section>
   );

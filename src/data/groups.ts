@@ -1,1426 +1,3023 @@
 import { IGroup, ParityWeek, TypeOfLesson } from "./interfaces";
-import { scheduleTest } from "./schedules";
 
 export const GROUPS: IGroup[] = [
   {
     id: 0,
     courseNumber: 1,
     typeOfEducation: "Бакалавриат",
-    groupNumber: "ПИ-101",
-    schedule: scheduleTest,
+    groupNumber: "БИ 101",
+    schedule: [
+      {
+        first: [
+          {
+            name: "ПСИХОЛОГИЯ ЛИДЕРСТВА И КОМАНДООБРАЗОВАНИЕ",
+            teacher: 6,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        second: [
+          {
+            name: "ВВЕДЕНИЕ В НАПРАВЛЕНИЕ",
+            teacher: 39,
+            audience: "А-17",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "ПСИХОЛОГИЯ ЛИДЕРСТВА И КОМАНДООБРАЗОВАНИЕ",
+            teacher: 6,
+            audience: "А-17",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        third: [
+          {
+            name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ.ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
+            teacher: 36,
+            audience: "413",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "БЕЗОПАСНОСТЬ ЖИЗНЕДЕЯТЕЛЬНОСТИ",
+            teacher: 13,
+            audience: "201",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        third: [
+          {
+            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ . 4 корпус",
+            teacher: 35,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "ВВЕДЕНИЕ В НАПРАВЛЕНИЕ",
+            teacher: 39,
+            audience: "132",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        third: [
+          {
+            name: "ИНФОРМАТИКА И ПРОГРАММИРОВАНИЕ",
+            teacher: 2,
+            audience: "132",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        fourth: [
+          {
+            name: "ИСТОРИЯ РОССИИ",
+            teacher: 1,
+            audience: "427",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ИСТОРИЯ РОССИИ",
+            teacher: 9,
+            audience: "А-17",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        fifth: [
+          {
+            name: "ИНФОРМАТИКА И ПРОГРАММИРОВАНИЕ",
+            teacher: 2,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        first: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК",
+            teacher: 41,
+            audience: "027",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        second: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК",
+            teacher: 41,
+            audience: "027",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "ЭКОНОМИЧЕСКАЯ ТЕОРИЯ",
+            teacher: 42,
+            audience: "326",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        fourth: [
+          {
+            name: "ЭКОНОМИЧЕСКАЯ ТЕОРИЯ",
+            teacher: 42,
+            audience: "326",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "ЭКОНОМИЧЕСКАЯ ТЕОРИЯ",
+            teacher: 42,
+            audience: "326",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        first: [
+          {
+            name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ.ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
+            teacher: 36,
+            audience: "А-17",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        second: [
+          {
+            name: "ИНФОРМАТИКА И ПРОГРАММИРОВАНИЕ",
+            teacher: 2,
+            audience: "132",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "ИНФОРМАТИКА И ПРОГРАММИРОВАНИЕ",
+            teacher: 2,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        sixth: [
+          {
+            name: "ИСТОРИЯ РОССИИ (ОНЛАЙН-КУРС)",
+            teacher: 1,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "БЕЗОПАСНОСТЬ ЖИЗНЕДЕЯТЕЛЬНОСТИ (ОНЛАЙН-КУРС)",
+            teacher: 43,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      }
+    ]
   },
   {
     id: 1,
     courseNumber: 1,
     typeOfEducation: "Бакалавриат",
-    groupNumber: "БИ-101",
+    groupNumber: "ПИ 101",
     schedule: [
-    {
-      first: [
       {
-        name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
-        teacher: 31,
-        audience: 132,
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
+        first: [
+          {
+            name: "БЕЗОПАСНОСТЬ ЖИЗНЕДЕЯТЕЛЬНОСТИ",
+            teacher: 13,
+            audience: "109",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ПСИХОЛОГИЯ ЛИДЕРСТВА И КОМАНДООБРАЗОВАНИЕ",
+            teacher: 6,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        second: [
+          {
+            name: "ВВЕДЕНИЕ В НАПРАВЛЕНИЕ",
+            teacher: 39,
+            audience: "А-17",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "ПСИХОЛОГИЯ ЛИДЕРСТВА И КОМАНДООБРАЗОВАНИЕ",
+            teacher: 6,
+            audience: "А-17",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        third: [
+          {
+            name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ.ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
+            teacher: 0,
+            audience: "431",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "АРХИТЕКТУРА ВЫЧИСЛИТЕЛЬНЫХ СИСТЕМ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
       },
       {
-        name: "ИСТОРИЯ РОССИИ",
-        teacher: 1,
-        audience: 431,
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      second: [
-      {
-        name: "ОСНОВЫ РОССИЙСКОЙ ГОСУДАРСТВЕННОСТИ",
-        teacher: 30,
-        audience: 326,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ]
-    },
-    {
-      first: [
-      {
-        name: "ИНОСТРАННЫЙ ЯЗЫК",
-        teacher: 37,
-        audience: 132,
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      second: [
-      {
-        name: "ИНОСТРАННЫЙ ЯЗЫК",
-        teacher: 37,
-        audience: 132,
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      third: [
-      {
-        name: "ОСНОВЫ РОССИЙСКОЙ ГОСУДАРСТВЕННОСТИ",
-        teacher: 30,
-        audience: "А-13",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
+        third: [
+          {
+            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ . 4 корпус",
+            teacher: 35,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "ВВЕДЕНИЕ В НАПРАВЛЕНИЕ",
+            teacher: 39,
+            audience: "132",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
       },
       {
-        name: "ПРАВО",
-        teacher: 30,
-        audience: "А-13",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      fourth: [
-      {
-        name: "СОВР.ТЕХНОЛОГИИ ПОИСКА И ОБРАБОТКИ ИНФОРМАЦИИ",
-        teacher: 31,
-        audience: "А-17",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ]
-    },
-    {
-      first: [
-      {
-        name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
-        teacher: 31,
-        audience: 132,
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      second: [
-      {
-        name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
-        teacher: 31,
-        audience: 132,
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      third: [
-      {
-        name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
-        teacher: 32,
-        audience: 326,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      fourth: [
-      {
-        name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
-        teacher: 31,
-        audience: "А-15",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
+        third: [
+          {
+            name: "ИНФОРМАТИКА И ПРОГРАММИРОВАНИЕ",
+            teacher: 2,
+            audience: "132",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        fourth: [
+          {
+            name: "АРХИТЕКТУРА ВЫЧИСЛИТЕЛЬНЫХ СИСТЕМ",
+            teacher: 3,
+            audience: "А-17",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "ИСТОРИЯ РОССИИ",
+            teacher: 9,
+            audience: "А-17",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        fifth: [
+          {
+            name: "ИСТОРИЯ РОССИИ",
+            teacher: 1,
+            audience: "013",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ИНФОРМАТИКА И ПРОГРАММИРОВАНИЕ",
+            teacher: 2,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
       },
       {
-        name: "ИСТОРИЯ РОССИИ",
-        teacher: 9,
-        audience: "А-15",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ]
-    },
-    {
-      second: [
-      {
-        name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ",
-        teacher: 35,
-        audience: 100,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      third: [
-      {
-        name: "ЛИНЕЙНАЯ АЛГЕБРА И АНАЛИТИЧЕСКАЯ ГЕОМЕТРИЯ О.В.",
-        teacher: 34,
-        audience: "А-15",
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      fourth: [
-      {
-        name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
-        teacher: 36,
-        audience: "А-15",
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ]
-    },
-    {
-      first: [
-      {
-        name: "ИНОСТРАННЫЙ ЯЗЫК",
-        teacher: 37,
-        audience: 413,
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
+        first: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 8,
+            audience: "023",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        second: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 8,
+            audience: "023",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "ЭКОНОМИЧЕСКАЯ ТЕОРИЯ",
+            teacher: 42,
+            audience: "326",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        fourth: [
+          {
+            name: "ЭКОНОМИЧЕСКАЯ ТЕОРИЯ",
+            teacher: 42,
+            audience: "326",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
       },
       {
-        name: "СОВР.ТЕХНОЛОГИИ ПОИСКА И ОБРАБОТКИ ИНФОРМАЦИИ",
-        teacher: 31,
-        audience: 132,
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      second: [
+        first: [
+          {
+            name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ.ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
+            teacher: 36,
+            audience: "А-17",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        second: [
+          {
+            name: "ИНФОРМАТИКА И ПРОГРАММИРОВАНИЕ",
+            teacher: 2,
+            audience: "132",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "ИНФОРМАТИКА И ПРОГРАММИРОВАНИЕ",
+            teacher: 2,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
       {
-        name: "ЛИНЕЙНАЯ АЛГЕБРА И АНАЛИТИЧЕСКАЯ ГЕОМЕТРИЯ",
-        teacher: 33,
-        audience: 326,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
+        sixth: [
+          {
+            name: "ИСТОРИЯ РОССИИ (ОНЛАЙН-КУРС)",
+            teacher: 1,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "БЕЗОПАСНОСТЬ ЖИЗНЕДЕЯТЕЛЬНОСТИ (ОНЛАЙН-КУРС)",
+            teacher: 43,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
       }
-      ],
-      third: [
-      {
-        name: "ИНФОРМАТИКА И ПРОГРАММИРОВАНИЕ",
-        teacher: 2,
-        audience: 413,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      fourth: [
-      {
-        name: "ИНФОРМАТИКА И ПРОГРАММИРОВАНИЕ",
-        teacher: 2,
-        audience: "132А",
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ]
-    },
-    {
-      fifth: [
-      {
-        name: "ИСТОРИЯ РОССИИ ОНЛАЙН-КУРС",
-        teacher: 0,
-        audience: "",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      sixth: [
-      {
-        name: "ИСТОРИЯ РОССИИ ОНЛАЙН-КУРС https://moodle.uio.csu.ru/course/view.php?id=6422",
-        teacher: 1,
-        audience: "",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ]
-    }
-  ]
+    ]
   },
   {
     id: 2,
-    courseNumber: 2,
+    courseNumber: 1,
     typeOfEducation: "Бакалавриат",
-    groupNumber: "ПИ-201",
+    groupNumber: "ПрИ 101",
     schedule: [
       {
-        fourth: [
-        {
-          name: "Иностранный язык",
-          teacher: 8,
-          audience: "011",
-          week: ParityWeek.EVEN,
-          typeOfLesson: TypeOfLesson.PRACTICE,
-        },
-      ],
-      fifth: [
-        {
-          name: "Экономика фирмы и автоматизация учета",
-          teacher: 14,
-          audience: "132Б",
-          week: ParityWeek.EVERYWEEK,
-          typeOfLesson: TypeOfLesson.LECTURE,
-        },
-      ],
-      sixth: [
-        {
-          name: "Экономика фирмы и автоматизация учета",
-          teacher: 14,
-          audience: "132Б",
-          week: ParityWeek.EVERYWEEK,
-          typeOfLesson: TypeOfLesson.PRACTICE,
-        },
-      ],
-      seventh: [
-        {
-          name: "Архитектура предприятия и моделирование бизнес-процессов",
-          teacher: 14,
-          audience: "132Б",
-          week: ParityWeek.EVERYWEEK,
-          typeOfLesson: TypeOfLesson.PRACTICE,
-        },
-      ],
-      },
-      {
-        first: [
-          {
-            name: "Теория вероятностей и мат. статистика",
-            teacher: 0,
-            audience: "А-13",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.LECTURE,
-          },
-        ],
         second: [
           {
-            name: "Менеджмент в ИТ-сфере",
-            teacher: 15,
-            audience: "А-13",
+            name: "ВВЕДЕНИЕ В НАПРАВЛЕНИЕ",
+            teacher: 39,
+            audience: "А-17",
             week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.LECTURE,
+            typeOfLesson: TypeOfLesson.LECTURE
           },
           {
-            name: "Вычислительные системы, сети и телекоммуникации",
-            teacher: 3,
-            audience: "А-13",
+            name: "ПСИХОЛОГИЯ ЛИДЕРСТВА И КОМАНДООБРАЗОВАНИЕ",
+            teacher: 6,
+            audience: "А-17",
             week: ParityWeek.EVEN,
-            typeOfLesson: TypeOfLesson.LECTURE,
-          },
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
         ],
         third: [
           {
-            name: "Прикладная физическая культура",
-            teacher: 4,
-            audience: "100 (4К.)",
-            week: ParityWeek.EVERYWEEK,
-            typeOfLesson: TypeOfLesson.PRACTICE,
+            name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
+            teacher: 31,
+            audience: "А-15",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
           },
+          {
+            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ . 4 корпус",
+            teacher: 35,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
         ],
+        fourth: [
+          {
+            name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
+            teacher: 31,
+            audience: "326",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
+            teacher: 31,
+            audience: "326",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ПСИХОЛОГИЯ ЛИДЕРСТВА И КОМАНДООБРАЗОВАНИЕ БЕЗОПАСНОСТЬ ЖИЗНЕДЕЯТЕЛЬНОСТИ АУД. 109",
+            teacher: 6,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
       },
-    {},
-    {
-      first: [
-        {
-          name: "Иностранный язык",
-          teacher: 8,
-          audience: "429",
-          week: ParityWeek.ODD,
-          typeOfLesson: TypeOfLesson.PRACTICE,
-        },
-      ],
-      second: [
-        {
-          name: "Иностранный язык",
-          teacher: 8,
-          audience: "429",
-          week: ParityWeek.ODD,
-          typeOfLesson: TypeOfLesson.PRACTICE,
-        },
-      ],
-      fifth: [
-        {
-          name: "Архитектура предприятия и моделирование бизнес-процессов",
-          teacher: 14,
-          audience: "А-17",
-          week: ParityWeek.EVEN,
-          typeOfLesson: TypeOfLesson.LECTURE,
-        },
-      ],
-      sixth: [
-        {
-          name: "Вычислительные системы, сети и телекоммуникации",
-          teacher: 3,
-          audience: "132А",
-          week: ParityWeek.EVEN,
-          typeOfLesson: TypeOfLesson.PRACTICE,
-        },
-      ],
-      seventh: [
-        {
-          name: "Вычислительные системы, сети и телекоммуникации",
-          teacher: 3,
-          audience: "132А",
-          week: ParityWeek.EVEN,
-          typeOfLesson: TypeOfLesson.PRACTICE,
-        },
-      ],
-    },
-    {
-      third: [ 
-        {
-          name: "Менеджмент в ИТ-сфере",
-          teacher: 15,
-          audience: "326",
-          week: ParityWeek.EVEN,
-          typeOfLesson: TypeOfLesson.PRACTICE,
-        },
-      ],
-      fourth: [
-        {
-          name: "Объектно-ориентированный анализ и программирование",
-          teacher: 2,
-          audience: "132Б",
-          week: ParityWeek.EVERYWEEK,
-          typeOfLesson: TypeOfLesson.PRACTICE
-        },
-      ],
-      fifth: [
-        {
-          name: "Объектно-ориентированный анализ и программирование",
-          teacher: 16,
-          audience: "132Б",
-          week: ParityWeek.EVERYWEEK,
-          typeOfLesson: TypeOfLesson.LECTURE
-        },
-      ],
-      sixth: [ 
-        {
-          name: "Теория вероятностей и мат. статистика",
-          teacher: 17,
-          audience: "013",
-          week: ParityWeek.EVERYWEEK,
-          typeOfLesson: TypeOfLesson.PRACTICE
-        },
-      ],
-    },
-    {
-      first: [
-        {
-          name: "Базы и хранилища данных",
-          teacher: 18,
-          audience: "132",
-          week: ParityWeek.ODD,
-          typeOfLesson: TypeOfLesson.PRACTICE
-        },
-      ],
-      second: [
-        {
-          name: "Базы и хранилища данных",
-          teacher: 18,
-          audience: "132",
-          week: ParityWeek.ODD,
-          typeOfLesson: TypeOfLesson.PRACTICE
-        },
-      ],
-      third: [ 
-        {
-          name: "Базы и хранилища данных",
-          teacher: 18,
-          audience: "А-13",
-          week: ParityWeek.ODD,
-          typeOfLesson: TypeOfLesson.LECTURE
-        },
-      ],
-    },
-    ],
-  },
-  {
-    id: 3,
-    courseNumber: 3,
-    typeOfEducation: "Бакалавриат",
-    groupNumber: "ПИ-301",
-    schedule: [
       {
         first: [
           {
-            name: "Системный анализ и моделирование",
-            teacher: 19,
-            audience: "Дистанционно",
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
+            teacher: 44,
+            audience: "011",
             week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.LECTURE,
-          },
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
         ],
         second: [
           {
-            name: "Системный анализ и моделирование",
-            teacher: 19,
-            audience: "Дистанционно",
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
+            teacher: 44,
+            audience: "011",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 44,
+            audience: "013",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 44,
+            audience: "013",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        fourth: [
+          {
+            name: "АРХИТЕКТУРА ВЫЧИСЛИТЕЛЬНЫХ СИСТЕМ",
+            teacher: 3,
+            audience: "А-17",
             week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.PRACTICE,
+            typeOfLesson: TypeOfLesson.LECTURE
           },
-        ],
-        seventh: [
           {
-            name: "Корпоративные информационные системы",
-            teacher: 20,
-            audience: "132А",
+            name: "ИСТОРИЯ РОССИИ",
+            teacher: 9,
+            audience: "А-17",
             week: ParityWeek.EVEN,
-            typeOfLesson: TypeOfLesson.PRACTICE,
-          },
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
         ],
-        eighth: [
-          {
-            name: "Корпоративные информационные системы",
-            teacher: 20,
-            audience: "132А",
-            week: ParityWeek.EVEN,
-            typeOfLesson: TypeOfLesson.PRACTICE,
-          },
-        ],
-      },
-      {
-        seventh: [
-          {
-            name: "Управление ИТ-проектами и жизненным циклом ПО",
-            teacher: 21,
-            audience: "А-25",
-            week: ParityWeek.EVERYWEEK,
-            typeOfLesson: TypeOfLesson.LECTURE,
-          },
-        ],
-        eighth: [
-          {
-            name: "Управление ИТ-проектами и жизненным циклом ПО",
-            teacher: 21,
-            audience: "А-25",
-            week: ParityWeek.EVERYWEEK,
-            typeOfLesson: TypeOfLesson.PRACTICE,
-          },
-        ],
-      },
-      {
-        seventh: [
-          {
-            name: "Машинное обучение и интеллектуальный анализ данных",
-            teacher: 21,
-            audience: "Дистанционно",
-            week: ParityWeek.EVERYWEEK,
-            typeOfLesson: TypeOfLesson.LECTURE,
-          },
-        ],
-        eighth: [
-          {
-            name: "Машинное обучение и интеллектуальный анализ данных",
-            teacher: 21,
-            audience: "Дистанционно",
-            week: ParityWeek.EVERYWEEK,
-            typeOfLesson: TypeOfLesson.PRACTICE,
-          },
-        ],
-      },
-      {},
-      {
         fifth: [
           {
-            name: "Архитектура предприятия и моделирование бизнес-процессов",
-            teacher: 14,
-            audience: "326",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.LECTURE,
-          },
-          {
-            name: "Интернет-маркетинг",
-            teacher: 22,
-            audience: "326",
-            week: ParityWeek.EVEN,
-            typeOfLesson: TypeOfLesson.LECTURE,
-          },
+            name: "АРХИТЕКТУРА ВЫЧИСЛИТЕЛЬНЫХ СИСТЕМ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
         ],
         sixth: [
           {
-            name: "Архитектура предприятия и моделирование бизнес-процессов",
-            teacher: 14,
-            audience: "326",
+            name: "ИСТОРИЯ РОССИИ",
+            teacher: 1,
+            audience: "427",
             week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.PRACTICE,
-          },
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        first: [
           {
-            name: "Интернет-маркетинг",
-            teacher: 22,
-            audience: "326",
-            week: ParityWeek.EVEN,
-            typeOfLesson: TypeOfLesson.PRACTICE,
-          },
-        ],
-        seventh: [
-          {
-            name: "Архитектура предприятия и моделирование бизнес-процессов",
-            teacher: 14,
-            audience: "326",
+            name: "ВВЕДЕНИЕ В НАПРАВЛЕНИЕ",
+            teacher: 39,
+            audience: "132А",
             week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.PRACTICE,
-          },
-          {
-            name: "Интернет-маркетинг",
-            teacher: 22,
-            audience: "326",
-            week: ParityWeek.EVEN,
-            typeOfLesson: TypeOfLesson.PRACTICE,
-          },
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
         ],
-        eighth: [
+        second: [
           {
-            name: "Корпоративные информационные системы",
-            teacher: 20,
-            audience: "200",
+            name: "ВВЕДЕНИЕ В НАПРАВЛЕНИЕ",
+            teacher: 39,
+            audience: "132А",
             week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.LECTURE,
-          },
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        first: [
+          {
+            name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ.ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
+            teacher: 36,
+            audience: "А-17",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
         ],
+        second: [
+          {
+            name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ.ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
+            teacher: 0,
+            audience: "432",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ . 4 корпус",
+            teacher: 35,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
       },
       {
         third: [
           {
-            name: "Анализ данных",
-            teacher: 23,
-            audience: "Дистанционно",
+            name: "ПРОГРАММИРОВАНИЕ",
+            teacher: 45,
+            audience: "А-17",
             week: ParityWeek.EVEN,
-            typeOfLesson: TypeOfLesson.LECTURE,
-          },
-        ],
-        fourth: [
-          {
-            name: "Анализ данных",
-            teacher: 23,
-            audience: "Дистанционно",
-            week: ParityWeek.EVEN,
-            typeOfLesson: TypeOfLesson.PRACTICE,
-          },
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
         ],
         fifth: [
           {
-            name: "Анализ данных",
-            teacher: 23,
-            audience: "Дистанционно",
-            week: ParityWeek.EVEN,
-            typeOfLesson: TypeOfLesson.PRACTICE,
-          },
+            name: "ПРОГРАММИРОВАНИЕ",
+            teacher: 45,
+            audience: "132А",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
         ],
+        sixth: [
+          {
+            name: "ПРОГРАММИРОВАНИЕ",
+            teacher: 45,
+            audience: "132А",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        seventh: [
+          {
+            name: "ИСТОРИЯ РОССИИ (ОНЛАЙН-КУРС)",
+            teacher: 1,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "БЕЗОПАСНОСТЬ ЖИЗНЕДЕЯТЕЛЬНОСТИ (ОНЛАЙН-КУРС)",
+            teacher: 43,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 3,
+    courseNumber: 1,
+    typeOfEducation: "Бакалавриат",
+    groupNumber: "ПрИ 102",
+    schedule: [
+      {
+        first: [
+          {
+            name: "ВВЕДЕНИЕ В НАПРАВЛЕНИЕ",
+            teacher: 39,
+            audience: "326",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        second: [
+          {
+            name: "ВВЕДЕНИЕ В НАПРАВЛЕНИЕ",
+            teacher: 39,
+            audience: "А-17",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "ПСИХОЛОГИЯ ЛИДЕРСТВА И КОМАНДООБРАЗОВАНИЕ БЕЗОПАСНОСТЬ ЖИЗНЕДЕЯТЕЛЬНОСТИ АУД. А-17",
+            teacher: 6,
+            audience: "А-17",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        third: [
+          {
+            name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
+            teacher: 31,
+            audience: "А-15",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
+            teacher: 31,
+            audience: "326",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ . 4 корпус",
+            teacher: 35,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ПСИХОЛОГИЯ ЛИДЕРСТВА И КОМАНДООБРАЗОВАНИЕ",
+            teacher: 6,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
       },
-    ],
+      {
+        first: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
+            teacher: 44,
+            audience: "025",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 10,
+            audience: "027",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        second: [
+          {
+            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ . 4 корпус",
+            teacher: 35,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        third: [
+          {
+            name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
+            teacher: 31,
+            audience: "326",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "АРХИТЕКТУРА ВЫЧИСЛИТЕЛЬНЫХ СИСТЕМ",
+            teacher: 3,
+            audience: "А-17",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "ИСТОРИЯ РОССИИ",
+            teacher: 9,
+            audience: "А-17",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        fifth: [
+          {
+            name: "ИСТОРИЯ РОССИИ",
+            teacher: 1,
+            audience: "427",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        first: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
+            teacher: 44,
+            audience: "425",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        second: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
+            teacher: 44,
+            audience: "425",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        first: [
+          {
+            name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ.ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
+            teacher: 36,
+            audience: "А-17",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        second: [
+          {
+            name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ.ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
+            teacher: 36,
+            audience: "425",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "АРХИТЕКТУРА ВЫЧИСЛИТЕЛЬНЫХ СИСТЕМ",
+            teacher: 3,
+            audience: "326",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        third: [
+          {
+            name: "ПРОГРАММИРОВАНИЕ",
+            teacher: 45,
+            audience: "132А",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ПРОГРАММИРОВАНИЕ",
+            teacher: 45,
+            audience: "А-17",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        fourth: [
+          {
+            name: "ПРОГРАММИРОВАНИЕ",
+            teacher: 45,
+            audience: "132А",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        seventh: [
+          {
+            name: "ИСТОРИЯ РОССИИ (ОНЛАЙН-КУРС)",
+            teacher: 1,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "БЕЗОПАСНОСТЬ ЖИЗНЕДЕЯТЕЛЬНОСТИ (ОНЛАЙН-КУРС)",
+            teacher: 43,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      }
+    ]
   },
   {
     id: 4,
     courseNumber: 1,
     typeOfEducation: "Бакалавриат",
-    groupNumber: "ПрИ-101",
+    groupNumber: "ПрИ 103",
     schedule: [
-    {
-      first: [
       {
-        name: "ИСТОРИЯ РОССИИ",
-        teacher: 1,
-        audience: 432,
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
+        second: [
+          {
+            name: "ВВЕДЕНИЕ В НАПРАВЛЕНИЕ",
+            teacher: 39,
+            audience: "А-17",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "ПСИХОЛОГИЯ ЛИДЕРСТВА И КОМАНДООБРАЗОВАНИЕ",
+            teacher: 6,
+            audience: "А-17",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        third: [
+          {
+            name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
+            teacher: 31,
+            audience: "А-15",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "ПСИХОЛОГИЯ ЛИДЕРСТВА И КОМАНДООБРАЗОВАНИЕ БЕЗОПАСНОСТЬ ЖИЗНЕДЕЯТЕЛЬНОСТИ АУД. 201",
+            teacher: 6,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ.ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
+            teacher: 32,
+            audience: "432",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ . 4 корпус",
+            teacher: 35,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
       },
       {
-        name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ",
-        teacher: 35,
-        audience: 100,
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      second: [
-      {
-        name: "ЛИНЕЙНАЯ АЛГЕБРА И АНАЛИТИЧЕСКАЯ ГЕОМЕТРИЯ",
-        teacher: 33,
-        audience: 427,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      third: [
-      {
-        name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ",
-        teacher: 35,
-        audience: 100,
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ]
-    },
-    {
-      first: [
-      {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
-        teacher: 25,
-        audience: 337,
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
+        second: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
       },
       {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
-        teacher: 25,
-        audience: 337,
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      second: [
-      {
-        name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
-        teacher: 31,
-        audience: 326,
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
+        third: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "АРХИТЕКТУРА ВЫЧИСЛИТЕЛЬНЫХ СИСТЕМ",
+            teacher: 3,
+            audience: "А-17",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "ИСТОРИЯ РОССИИ",
+            teacher: 9,
+            audience: "А-17",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        fifth: [
+          {
+            name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
+            teacher: 31,
+            audience: "326",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        sixth: [
+          {
+            name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
+            teacher: 31,
+            audience: "326",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ИСТОРИЯ РОССИИ",
+            teacher: 1,
+            audience: "427",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
       },
       {
-        name: "ФИЗИКА",
-        teacher: 29,
-        audience: "А-13",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      third: [
-      {
-        name: "ОСНОВЫ РОССИЙСКОЙ ГОСУДАРСТВЕННОСТИ",
-        teacher: 30,
-        audience: "А-13",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
+        first: [
+          {
+            name: "ВВЕДЕНИЕ В НАПРАВЛЕНИЕ",
+            teacher: 39,
+            audience: "132А",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        second: [
+          {
+            name: "ВВЕДЕНИЕ В НАПРАВЛЕНИЕ",
+            teacher: 39,
+            audience: "132А",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
       },
       {
-        name: "ПРАВО",
-        teacher: 30,
-        audience: "А-13",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      fourth: [
-      {
-        name: "СОВР.ТЕХНОЛОГИИ ПОИСКА И ОБРАБОТКИ ИНФОРМАЦИИ",
-        teacher: 31,
-        audience: "А-17",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ]
-    },
-    {
-      second: [
-      {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
-        teacher: 25,
-        audience: 431,
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      third: [
-      {
-        name: "СОВР.ТЕХНОЛОГИИ ПОИСКА И ОБРАБОТКИ ИНФОРМАЦИИ",
-        teacher: 31,
-        audience: 132,
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
+        first: [
+          {
+            name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ.ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
+            teacher: 36,
+            audience: "А-17",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        second: [
+          {
+            name: "АРХИТЕКТУРА ВЫЧИСЛИТЕЛЬНЫХ СИСТЕМ",
+            teacher: 3,
+            audience: "326",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
       },
       {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
-        teacher: 25,
-        audience: "332А",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
+        fourth: [
+          {
+            name: "ПРОГРАММИРОВАНИЕ (ЛЕК+)",
+            teacher: 27,
+            audience: "326",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "ПРОГРАММИРОВАНИЕ",
+            teacher: 27,
+            audience: "326",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        seventh: [
+          {
+            name: "ИСТОРИЯ РОССИИ (ОНЛАЙН-КУРС)",
+            teacher: 1,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "БЕЗОПАСНОСТЬ ЖИЗНЕДЕЯТЕЛЬНОСТИ (ОНЛАЙН-КУРС)",
+            teacher: 43,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
       }
-      ],
-      fourth: [
-      {
-        name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
-        teacher: 31,
-        audience: "А-15",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      },
-      {
-        name: "ИСТОРИЯ РОССИИ",
-        teacher: 9,
-        audience: "А-15",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      fifth: [
-      {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
-        teacher: 25,
-        audience: "132Б",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      sixth: [
-      {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
-        teacher: 25,
-        audience: "132Б",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ]
-    },
-    {
-      third: [
-      {
-        name: "ЛИНЕЙНАЯ АЛГЕБРА И АНАЛИТИЧЕСКАЯ ГЕОМЕТРИЯ О.В.",
-        teacher: 34,
-        audience: "А-15",
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      fourth: [
-      {
-        name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
-        teacher: 36,
-        audience: "А-15",
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      fifth: [
-      {
-        name: "ОСНОВЫ РОССИЙСКОЙ ГОСУДАРСТВЕННОСТИ",
-        teacher: 30,
-        audience: 425,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ]
-    },
-    {
-      third: [
-      {
-        name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
-        teacher: 31,
-        audience: "132А",
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      fourth: [
-      {
-        name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
-        teacher: 0,
-        audience: 413,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      fifth: [
-      {
-        name: "ФИЗИКА",
-        teacher: 29,
-        audience: 132,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ]
-    },
-    {
-      first: [
-      {
-        name: "ИНФОРМАТИКА ТЕРЮХИН А.Е.",
-        teacher: 0,
-        audience: "132А",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      second: [
-      {
-        name: "ИНФОРМАТИКА ТЕРЮХИН А.Е.",
-        teacher: 0,
-        audience: "А-15",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      third: [
-      {
-        name: "ПРОГРАММИРОВАНИЕ БАБИН И.К.",
-        teacher: 0,
-        audience: "А-13",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      fifth: [
-      {
-        name: "ПРОГРАММИРОВАНИЕ БАБИН И.К.",
-        teacher: 0,
-        audience: "",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      sixth: [
-      {
-        name: "ИСТОРИЯ РОССИИ ОНЛАЙН-КУРС https://moodle.uio.csu.ru/course/view.php?id=6422",
-        teacher: 1,
-        audience: "",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      },
-      {
-        name: "ПРОГРАММИРОВАНИЕ",
-        teacher: 0,
-        audience: "",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ]
-    }
-  ]
+    ]
   },
   {
     id: 5,
-    courseNumber: 1,
+    courseNumber: 2,
     typeOfEducation: "Бакалавриат",
-    groupNumber: "ПрИ-102",
+    groupNumber: "БИ 201",
     schedule: [
-    {
-      second: [
       {
-        name: "ИСТОРИЯ РОССИИ",
-        teacher: 1,
-        audience: 432,
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      third: [
-      {
-        name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
-        teacher: 31,
-        audience: 132,
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      fourth: [
-      {
-        name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
-        teacher: 31,
-        audience: 132,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      fifth: [
-      {
-        name: "ЛИНЕЙНАЯ АЛГЕБРА И АНАЛИТИЧЕСКАЯ ГЕОМЕТРИЯ О.В.",
-        teacher: 34,
-        audience: "351А",
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ]
-    },
-    {
-      first: [
-      {
-        name: "ОСНОВЫ РОССИЙСКОЙ ГОСУДАРСТВЕННОСТИ",
-        teacher: 30,
-        audience: 429,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      second: [
-      {
-        name: "ФИЗИКА",
-        teacher: 29,
-        audience: 132,
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
+        first: [
+          {
+            name: "ТЕОРИЯ ВЕРОЯТНОСТЕЙ И МАТЕМАТИЧЕСКАЯ СТАТИСТИКА",
+            teacher: 0,
+            audience: "А-13",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        second: [
+          {
+            name: "ВЫЧИСЛИТЕЛЬНЫЕ СИСТЕМЫ СЕТИ И ТЕЛЕКОММУНИКАЦИИ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LAB
+          }
+        ],
+        third: [
+          {
+            name: "ВЫЧИСЛИТЕЛЬНЫЕ СИСТЕМЫ СЕТИ И ТЕЛЕКОММУНИКАЦИИ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LAB
+          }
+        ],
+        fourth: [
+          {
+            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА . 4 корпус",
+            teacher: 35,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "ЭКОНОМИКА ФИРМЫ И АВТОМАТИЗАЦИЯ УЧЕТА",
+            teacher: 14,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        sixth: [
+          {
+            name: "ЭКОНОМИКА ФИРМЫ И АВТОМАТИЗАЦИЯ УЧЕТА",
+            teacher: 14,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        seventh: [
+          {
+            name: "АРХИТЕКТУРА ПРЕДПРИЯТИЯ И МОДЕЛИРОВАНИЕ БИЗНЕС-ПРОЦЕССОВ",
+            teacher: 14,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
       },
       {
-        name: "ФИЗИКА",
-        teacher: 29,
-        audience: "А-13",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      third: [
+        fourth: [
+          {
+            name: "МЕНЕДЖМЕНТ В ИТ-СФЕРЕ",
+            teacher: 15,
+            audience: "326",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "ЭКОНОМИКА ФИРМЫ И АВТОМАТИЗАЦИЯ УЧЕТА",
+            teacher: 14,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        sixth: [
+          {
+            name: "ЭКОНОМИКА ФИРМЫ И АВТОМАТИЗАЦИЯ УЧЕТА",
+            teacher: 14,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        eighth: [
+          {
+            name: "ВЫЧИСЛИТЕЛЬНЫЕ СИСТЕМЫ СЕТИ И ТЕЛЕКОММУНИКАЦИИ (ОНЛАЙН-КУРС)",
+            teacher: 3,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      },
+      {},
       {
-        name: "ОСНОВЫ РОССИЙСКОЙ ГОСУДАРСТВЕННОСТИ",
-        teacher: 30,
-        audience: "А-13",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
+        second: [
+          {
+            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА . 4 корпус",
+            teacher: 35,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "ТЕОРИЯ ВЕРОЯТНОСТЕЙ И МАТЕМАТИЧЕСКАЯ СТАТИСТИКА",
+            teacher: 0,
+            audience: "132",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК",
+            teacher: 46,
+            audience: "011",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "МЕНЕДЖМЕНТ В ИТ-СФЕРЕ",
+            teacher: 15,
+            audience: "А-25",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
       },
       {
-        name: "ПРАВО",
-        teacher: 30,
-        audience: "А-13",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      fourth: [
-      {
-        name: "СОВР.ТЕХНОЛОГИИ ПОИСКА И ОБРАБОТКИ ИНФОРМАЦИИ",
-        teacher: 31,
-        audience: "А-17",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ]
-    },
-    {
-      second: [
-      {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
-        teacher: 10,
-        audience: "132Б",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      third: [
-      {
-        name: "СОВР.ТЕХНОЛОГИИ ПОИСКА И ОБРАБОТКИ ИНФОРМАЦИИ",
-        teacher: 31,
-        audience: 132,
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
+        second: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК",
+            teacher: 46,
+            audience: "431",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "ОБЪЕКТНО-ОРИЕНТИРОВАННЫЙ АНАЛИЗ И ПРОГРАММИРОВАНИЕ",
+            teacher: 2,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "ОБЪЕКТНО-ОРИЕНТИРОВАННЫЙ АНАЛИЗ И ПРОГРАММИРОВАНИЕ",
+            teacher: 2,
+            audience: "132",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "ОБЪЕКТНО-ОРИЕНТИРОВАННЫЙ АНАЛИЗ И ПРОГРАММИРОВАНИЕ",
+            teacher: 16,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "АРХИТЕКТУРА ПРЕДПРИЯТИЯ И МОДЕЛИРОВАНИЕ БИЗНЕС-ПРОЦЕССОВ",
+            teacher: 14,
+            audience: "А-13",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        sixth: [
+          {
+            name: "АРХИТЕКТУРА ПРЕДПРИЯТИЯ И МОДЕЛИРОВАНИЕ БИЗНЕС-ПРОЦЕССОВ",
+            teacher: 14,
+            audience: "326",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
       },
       {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
-        teacher: 10,
-        audience: "132Б",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
+        first: [
+          {
+            name: "БАЗЫ И ХРАНИЛИЩА ДАННЫХ ОДАВАТЕЛЬ",
+            teacher: 18,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        second: [
+          {
+            name: "БАЗЫ И ХРАНИЛИЩА ДАННЫХ ОДАВАТЕЛЬ",
+            teacher: 18,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "БАЗЫ И ХРАНИЛИЩА ДАННЫХ ОДАВАТЕЛЬ",
+            teacher: 18,
+            audience: "А-15",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
       }
-      ],
-      fourth: [
-      {
-        name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
-        teacher: 31,
-        audience: "А-15",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      },
-      {
-        name: "ИСТОРИЯ РОССИИ",
-        teacher: 9,
-        audience: "А-15",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      fifth: [
-      {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
-        teacher: 25,
-        audience: "132Б",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      sixth: [
-      {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
-        teacher: 25,
-        audience: "132Б",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ]
-    },
-    {
-      third: [
-      {
-        name: "ЛИНЕЙНАЯ АЛГЕБРА И АНАЛИТИЧЕСКАЯ ГЕОМЕТРИЯ О.В.",
-        teacher: 34,
-        audience: "А-15",
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      fourth: [
-      {
-        name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
-        teacher: 36,
-        audience: "А-15",
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      fifth: [
-      {
-        name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
-        teacher: 36,
-        audience: 431,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ]
-    },
-    {
-      second: [
-      {
-        name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ",
-        teacher: 35,
-        audience: 100,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      third: [
-      {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
-        teacher: 25,
-        audience: 337,
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      },
-      {
-        name: "ФИЗИКА",
-        teacher: 29,
-        audience: 132,
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      },
-      {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
-        teacher: 10,
-        audience: "132Б",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ]
-    },
-    {
-      second: [
-      {
-        name: "ИНФОРМАТИКА ТЕРЮХИН А.Е.",
-        teacher: 0,
-        audience: "А-15",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      third: [
-      {
-        name: "ПРОГРАММИРОВАНИЕ БАБИН И.К.",
-        teacher: 0,
-        audience: "А-13",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      },
-      {
-        name: "ПРОГРАММИРОВАНИЕ БАБИН И.К.",
-        teacher: 0,
-        audience: "",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      fourth: [
-      {
-        name: "ИНФОРМАТИКА ТЕРЮХИН А.Е.",
-        teacher: 0,
-        audience: "132А",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      },
-      {
-        name: "ПРОГРАММИРОВАНИЕ БАБИН И.К.",
-        teacher: 0,
-        audience: "",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      sixth: [
-      {
-        name: "ИСТОРИЯ РОССИИ ОНЛАЙН-КУРС https://moodle.uio.csu.ru/course/view.php?id=6422",
-        teacher: 1,
-        audience: "",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ]
-    }
-  ]
+    ]
   },
   {
     id: 6,
-    courseNumber: 1,
+    courseNumber: 2,
     typeOfEducation: "Бакалавриат",
-    groupNumber: "ПрИ-103",
+    groupNumber: "ПИ 201",
     schedule: [
-    {
-      first: [
       {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
-        teacher: 10,
-        audience: "132Б",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
+        first: [
+          {
+            name: "ТЕОРИЯ ВЕРОЯТНОСТЕЙ И МАТЕМАТИЧЕСКАЯ СТАТИСТИКА",
+            teacher: 0,
+            audience: "А-13",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        second: [
+          {
+            name: "ВЫЧИСЛИТЕЛЬНЫЕ СИСТЕМЫ СЕТИ И ТЕЛЕКОММУНИКАЦИИ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LAB
+          }
+        ],
+        third: [
+          {
+            name: "ВЫЧИСЛИТЕЛЬНЫЕ СИСТЕМЫ СЕТИ И ТЕЛЕКОММУНИКАЦИИ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LAB
+          }
+        ],
+        fourth: [
+          {
+            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА . 4 корпус",
+            teacher: 35,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "ЭКОНОМИКА ФИРМЫ И АВТОМАТИЗАЦИЯ УЧЕТА",
+            teacher: 14,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        sixth: [
+          {
+            name: "ЭКОНОМИКА ФИРМЫ И АВТОМАТИЗАЦИЯ УЧЕТА",
+            teacher: 14,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        seventh: [
+          {
+            name: "АРХИТЕКТУРА ПРЕДПРИЯТИЯ И МОДЕЛИРОВАНИЕ БИЗНЕС-ПРОЦЕССОВ",
+            teacher: 14,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
       },
       {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
-        teacher: 10,
-        audience: "132Б",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      second: [
+        first: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 8,
+            audience: "109",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        second: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 8,
+            audience: "109",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "МЕНЕДЖМЕНТ В ИТ-СФЕРЕ",
+            teacher: 15,
+            audience: "326",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "ЭКОНОМИКА ФИРМЫ И АВТОМАТИЗАЦИЯ УЧЕТА",
+            teacher: 14,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        sixth: [
+          {
+            name: "ЭКОНОМИКА ФИРМЫ И АВТОМАТИЗАЦИЯ УЧЕТА",
+            teacher: 14,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        eighth: [
+          {
+            name: "ВЫЧИСЛИТЕЛЬНЫЕ СИСТЕМЫ СЕТИ И ТЕЛЕКОММУНИКАЦИИ (ОНЛАЙН-КУРС)",
+            teacher: 3,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      },
+      {},
       {
-        name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
-        teacher: 31,
-        audience: 132,
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
+        second: [
+          {
+            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА . 4 корпус",
+            teacher: 35,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "ТЕОРИЯ ВЕРОЯТНОСТЕЙ И МАТЕМАТИЧЕСКАЯ СТАТИСТИКА",
+            teacher: 0,
+            audience: "132",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
+            teacher: 46,
+            audience: "011",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 8,
+            audience: "109",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "МЕНЕДЖМЕНТ В ИТ-СФЕРЕ",
+            teacher: 15,
+            audience: "А-25",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
       },
       {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
-        teacher: 10,
-        audience: "132Б",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      third: [
-      {
-        name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
-        teacher: 31,
-        audience: 132,
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      fourth: [
-      {
-        name: "ИСТОРИЯ РОССИИ",
-        teacher: 1,
-        audience: 326,
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ]
-    },
-    {
-      second: [
-      {
-        name: "ФИЗИКА",
-        teacher: 29,
-        audience: "А-13",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      third: [
-      {
-        name: "ОСНОВЫ РОССИЙСКОЙ ГОСУДАРСТВЕННОСТИ",
-        teacher: 30,
-        audience: "А-13",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
+        second: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
+            teacher: 46,
+            audience: "431",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "ОБЪЕКТНО-ОРИЕНТИРОВАННЫЙ АНАЛИЗ И ПРОГРАММИРОВАНИЕ",
+            teacher: 2,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "ОБЪЕКТНО-ОРИЕНТИРОВАННЫЙ АНАЛИЗ И ПРОГРАММИРОВАНИЕ",
+            teacher: 2,
+            audience: "132",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "ОБЪЕКТНО-ОРИЕНТИРОВАННЫЙ АНАЛИЗ И ПРОГРАММИРОВАНИЕ",
+            teacher: 16,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "АРХИТЕКТУРА ПРЕДПРИЯТИЯ И МОДЕЛИРОВАНИЕ БИЗНЕС-ПРОЦЕССОВ",
+            teacher: 14,
+            audience: "А-13",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        sixth: [
+          {
+            name: "АРХИТЕКТУРА ПРЕДПРИЯТИЯ И МОДЕЛИРОВАНИЕ БИЗНЕС-ПРОЦЕССОВ",
+            teacher: 14,
+            audience: "326",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
       },
       {
-        name: "ПРАВО",
-        teacher: 30,
-        audience: "А-13",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.LECTURE,
+        first: [
+          {
+            name: "БАЗЫ И ХРАНИЛИЩА ДАННЫХ ОДАВАТЕЛЬ",
+            teacher: 18,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        second: [
+          {
+            name: "БАЗЫ И ХРАНИЛИЩА ДАННЫХ ОДАВАТЕЛЬ",
+            teacher: 18,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "БАЗЫ И ХРАНИЛИЩА ДАННЫХ ОДАВАТЕЛЬ",
+            teacher: 18,
+            audience: "А-15",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
       }
-      ],
-      fourth: [
-      {
-        name: "СОВР.ТЕХНОЛОГИИ ПОИСКА И ОБРАБОТКИ ИНФОРМАЦИИ + ПР",
-        teacher: 31,
-        audience: "А-17",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      fifth: [
-      {
-        name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
-        teacher: 31,
-        audience: 132,
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ]
-    },
-    {
-      first: [
-      {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
-        teacher: 0,
-        audience: "",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      second: [
-      {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
-        teacher: 10,
-        audience: "132Б",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      third: [
-      {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
-        teacher: 10,
-        audience: "132Б",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      fourth: [
-      {
-        name: "ДИСКРЕТНАЯ МАТЕМАТИКА",
-        teacher: 31,
-        audience: "А-15",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      },
-      {
-        name: "ИСТОРИЯ РОССИИ",
-        teacher: 9,
-        audience: "А-15",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      fifth: [
-      {
-        name: "ЛИНЕЙНАЯ АЛГЕБРА И АНАЛИТИЧЕСКАЯ ГЕОМЕТРИЯ О.В.",
-        teacher: 34,
-        audience: 200,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ]
-    },
-    {
-      first: [
-      {
-        name: "ФИЗИКА",
-        teacher: 29,
-        audience: 132,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      second: [
-      {
-        name: "ОСНОВЫ РОССИЙСКОЙ ГОСУДАРСТВЕННОСТИ",
-        teacher: 30,
-        audience: 431,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      third: [
-      {
-        name: "ЛИНЕЙНАЯ АЛГЕБРА И АНАЛИТИЧЕСКАЯ ГЕОМЕТРИЯ О.В.",
-        teacher: 34,
-        audience: "А-15",
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      fourth: [
-      {
-        name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
-        teacher: 36,
-        audience: "А-15",
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ]
-    },
-    {
-      first: [
-      {
-        name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ",
-        teacher: 35,
-        audience: 100,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      second: [
-      {
-        name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ",
-        teacher: 32,
-        audience: 431,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      third: [
-      {
-        name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
-        teacher: 10,
-        audience: "132Б",
-        week: ParityWeek.EVEN,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ]
-    },
-    {
-      second: [
-      {
-        name: "ИНФОРМАТИКА ТЕРЮХИН А.Е.",
-        teacher: 0,
-        audience: "А-15",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      third: [
-      {
-        name: "ИНФОРМАТИКА ТЕРЮХИН А.Е.",
-        teacher: 0,
-        audience: "132А",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      fourth: [
-      {
-        name: "ПРОГРАММИРОВАНИЕ 1-8 НЕД",
-        teacher: 27,
-        audience: 132,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ],
-      fifth: [
-      {
-        name: "ПРОГРАММИРОВАНИЕ",
-        teacher: 27,
-        audience: 132,
-        week: ParityWeek.EVERYWEEK,
-        typeOfLesson: TypeOfLesson.PRACTICE,
-      }
-      ],
-      sixth: [
-      {
-        name: "ИСТОРИЯ РОССИИ ОНЛАЙН-КУРС https://moodle.uio.csu.ru/course/view.php?id=6422",
-        teacher: 1,
-        audience: "",
-        week: ParityWeek.ODD,
-        typeOfLesson: TypeOfLesson.LECTURE,
-      }
-      ]
-    }
-  ]
+    ]
   },
+  {
+    id: 7,
+    courseNumber: 2,
+    typeOfEducation: "Бакалавриат",
+    groupNumber: "ПрИ 201",
+    schedule: [
+      {
+        first: [
+          {
+            name: "ВЫЧ. СИСТЕМЫ СЕТИ И ТЕЛЕКОМ-ИИ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LAB
+          },
+          {
+            name: "ТЕОРИЯ ВЕРОЯТНОСТЕЙ И МАТЕМАТИЧЕСКАЯ СТАТИСТИКА",
+            teacher: 0,
+            audience: "А-13",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        second: [
+          {
+            name: "ВЫЧ. СИСТЕМЫ СЕТИ И ТЕЛЕКОМ-ИИ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LAB
+          },
+          {
+            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА . 4 корпус",
+            teacher: 35,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА . 4 корпус",
+            teacher: 35,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        first: [
+          {
+            name: "ОБЪЕКТНО-ОРИЕНТИРОВАННЫЙ АНАЛИЗ И ПРОГРАММИРОВАНИЕ",
+            teacher: 47,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        second: [
+          {
+            name: "ОБЪЕКТНО-ОРИЕНТИРОВАННЫЙ АНАЛИЗ И ПРОГРАММИРОВАНИЕ",
+            teacher: 47,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        seventh: [
+          {
+            name: "ОПЕРАЦИОННЫЕ СИСТЕМЫ (ОНЛАЙН-КУРС)",
+            teacher: 3,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "ВЫЧИСЛИТЕЛЬНЫЕ СИСТЕМЫ СЕТИ И ТЕЛЕКОММУНИКАЦИИ (ОНЛАЙН-КУРС)",
+            teacher: 3,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      },
+      {
+        second: [
+          {
+            name: "ОПЕРАЦИОННЫЕ СИСТЕМЫ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ВЫЧ. СИСТЕМЫ СЕТИ И ТЕЛЕКОМ-ИИ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LAB
+          }
+        ],
+        third: [
+          {
+            name: "ОПЕРАЦИОННЫЕ СИСТЕМЫ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ВЫЧ. СИСТЕМЫ СЕТИ И ТЕЛЕКОМ-ИИ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LAB
+          }
+        ],
+        fifth: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        first: [
+          {
+            name: "ВЫЧ. СИСТЕМЫ СЕТИ И ТЕЛЕКОМ-ИИ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LAB
+          }
+        ],
+        second: [
+          {
+            name: "ВЫЧ. СИСТЕМЫ СЕТИ И ТЕЛЕКОМ-ИИ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LAB
+          }
+        ],
+        third: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "МЕНЕДЖМЕНТ В ИТ-СФЕРЕ",
+            teacher: 15,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "МЕНЕДЖМЕНТ В ИТ-СФЕРЕ",
+            teacher: 15,
+            audience: "А-25",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      },
+      {
+        fourth: [
+          {
+            name: "ТЕОРИЯ ВЕРОЯТНОСТЕЙ И МАТЕМАТИЧЕСКАЯ СТАТИСТИКА",
+            teacher: 0,
+            audience: "326",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "АРХИТЕКТУРА ПРЕДПРИЯТИЯ И МОДЕЛИРОВАНИЕ БИЗНЕС-ПРОЦЕССОВ",
+            teacher: 14,
+            audience: "326",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "АРХИТЕКТУРА ПРЕДПРИЯТИЯ И МОДЕЛИРОВАНИЕ БИЗНЕС-ПРОЦЕССОВ",
+            teacher: 14,
+            audience: "А-13",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        sixth: [
+          {
+            name: "АРХИТЕКТУРА ПРЕДПРИЯТИЯ И МОДЕЛИРОВАНИЕ БИЗНЕС-ПРОЦЕССОВ",
+            teacher: 14,
+            audience: "326",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        first: [
+          {
+            name: "БАЗЫ И ХРАНИЛИЩА ДАННЫХ ОДАВАТЕЛЬ",
+            teacher: 18,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        second: [
+          {
+            name: "БАЗЫ И ХРАНИЛИЩА ДАННЫХ ОДАВАТЕЛЬ",
+            teacher: 18,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "БАЗЫ И ХРАНИЛИЩА ДАННЫХ ОДАВАТЕЛЬ",
+            teacher: 18,
+            audience: "А-15",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 8,
+    courseNumber: 2,
+    typeOfEducation: "Бакалавриат",
+    groupNumber: "ПрИ 202",
+    schedule: [
+      {
+        first: [
+          {
+            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА . 4 корпус",
+            teacher: 35,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ТЕОРИЯ ВЕРОЯТНОСТЕЙ И МАТЕМАТИЧЕСКАЯ СТАТИСТИКА",
+            teacher: 0,
+            audience: "А-13",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        second: [
+          {
+            name: "ТЕОРИЯ ВЕРОЯТНОСТЕЙ И МАТЕМАТИЧЕСКАЯ СТАТИСТИКА",
+            teacher: 0,
+            audience: "132",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ВЫЧ. СИСТЕМЫ СЕТИ И ТЕЛЕКОМ-ИИ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LAB
+          }
+        ],
+        fourth: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 1)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        first: [
+          {
+            name: "ОБЪЕКТНО-ОРИЕНТИРОВАННЫЙ АНАЛИЗ И ПРОГРАММИРОВАНИЕ",
+            teacher: 47,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        second: [
+          {
+            name: "ОБЪЕКТНО-ОРИЕНТИРОВАННЫЙ АНАЛИЗ И ПРОГРАММИРОВАНИЕ",
+            teacher: 47,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        seventh: [
+          {
+            name: "ОПЕРАЦИОННЫЕ СИСТЕМЫ (ОНЛАЙН-КУРС)",
+            teacher: 3,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "ВЫЧИСЛИТЕЛЬНЫЕ СИСТЕМЫ СЕТИ И ТЕЛЕКОММУНИКАЦИИ (ОНЛАЙН-КУРС)",
+            teacher: 3,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      },
+      {
+        first: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        second: [
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        third: [
+          {
+            name: "ВЫЧ. СИСТЕМЫ СЕТИ И ТЕЛЕКОМ-ИИ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LAB
+          },
+          {
+            name: "ВЫЧ. СИСТЕМЫ СЕТИ И ТЕЛЕКОМ-ИИ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LAB
+          }
+        ],
+        fourth: [
+          {
+            name: "ВЫЧ. СИСТЕМЫ СЕТИ И ТЕЛЕКОМ-ИИ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LAB
+          },
+          {
+            name: "ВЫЧ. СИСТЕМЫ СЕТИ И ТЕЛЕКОМ-ИИ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LAB
+          },
+          {
+            name: "ИНОСТРАННЫЙ ЯЗЫК (Подгр. 2)",
+            teacher: 10,
+            audience: "132Б",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "АРХИТЕКТУРА ПРЕДПРИЯТИЯ И МОДЕЛИРОВАНИЕ БИЗНЕС-ПРОЦЕССОВ",
+            teacher: 14,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "МЕНЕДЖМЕНТ В ИТ-СФЕРЕ",
+            teacher: 15,
+            audience: "А-25",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        sixth: [
+          {
+            name: "АРХИТЕКТУРА ПРЕДПРИЯТИЯ И МОДЕЛИРОВАНИЕ БИЗНЕС-ПРОЦЕССОВ",
+            teacher: 14,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "МЕНЕДЖМЕНТ В ИТ-СФЕРЕ",
+            teacher: 15,
+            audience: "326",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        third: [
+          {
+            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА . 4 корпус",
+            teacher: 35,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "ОПЕРАЦИОННЫЕ СИСТЕМЫ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "ОПЕРАЦИОННЫЕ СИСТЕМЫ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "АРХИТЕКТУРА ПРЕДПРИЯТИЯ И МОДЕЛИРОВАНИЕ БИЗНЕС-ПРОЦЕССОВ",
+            teacher: 14,
+            audience: "А-13",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        sixth: [
+          {
+            name: "ОПЕРАЦИОННЫЕ СИСТЕМЫ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ВЫЧ. СИСТЕМЫ СЕТИ И ТЕЛЕКОМ-ИИ",
+            teacher: 3,
+            audience: "132А",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LAB
+          }
+        ]
+      },
+      {
+        third: [
+          {
+            name: "БАЗЫ И ХРАНИЛИЩА ДАННЫХ ОДАВАТЕЛЬ",
+            teacher: 18,
+            audience: "А-15",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "БАЗЫ И ХРАНИЛИЩА ДАННЫХ ОДАВАТЕЛЬ",
+            teacher: 18,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "БАЗЫ И ХРАНИЛИЩА ДАННЫХ ОДАВАТЕЛЬ",
+            teacher: 18,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 9,
+    courseNumber: 3,
+    typeOfEducation: "Бакалавриат",
+    groupNumber: "ПИ 301",
+    schedule: [
+      {
+        seventh: [
+          {
+            name: "МАШИННОЕ ОБУЧЕНИЕ И ИНТЕЛЛЕКТУАЛЬНЫЙ АНАЛИЗ ДАННЫХ",
+            teacher: 48,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "МАШИННОЕ ОБУЧЕНИЕ И ИНТЕЛЛЕКТУАЛЬНЫЙ АНАЛИЗ ДАННЫХ",
+            teacher: 48,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        seventh: [
+          {
+            name: "УПРАВЛЕНИЕ ИТ-ПРОЕКТАМИ И ЖИЗНЕНЫМ ЦИКЛОМ ПО",
+            teacher: 21,
+            audience: "А-13",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "УПРАВЛЕНИЕ ИТ-ПРОЕКТАМИ И ЖИЗНЕНЫМ ЦИКЛОМ ПО",
+            teacher: 21,
+            audience: "А-13",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        sixth: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ ОДАВАТЕЛЬ",
+            teacher: 20,
+            audience: "А-25",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        seventh: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ ОДАВАТЕЛЬ",
+            teacher: 20,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        eighth: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ ОДАВАТЕЛЬ",
+            teacher: 20,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        fifth: [
+          {
+            name: "ИНТЕРНЕТ-МАРКЕТИНГ",
+            teacher: 22,
+            audience: "132А",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "АРХИТЕКТУРА ПРЕДПРИЯТИЯ И МОДЕЛИРОВАНИЕ БИЗНЕС-ПРОЦЕССОВ",
+            teacher: 14,
+            audience: "132А",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        sixth: [
+          {
+            name: "ИНТЕРНЕТ-МАРКЕТИНГ",
+            teacher: 22,
+            audience: "132А",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "АРХИТЕКТУРА ПРЕДПРИЯТИЯ И МОДЕЛИРОВАНИЕ БИЗНЕС-ПРОЦЕССОВ",
+            teacher: 14,
+            audience: "132А",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        seventh: [
+          {
+            name: "ИНТЕРНЕТ-МАРКЕТИНГ",
+            teacher: 22,
+            audience: "132А",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "АРХИТЕКТУРА ПРЕДПРИЯТИЯ И МОДЕЛИРОВАНИЕ БИЗНЕС-ПРОЦЕССОВ",
+            teacher: 14,
+            audience: "132А",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        fifth: [
+          {
+            name: "СИСТЕМНЫЙ АНАЛИЗ И МОДЕЛИРОВАНИЕ",
+            teacher: 19,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        sixth: [
+          {
+            name: "СИСТЕМНЫЙ АНАЛИЗ И МОДЕЛИРОВАНИЕ",
+            teacher: 19,
+            audience: "А-13",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      },
+      {
+        second: [
+          {
+            name: "В 10:00 АНАЛИЗ ДАННЫХ",
+            teacher: 23,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        third: [
+          {
+            name: "АНАЛИЗ ДАННЫХ",
+            teacher: 23,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "АНАЛИЗ ДАННЫХ",
+            teacher: 23,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 10,
+    courseNumber: 3,
+    typeOfEducation: "Бакалавриат",
+    groupNumber: "ПрИ 301",
+    schedule: [
+      {
+        fifth: [
+          {
+            name: "ПРОЕКТИРОВАНИЕ И РАЗРАБОТКА РАСПРЕДЕЛЕННЫХ ПРОГРАММНЫХ СИСТЕМ",
+            teacher: 49,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        sixth: [
+          {
+            name: "ПРОЕКТИРОВАНИЕ И РАЗРАБОТКА РАСПРЕДЕЛЕННЫХ ПРОГРАММНЫХ СИСТЕМ",
+            teacher: 49,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        seventh: [
+          {
+            name: "МАШИННОЕ ОБУЧЕНИЕ И ИНТЕЛЛЕКТУАЛЬНЫЙ АНАЛИЗ ДАННЫХ",
+            teacher: 48,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "МАШИННОЕ ОБУЧЕНИЕ И ИНТЕЛЛЕКТУАЛЬНЫЙ АНАЛИЗ ДАННЫХ",
+            teacher: 48,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        seventh: [
+          {
+            name: "УПРАВЛЕНИЕ ИТ-ПРОЕКТАМИ И ЖИЗНЕНЫМ ЦИКЛОМ ПО",
+            teacher: 21,
+            audience: "А-13",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "УПРАВЛЕНИЕ ИТ-ПРОЕКТАМИ И ЖИЗНЕНЫМ ЦИКЛОМ ПО",
+            teacher: 21,
+            audience: "А-13",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        sixth: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ ОДАВАТЕЛЬ",
+            teacher: 20,
+            audience: "А-25",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        seventh: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ ОДАВАТЕЛЬ",
+            teacher: 20,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "РАЗРАБОТКА ИНТЕРНЕТ-ПРИЛОЖЕНИЙ",
+            teacher: 48,
+            audience: "А-25",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ ОДАВАТЕЛЬ",
+            teacher: 20,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        seventh: [
+          {
+            name: "РАЗРАБОТКА ИНТЕРНЕТ-ПРИЛОЖЕНИЙ",
+            teacher: 48,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        eighth: [
+          {
+            name: "РАЗРАБОТКА ИНТЕРНЕТ-ПРИЛОЖЕНИЙ",
+            teacher: 48,
+            audience: "132",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        fifth: [
+          {
+            name: "СИСТЕМНЫЙ АНАЛИЗ И МОДЕЛИРОВАНИЕ",
+            teacher: 19,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        sixth: [
+          {
+            name: "СИСТЕМНЫЙ АНАЛИЗ И МОДЕЛИРОВАНИЕ",
+            teacher: 19,
+            audience: "А-13",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      },
+      {
+        second: [
+          {
+            name: "В 10:00 АНАЛИЗ ДАННЫХ",
+            teacher: 23,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        third: [
+          {
+            name: "АНАЛИЗ ДАННЫХ",
+            teacher: 23,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "АНАЛИЗ ДАННЫХ",
+            teacher: 23,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 11,
+    courseNumber: 3,
+    typeOfEducation: "Бакалавриат",
+    groupNumber: "ПрИ 302",
+    schedule: [
+      {
+        fifth: [
+          {
+            name: "ПРОЕКТИРОВАНИЕ И РАЗРАБОТКА РАСПРЕДЕЛЕННЫХ ПРОГРАММНЫХ СИСТЕМ",
+            teacher: 49,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        sixth: [
+          {
+            name: "ПРОЕКТИРОВАНИЕ И РАЗРАБОТКА РАСПРЕДЕЛЕННЫХ ПРОГРАММНЫХ СИСТЕМ",
+            teacher: 49,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        seventh: [
+          {
+            name: "МАШИННОЕ ОБУЧЕНИЕ И ИНТЕЛЛЕКТУАЛЬНЫЙ АНАЛИЗ ДАННЫХ",
+            teacher: 48,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "МАШИННОЕ ОБУЧЕНИЕ И ИНТЕЛЛЕКТУАЛЬНЫЙ АНАЛИЗ ДАННЫХ",
+            teacher: 48,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        seventh: [
+          {
+            name: "УПРАВЛЕНИЕ ИТ-ПРОЕКТАМИ И ЖИЗНЕНЫМ ЦИКЛОМ ПО",
+            teacher: 21,
+            audience: "А-13",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "УПРАВЛЕНИЕ ИТ-ПРОЕКТАМИ И ЖИЗНЕНЫМ ЦИКЛОМ ПО",
+            teacher: 21,
+            audience: "А-13",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        sixth: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ ОДАВАТЕЛЬ",
+            teacher: 20,
+            audience: "А-25",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        seventh: [
+          {
+            name: "РАЗРАБОТКА ИНТЕРНЕТ-ПРИЛОЖЕНИЙ",
+            teacher: 48,
+            audience: "А-25",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      },
+      {
+        seventh: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ ОДАВАТЕЛЬ",
+            teacher: 20,
+            audience: "326",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "РАЗРАБОТКА ИНТЕРНЕТ-ПРИЛОЖЕНИЙ",
+            teacher: 48,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        eighth: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ ОДАВАТЕЛЬ",
+            teacher: 20,
+            audience: "326",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "РАЗРАБОТКА ИНТЕРНЕТ-ПРИЛОЖЕНИЙ",
+            teacher: 48,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        sixth: [
+          {
+            name: "СИСТЕМНЫЙ АНАЛИЗ И МОДЕЛИРОВАНИЕ",
+            teacher: 19,
+            audience: "А-13",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        seventh: [
+          {
+            name: "СИСТЕМНЫЙ АНАЛИЗ И МОДЕЛИРОВАНИЕ",
+            teacher: 19,
+            audience: "132",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        second: [
+          {
+            name: "В 10:00 АНАЛИЗ ДАННЫХ",
+            teacher: 23,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        third: [
+          {
+            name: "АНАЛИЗ ДАННЫХ",
+            teacher: 23,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fourth: [
+          {
+            name: "АНАЛИЗ ДАННЫХ",
+            teacher: 23,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 12,
+    courseNumber: 4,
+    typeOfEducation: "Бакалавриат",
+    groupNumber: "ПИ 401",
+    schedule: [
+      {
+        sixth: [
+          {
+            name: "ДЕНЬ",
+            teacher: -1,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        seventh: [
+          {
+            name: "САМОСТОЯТЕЛЬНЫХ",
+            teacher: -1,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "ЗАНЯТИЙ",
+            teacher: -1,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      },
+      {
+        sixth: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ",
+            teacher: -1,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        seventh: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ",
+            teacher: 14,
+            audience: "432",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ",
+            teacher: 14,
+            audience: "432",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        seventh: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ",
+            teacher: 50,
+            audience: "432",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ",
+            teacher: 50,
+            audience: "432",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        sixth: [
+          {
+            name: "ДЕНЬ",
+            teacher: -1,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        seventh: [
+          {
+            name: "САМОСТОЯТЕЛЬНЫХ",
+            teacher: -1,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "ЗАНЯТИЙ",
+            teacher: -1,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      },
+      {
+        sixth: [
+          {
+            name: "ДЕНЬ",
+            teacher: -1,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        seventh: [
+          {
+            name: "САМОСТОЯТЕЛЬНЫХ",
+            teacher: -1,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "ЗАНЯТИЙ",
+            teacher: -1,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      },
+      {
+        fifth: [
+          {
+            name: "ИНФОРМАЦИОННАЯ БЕЗОПАСНОСТЬ",
+            teacher: 51,
+            audience: "132Б",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        sixth: [
+          {
+            name: "ИНФОРМАЦИОННАЯ БЕЗОПАСНОСТЬ",
+            teacher: 51,
+            audience: "132Б",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        seventh: [
+          {
+            name: "ИНФОРМАЦИОННАЯ БЕЗОПАСНОСТЬ",
+            teacher: 51,
+            audience: "132Б",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 13,
+    courseNumber: 4,
+    typeOfEducation: "Бакалавриат",
+    groupNumber: "ПрИ 401",
+    schedule: [
+      {
+        sixth: [
+          {
+            name: "ДЕНЬ",
+            teacher: -1,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        seventh: [
+          {
+            name: "САМОСТОЯТЕЛЬНЫХ",
+            teacher: -1,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "ЗАНЯТИЙ",
+            teacher: -1,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      },
+      {
+        sixth: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ",
+            teacher: -1,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        seventh: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ",
+            teacher: 14,
+            audience: "432",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ",
+            teacher: 14,
+            audience: "432",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        seventh: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ",
+            teacher: 50,
+            audience: "432",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "КОРПОРАТИВНЫЕ ИНФОРМАЦИОННЫЕ СИСТЕМЫ",
+            teacher: 50,
+            audience: "432",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        sixth: [
+          {
+            name: "ФУНКЦИОНАЛЬНОЕ ПРОГРАММИРОВАНИЕ",
+            teacher: 27,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        seventh: [
+          {
+            name: "ФУНКЦИОНАЛЬНОЕ ПРОГРАММИРОВАНИЕ",
+            teacher: 27,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        eighth: [
+          {
+            name: "ФУНКЦИОНАЛЬНОЕ ПРОГРАММИРОВАНИЕ",
+            teacher: 27,
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
+      {
+        sixth: [
+          {
+            name: "ДЕНЬ",
+            teacher: -1,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        seventh: [
+          {
+            name: "САМОСТОЯТЕЛЬНЫХ",
+            teacher: -1,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "ЗАНЯТИЙ",
+            teacher: -1,
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      },
+      {
+        third: [
+          {
+            name: "с 12:00 ЗАЩИТА ИНФОРМАЦИИ",
+            teacher: 52,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        fourth: [
+          {
+            name: "ЗАЩИТА ИНФОРМАЦИИ",
+            teacher: 52,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "ЗАЩИТА ИНФОРМАЦИИ",
+            teacher: 52,
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      }
+    ]
+  }
 ];

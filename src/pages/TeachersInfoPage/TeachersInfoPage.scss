@@ -1,6 +1,13 @@
 .teacherInfoPage {
   &__header {
     margin: 0 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 450px) {
+      display: block;
+    }
   }
 
   &__name {
@@ -9,23 +16,43 @@
     font-weight: 700;
     font-size: 36px;
     line-height: 100%;
-    margin: 0 0 13px;
+    margin: 0; 
+
+    @media (max-width: 450px) {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 13px; 
+    }
   }
-}
 
-.teacher {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  margin: 0 0 40px;
+  &__back-btn {
+    text-decoration: none;
+    background-color: transparent; 
+    color: black;
+    font-family: "OfficinaSansBoldC", sans-serif;
+    
+    font-size: 24px; 
+    padding: 5px 15px; 
+    border-radius: 5px; 
 
-  &__block {
-    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    user-select: none;
+    line-height: 100%;
+
+    &:hover {
+      background-color: rgb(14, 14, 14);
+      color: white;
+      transform: none;
+    }
+
+    @media (max-width: 450px) {
+      display: none;
+    }
   }
-}
-
-.teacher a {
-  text-decoration: none;
-  cursor: pointer;
 }

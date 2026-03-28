@@ -52,34 +52,48 @@
     flex-direction: column;
     align-items: flex-start;
     min-height: 130px;
+    min-width: 0;
+    overflow: hidden;
+    gap: 4px;
 
     &:not(:first-child) {
       border-top: 3px solid black;
+      padding-top: 10px;
+      margin-top: 5px;
     }
   }
 
   &__subject-name {
-    font-size: 15px;
+    font-size: 14px;
     text-align: left;
-    padding: 0 40px 0 0;
-    margin: 0;
+    margin: 0 0 2px 0;
+    line-height: 1.3;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
+    padding-right: 45px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &__audience {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 2px 0;
+    display: block;
   }
 
   &__teacher-name {
-    font-size: 15px;
-    padding: 0 40px 0 0;
+    font-size: 14px;
+    display: block;
+    margin-top: 2px;
+    text-decoration: none;
+    
+    color: #8b0000;
 
     &:hover {
-      color: #7f4645;
-      transform: none;
+      color: #cf805f;
     }
-  }
-
-  &__type-of-lesson,
-  &__audience {
-    font-size: 15px;
-    margin: 0;
-    padding: 0;
   }
 
   &__lesson-type {
@@ -88,21 +102,25 @@
     right: 5px;
     font-family: "OfficinaSansBookC";
     font-weight: 400;
-    font-size: 11.56px;
+    font-size: 11px;
     line-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 30px;
     height: 30px;
-    padding: 6px 8px;
     border-radius: 50%;
     background-color: #f5e6c7;
     color: black;
     user-select: none;
+    z-index: 2;
 
     &--lection {
       background-color: #cf805f;
+      color: white;
+    }
+    &--lab {
+      background-color: #75966e;
       color: white;
     }
   }
@@ -111,12 +129,12 @@
     position: absolute;
     right: 5px;
     bottom: 5px;
-    padding: 5px 10px;
     font-size: 14px;
     background-color: rgb(14, 14, 14);
-    padding: 5px;
+    padding: 5px 10px;
     border-radius: 5px;
     margin: 0;
     color: white;
+    user-select: none;
   }
 }
