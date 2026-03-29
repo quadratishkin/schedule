@@ -21,9 +21,11 @@ export const GroupsInfoPage = () => {
     <section className="groupInfoPage">
       <div className="groupInfoPage__header">
         <p className="groupInfoPage__number">{group.groupNumber}</p>
+        
         <Link to="/groups" className="groupInfoPage__back-btn">
-          &#8592; Назад
+          <span className="groupInfoPage__arrow">&#8592;</span> Назад
         </Link>
+        
       </div>
       <Schedule scheduleTest={group.schedule} />
     </section>

@@ -25,11 +25,8 @@ export const TeachersInfoPage = () => {
       <div className="teacherInfoPage__header">
         <p className="teacherInfoPage__name">{teacher.name}</p>
         
-        <button 
-          onClick={() => navigate(-1)} 
-          className="teacherInfoPage__back-btn"
-        >
-          &#8592; Назад
+        <button onClick={() => navigate(-1)} className="teacherInfoPage__back-btn">
+          <span>&#8592;</span> Назад
         </button>
       </div>
       

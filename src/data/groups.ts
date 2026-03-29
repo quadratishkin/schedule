@@ -55,9 +55,9 @@ export const GROUPS: IGroup[] = [
       {
         third: [
           {
-            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ . 4 корпус",
+            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ",
             teacher: 35,
-            audience: "",
+            audience: "4 корпус",
             week: ParityWeek.EVERYWEEK,
             typeOfLesson: TypeOfLesson.PRACTICE
           }
@@ -265,9 +265,9 @@ export const GROUPS: IGroup[] = [
       {
         third: [
           {
-            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ . 4 корпус",
+            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ",
             teacher: 35,
-            audience: "",
+            audience: "4 корпус",
             week: ParityWeek.EVERYWEEK,
             typeOfLesson: TypeOfLesson.PRACTICE
           }
@@ -458,9 +458,9 @@ export const GROUPS: IGroup[] = [
             typeOfLesson: TypeOfLesson.LECTURE
           },
           {
-            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ . 4 корпус",
+            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ",
             teacher: 35,
-            audience: "",
+            audience: "4 корпус",
             week: ParityWeek.EVEN,
             typeOfLesson: TypeOfLesson.PRACTICE
           }
@@ -606,9 +606,9 @@ export const GROUPS: IGroup[] = [
         ],
         third: [
           {
-            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ . 4 корпус",
+            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ",
             teacher: 35,
-            audience: "",
+            audience: "4 корпус",
             week: ParityWeek.ODD,
             typeOfLesson: TypeOfLesson.PRACTICE
           }
@@ -711,9 +711,9 @@ export const GROUPS: IGroup[] = [
         ],
         fourth: [
           {
-            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ . 4 корпус",
+            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ",
             teacher: 35,
-            audience: "",
+            audience: "4 корпус",
             week: ParityWeek.ODD,
             typeOfLesson: TypeOfLesson.PRACTICE
           },
@@ -745,9 +745,9 @@ export const GROUPS: IGroup[] = [
         ],
         second: [
           {
-            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ . 4 корпус",
+            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ",
             teacher: 35,
-            audience: "",
+            audience: "4 корпус",
             week: ParityWeek.EVEN,
             typeOfLesson: TypeOfLesson.PRACTICE
           }
@@ -951,9 +951,9 @@ export const GROUPS: IGroup[] = [
         ],
         fifth: [
           {
-            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ . 4 корпус",
+            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ",
             teacher: 35,
-            audience: "",
+            audience: "4 корпус",
             week: ParityWeek.EVERYWEEK,
             typeOfLesson: TypeOfLesson.PRACTICE
           }
@@ -1166,9 +1166,9 @@ export const GROUPS: IGroup[] = [
         ],
         fourth: [
           {
-            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА . 4 корпус",
+            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА",
             teacher: 35,
-            audience: "",
+            audience: "4 корпус",
             week: ParityWeek.EVEN,
             typeOfLesson: TypeOfLesson.PRACTICE
           }
@@ -1243,9 +1243,9 @@ export const GROUPS: IGroup[] = [
       {
         second: [
           {
-            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА . 4 корпус",
+            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА",
             teacher: 35,
-            audience: "",
+            audience: "4 корпус",
             week: ParityWeek.ODD,
             typeOfLesson: TypeOfLesson.PRACTICE
           }
@@ -1399,9 +1399,9 @@ export const GROUPS: IGroup[] = [
         ],
         fourth: [
           {
-            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА . 4 корпус",
+            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА",
             teacher: 35,
-            audience: "",
+            audience: "4 корпус",
             week: ParityWeek.EVEN,
             typeOfLesson: TypeOfLesson.PRACTICE
           }
@@ -1494,9 +1494,9 @@ export const GROUPS: IGroup[] = [
       {
         second: [
           {
-            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА . 4 корпус",
+            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА",
             teacher: 35,
-            audience: "",
+            audience: "4 корпус",
             week: ParityWeek.ODD,
             typeOfLesson: TypeOfLesson.PRACTICE
           }
@@ -1660,9 +1660,9 @@ export const GROUPS: IGroup[] = [
             typeOfLesson: TypeOfLesson.LAB
           },
           {
-            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА . 4 корпус",
+            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА",
             teacher: 35,
-            audience: "",
+            audience: "4 корпус",
             week: ParityWeek.EVEN,
             typeOfLesson: TypeOfLesson.PRACTICE
           },
@@ -1676,7 +1676,7 @@ export const GROUPS: IGroup[] = [
         ],
         third: [
           {
-            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА . 4 корпус",
+            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА",
             teacher: 35,
             audience: "",
             week: ParityWeek.ODD,
@@ -1897,9 +1897,9 @@ export const GROUPS: IGroup[] = [
       {
         first: [
           {
-            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА . 4 корпус",
+            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА",
             teacher: 35,
-            audience: "",
+            audience: "4 корпус",
             week: ParityWeek.ODD,
             typeOfLesson: TypeOfLesson.PRACTICE
           },
@@ -2080,9 +2080,9 @@ export const GROUPS: IGroup[] = [
       {
         third: [
           {
-            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА . 4 корпус",
+            name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА",
             teacher: 35,
-            audience: "",
+            audience: "4 корпус",
             week: ParityWeek.EVEN,
             typeOfLesson: TypeOfLesson.PRACTICE
           }
