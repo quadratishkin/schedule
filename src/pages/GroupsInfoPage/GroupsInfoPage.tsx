@@ -5,7 +5,9 @@ import { Schedule } from "../../components/Schedule";
 
 export const GroupsInfoPage = () => {
   const { groupId } = useParams();
-  const group = GROUPS[Number(groupId)];
+  
+  // Ищем группу по id, а не по индексу!
+  const group = GROUPS.find(g => g.id === Number(groupId));
 
   if (!group) {
     return (

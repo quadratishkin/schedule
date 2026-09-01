@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Link } from "react-router";
 import { ILesson, ParityWeek, TypeOfLesson } from "../../data/interfaces";
 import "./ScheduleCell.scss";
@@ -17,6 +18,20 @@ export const ScheduleCell = ({
   const determineTeacher = (id: number) => {
     const teacher = TEACHERS.find((teacher) => teacher.id === id);
     return teacher;
+  };
+
+  const renderTeachers = (ids: number[]) => {
+    const found = ids
+      .map((id) => determineTeacher(id))
+      .filter((t): t is NonNullable<typeof t> => Boolean(t));
+    return found.map((teacher, i) => (
+      <Fragment key={teacher.id}>
+        {i > 0 && ", "}
+        <Link className="schedule-cell__teacher-name" to={`/teachers/${teacher.id}`}>
+          {teacher.name}
+        </Link>
+      </Fragment>
+    ));
   };
 
   const renderLessonType = (type: TypeOfLesson) => {
@@ -42,12 +57,7 @@ export const ScheduleCell = ({
                 <span className="schedule-cell__audience">
                   {subject.audience}
                 </span>
-                <Link
-                  className="schedule-cell__teacher-name"
-                  to={`/teachers/${determineTeacher(subject.teacher)?.id}`}
-                >
-                  {determineTeacher(subject.teacher)?.name}
-                </Link>
+                {renderTeachers(subject.teachers)}
               </div>
               
               {renderLessonType(subject.typeOfLesson)}
@@ -73,12 +83,7 @@ export const ScheduleCell = ({
                 <span className="schedule-cell__audience">
                   {subject.audience}
                 </span>
-                <Link
-                  className="schedule-cell__teacher-name"
-                  to={`/teachers/${determineTeacher(subject.teacher)?.id}`}
-                >
-                  {determineTeacher(subject.teacher)?.name}
-                </Link>
+                {renderTeachers(subject.teachers)}
               </div>
 
               {renderLessonType(subject.typeOfLesson)}
@@ -107,12 +112,7 @@ export const ScheduleCell = ({
               <span className="schedule-cell__audience">
                 {subject.audience}
               </span>
-              <Link
-                className="schedule-cell__teacher-name"
-                to={`/teachers/${determineTeacher(subject.teacher)?.id}`}
-              >
-                {determineTeacher(subject.teacher)?.name}
-              </Link>
+              {renderTeachers(subject.teachers)}
               
               {renderLessonType(subject.typeOfLesson)}
 
@@ -137,12 +137,7 @@ export const ScheduleCell = ({
           <div className="schedule-cell__subject-info" key={index}>
             <h3 className="schedule-cell__subject-name">{subject.name}</h3>
             <span className="schedule-cell__audience">{subject.audience}</span>
-            <Link
-              className="schedule-cell__teacher-name"
-              to={`/teachers/${determineTeacher(subject.teacher)?.id}`}
-            >
-              {determineTeacher(subject.teacher)?.name}
-            </Link>
+            {renderTeachers(subject.teachers)}
             
             {renderLessonType(subject.typeOfLesson)}
 

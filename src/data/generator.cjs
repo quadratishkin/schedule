@@ -3,7 +3,19 @@ const fs = require('fs');
 const path = require('path');
 
 const START_GROUP_ID = 0;
-const LESSON_TYPES = { 'ЛЕК': 0, 'ПР': 1, 'ЛАБ': 2 };
+const LESSON_TYPES_MAP = {
+  'ЛЕК': 0,
+  'ЛЕКЦ': 0,
+  'ЛЕКЦИЯ': 0,
+
+  'ПР': 1,
+  'ПРАКТ': 1,
+  'ПРАКТИКА': 1,
+
+  'ЛАБ': 2,
+  'ЛАБОР': 2,
+  'ЛАБОРАТОРНАЯ': 2,
+};
 const WEEK_TYPES = { EVERY: 0, ODD: 1, EVEN: 2 };
 const DAY_ORDER = ['ПОНЕДЕЛЬНИК', 'ВТОРНИК', 'СРЕДА', 'ЧЕТВЕРГ', 'ПЯТНИЦА', 'СУББОТА'];
 const WEEK_ENUM_MAP = { 0: 'ParityWeek.EVERYWEEK', 1: 'ParityWeek.ODD', 2: 'ParityWeek.EVEN' };
@@ -18,18 +30,9 @@ const allGroups = [];
 let currentGroupId = START_GROUP_ID;
 
 function loadExistingTeachers() {
-    if (!fs.existsSync(TEACHERS_FILE)) return;
-    const content = fs.readFileSync(TEACHERS_FILE, 'utf-8');
-    const regex = /id:\s*(\d+),\s*name:\s*"([^"]+)"/g;
-    let match;
-    let maxId = -1;
-    while ((match = regex.exec(content)) !== null) {
-        const id = parseInt(match[1]);
-        const name = match[2];
-        teachersRegistry.set(name.toUpperCase(), { id, originalName: name });
-        if (id > maxId) maxId = id;
-    }
-    nextTeacherId = maxId >= 0 ? maxId + 1 : 0;
+    // Always start fresh - rebuild teachers from current xlsx files only
+    teachersRegistry.clear();
+    nextTeacherId = 0;
 }
 
 function safeStr(val) { return (val === null || val === undefined) ? "" : val.toString(); }
@@ -57,50 +60,77 @@ function getOrCreateTeacherId(teacherText) {
     return newId;
 }
 
+function getLessonType(text) {
+    if (!text) return 0;
+    const cleanText = text.toUpperCase();
+    
+    if (cleanText.includes('ЛАБ')) return LESSON_TYPES_MAP['ЛАБ'];
+    if (cleanText.includes('ПР') || cleanText.includes('ПРАКТ')) return LESSON_TYPES_MAP['ПР'];
+    if (cleanText.includes('ЛЕК')) return LESSON_TYPES_MAP['ЛЕК'];
+    
+    return 0;
+}
+
 function createLesson(rawText, weekType) {
     let clean = rawText.replace(/(?:^|\s)[12][НH]\.?/gi, "").trim();
-    
-    const lesson = { name: "", teacher: -1, audience: "", week: weekType, typeOfLesson: 0 };
+    const lesson = { name: "", teachers: [], audience: "", week: weekType, typeOfLesson: 0 };
 
-    const audRegex = /(?:АУД\.?\s*)?(\d+\s*корпус|[А-ЯЁA-Z0-9\-]+\s*(?:\([^)]+\))?)/gi;
+    // 1. Извлечение аудитории и корпуса (с поддержкой слэша и нормализацией слитного написания)
+    const audRegex = /(?:АУД\.?\s*)?((?:\d+[А-ЯЁ]*|[А-ЯЁA-Z0-9\-]+)\s*(?:\(\d+\s*КОРП\.?\)?|\d+\s*КОРПУС)?(?:\s*[\/]\s*(?:(?:\d+[А-ЯЁ]*|[А-ЯЁA-Z0-9\-]+)\s*(?:\(\d+\s*КОРП\.?\)?|\d+\s*КОРПУС)?))*)/gi;
     const audMatches = Array.from(clean.matchAll(audRegex));
     
     if (audMatches.length > 0) {
         for (let i = audMatches.length - 1; i >= 0; i--) {
             let fullMatch = audMatches[i][0];
-            let audValue = audMatches[i][1] || fullMatch;
-            
-            if (fullMatch.toUpperCase().includes("КОРПУС") || /\d/.test(fullMatch)) {
-                lesson.audience = audValue.replace(/АУД\.?/gi, "").trim();
+            let audValue = audMatches[i][1];
+
+            // Проверяем, что это аудитория (наличие цифр или слов КОРП/КОРПУС)
+            if (fullMatch.toUpperCase().includes("КОРПУС") || fullMatch.toUpperCase().includes("КОРП") || /\d/.test(fullMatch)) {
+                lesson.audience = audValue.split('/')
+                    .map(part => part.trim()
+                        .replace(/(\d+[А-ЯЁ]*)\s*\(?(\d+)\s*КОРП\.?\)?/gi, "$1 ($2 корп.)") // Чиним "111(1КОРП)"
+                        .replace(/(\d+)\s*КОРПУС/gi, "($1 корп.)")
+                        .replace(/АУД\.?/gi, "").trim()
+                    )
+                    .join('\n'); // Две аудитории будут отображаться одна под другой
+                
                 clean = clean.replace(fullMatch, "").trim();
                 break;
             }
         }
     }
 
-    const typeRegex = /\((ЛЕК\+?|ПР|ЛАБ)\.?\)|(ЛЕК\+?|ПР|ЛАБ)\./gi;
+    // ФОК — место проведения физкультуры
+    if (!lesson.audience && /ФОК/i.test(clean)) {
+        lesson.audience = "ФОК";
+        clean = clean.replace(/ФОК/gi, " ").replace(/\s{2,}/g, " ").trim();
+    }
+
+    // 2. Извлечение типа занятия
+    const typeRegex = /\((ЛЕК[А-ЯЁ]*|ПРАКТ[А-ЯЁ]*|ПР[А-ЯЁ]*|ЛАБ[А-ЯЁ]*)\.?\s*(\/.*)?\)|(?:\s|^)(ЛЕК|ПР|ЛАБ|ПРАКТ)\./gi;
     const matchType = clean.match(typeRegex);
     if (matchType) {
-        const t = matchType[0].toUpperCase();
-        if (t.includes("ЛЕК")) lesson.typeOfLesson = LESSON_TYPES['ЛЕК'];
-        else if (t.includes("ПР")) lesson.typeOfLesson = LESSON_TYPES['ПР'];
-        else if (t.includes("ЛАБ")) lesson.typeOfLesson = LESSON_TYPES['ЛАБ'];
-        clean = clean.replace(typeRegex, "");
+        lesson.typeOfLesson = getLessonType(matchType[0]);
+        clean = clean.replace(typeRegex, " ").replace(/\s+/g, " ").trim();
     }
 
     let name = clean;
-
-    const allMatches = name.match(/[А-ЯЁ]{2,}\s+[А-ЯЁ]\.\s?[А-ЯЁ]\.?/gi) || [];
+    
+    // 3. Извлечение преподавателей (в ячейке может быть несколько через /)
+    const allMatches = name.match(/[А-ЯЁ][А-ЯЁа-яё]{2,}\s+[А-ЯЁ]\.\s?[А-ЯЁ]\.?/g) || [];
     if (allMatches.length > 0) {
-        lesson.teacher = getOrCreateTeacherId(allMatches[0]);
+        lesson.teachers = [...new Set(allMatches.map(getOrCreateTeacherId).filter(id => id !== -1))];
         allMatches.forEach(m => { name = name.replace(m, " "); });
     }
 
-    name = name.replace(/(доцент|доц\.?|ст\.?преп|преп\.?|преподаватель|к\.т\.н|д\.т\.н|профессор|проф\.?)/gi, " ");
+    // 4. Очистка должностей (границы слова вручную: \b в JS не работает с кириллицей)
+    const rankRegex = /(?<![А-ЯЁа-яёA-Za-z])(?:старший\s+преподаватель|ст\.?\s*преподаватель|преподаватель|доцент|доц\.?|ст\.?\s*преп\.?|преп\.?|к\.т\.н\.?|д\.т\.н\.?|профессор|проф\.?)(?![А-ЯЁа-яёA-Za-z])/gi;
+    name = name.replace(rankRegex, " ");
+
+    // Финальная очистка названия
     name = name.replace(/[,\/]/g, " ");
     name = name.replace(/\s{2,}/g, ' ').trim();
-    
-    lesson.name = name.replace(/^[\s.+,/-]+|[\s.+,/-]+$/g, '');
+    lesson.name = name.replace(/^[\s.+,/*-]+|[\s.+,/*-]+$/g, '');
 
     return lesson;
 }
@@ -110,23 +140,32 @@ function parseColumnBlock(rows, colIndex) {
     const r = rows.map(row => safeStr(row ? row[colIndex] : "").trim());
     const fullText = r.join(" ").replace(/\s+/g, " ").trim();
 
+    if (fullText.includes("ПОРТРЕТ") || fullText.includes("ПРАКТИКУМ") || fullText.includes("ОДАВАТЕЛЬ")) {
+        console.log("RAW BLOCK:", JSON.stringify(r));
+        console.log("FULL TEXT:", fullText);
+    }
+
     if (fullText.length < 4) return result;
 
     const m1 = fullText.search(/(?<!^)[1][НH]\./i);
     const m2 = fullText.search(/(?<!^)[2][НH]\./i);
     const splitPos = (m1 !== -1) ? m1 : m2;
+    
+    const hasStartMarker = fullText.match(/^([12]н)\.?\s+/i);
 
-    if (splitPos > 0) {
+    if (splitPos !== -1 && hasStartMarker) {
         const part1 = fullText.substring(0, splitPos).trim();
         const part2 = fullText.substring(splitPos).trim();
+        
         const w1 = /2[НH]\.?/i.test(part1) ? WEEK_TYPES.EVEN : WEEK_TYPES.ODD;
         const w2 = /2[НH]\.?/i.test(part2) ? WEEK_TYPES.EVEN : WEEK_TYPES.ODD;
+        
         result.push(createLesson(part1, w1));
         result.push(createLesson(part2, w2));
     } else {
         let w = WEEK_TYPES.EVERY;
-        if (/1[НH]\./i.test(fullText)) w = WEEK_TYPES.ODD;
-        else if (/2[НH]\./i.test(fullText)) w = WEEK_TYPES.EVEN;
+        if (/^1[НH]\./i.test(fullText)) w = WEEK_TYPES.ODD;
+        else if (/^2[НH]\./i.test(fullText)) w = WEEK_TYPES.EVEN;
         
         const hasTwoAuds = (r[0]+r[1]).toUpperCase().includes("АУД") && (r[2]+r[3]).toUpperCase().includes("АУД");
         if (hasTwoAuds && w === WEEK_TYPES.EVERY) {
@@ -167,12 +206,23 @@ function processGroup(data, groupName, colMain, colSub) {
         const periodVal = row[localColPeriod];
         if (periodVal && parseInt(periodVal)) {
             const periodKey = periodMap[parseInt(periodVal)];
-            if (!schedule[currentDay][periodKey]) schedule[currentDay][periodKey] = [];
             const block = [data[i], data[i+1], data[i+2], data[i+3]];
-            const lessons = [...parseColumnBlock(block, colMain)];
-            if (colMain !== colSub) lessons.push(...parseColumnBlock(block, colSub));
-            const valid = lessons.filter(l => l.name && l.name.trim().length > 0);
-            if (valid.length > 0) schedule[currentDay][periodKey].push(...valid);
+            const mainLessons = parseColumnBlock(block, colMain);
+            const subLessons = colMain !== colSub ? parseColumnBlock(block, colSub) : [];
+            // Ячейка разделена на левую и правую половину: слева 1-я подгруппа, справа 2-я
+            if (mainLessons.some(l => l.name.trim()) && subLessons.some(l => l.name.trim())) {
+                mainLessons.forEach(l => { if (l.name.trim()) l.name += " 1гр"; });
+                subLessons.forEach(l => { if (l.name.trim()) l.name += " 2гр"; });
+            }
+            const lessons = [...mainLessons, ...subLessons];
+            // Ячейки без аудитории не допускаются, кроме физкультуры и занятий, проводимых по ссылке
+            const isExempt = l => /физич/i.test(l.name) || /https?:\/\/|www\.|ссылк/i.test(l.name);
+            const valid = lessons.filter(l => l.name && l.name.trim().length > 0 &&
+                (String(l.audience || "").trim().length > 0 || isExempt(l)));
+            if (valid.length > 0) {
+                if (!schedule[currentDay][periodKey]) schedule[currentDay][periodKey] = [];
+                schedule[currentDay][periodKey].push(...valid);
+            }
         }
     }
 
@@ -182,7 +232,7 @@ function processGroup(data, groupName, colMain, colSub) {
         for (const [timeKey, lessons] of Object.entries(dayData)) {
             formattedDay[timeKey] = lessons.map(l => ({
                 name: l.name,
-                teacher: l.teacher,
+                teachers: l.teachers,
                 audience: String(l.audience || ""),
                 week: `__ENUM__${WEEK_ENUM_MAP[l.week]}`,
                 typeOfLesson: `__ENUM__${LESSON_ENUM_MAP[l.typeOfLesson]}`
@@ -211,24 +261,25 @@ function saveTeachersSchedule() {
         group.schedule.forEach((dayObj, dayIndex) => {
             for (const [periodKey, lessons] of Object.entries(dayObj)) {
                 lessons.forEach(lesson => {
-                    const tId = lesson.teacher;
-                    if (tId === -1 || !tSchedules[tId]) return;
-                    const tDay = tSchedules[tId][dayIndex];
-                    if (!tDay[periodKey]) tDay[periodKey] = [];
-                    const existing = tDay[periodKey].find(l => 
-                        l.subjectName === lesson.name && l.week === lesson.week
-                    );
-                    if (existing) {
-                        if (!existing.groups.includes(group.groupNumber)) existing.groups.push(group.groupNumber);
-                    } else {
-                        tDay[periodKey].push({
-                            subjectName: lesson.name,
-                            groups: [group.groupNumber],
-                            audience: lesson.audience,
-                            week: lesson.week,
-                            typeOfLesson: lesson.typeOfLesson
-                        });
-                    }
+                    (lesson.teachers || []).forEach(tId => {
+                        if (tId === -1 || !tSchedules[tId]) return;
+                        const tDay = tSchedules[tId][dayIndex];
+                        if (!tDay[periodKey]) tDay[periodKey] = [];
+                        const existing = tDay[periodKey].find(l =>
+                            l.subjectName === lesson.name && l.week === lesson.week
+                        );
+                        if (existing) {
+                            if (!existing.groups.includes(group.groupNumber)) existing.groups.push(group.groupNumber);
+                        } else {
+                            tDay[periodKey].push({
+                                subjectName: lesson.name,
+                                groups: [group.groupNumber],
+                                audience: lesson.audience,
+                                week: lesson.week,
+                                typeOfLesson: lesson.typeOfLesson
+                            });
+                        }
+                    });
                 });
             }
         });
@@ -240,7 +291,7 @@ function saveTeachersSchedule() {
             for (const [timeKey, lessons] of Object.entries(dayObj)) {
                 formattedDay[timeKey] = lessons.map(l => ({
                     name: `${l.subjectName} [${l.groups.join(', ')}]`,
-                    teacher: t.id,
+                    teachers: [t.id],
                     audience: l.audience,
                     week: l.week,
                     typeOfLesson: l.typeOfLesson
@@ -265,19 +316,22 @@ function start() {
         workbook.SheetNames.forEach(sheetName => {
             const data = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName], { header: 1, defval: null });
             if (data.length === 0) return;
+            // Группы: 2-3 цифры в номере ("БИ 201", "БИ-11"), возможен префикс ("ИТ1-ПрИб-11")
+            const GROUP_RE = /^(?:[А-ЯЁа-яёA-Za-z]{1,4}\d[\s-]?)?[А-ЯЁа-яёA-Za-z]{2,8}[\s-]?\d{2,3}(\s*\(\d+\))?$/;
             let gIdx = -1;
-            for (let i = 0; i < 40; i++) {
-                if (data[i] && data[i].some(c => /[А-ЯЁ]{2,4}[\s-]?\d{3}/i.test(safeStr(c)))) { gIdx = i; break; }
+            for (let i = 0; i < 60; i++) {
+                if (data[i] && data[i].some(c => GROUP_RE.test(safeStr(c).trim()))) { gIdx = i; break; }
             }
             if (gIdx === -1) return;
             const groupRow = data[gIdx];
             groupRow.forEach((cell, index) => {
                 const txt = safeStr(cell).trim();
-                const match = txt.match(/[А-ЯЁ]{2,4}[\s-]?\d{3}/i);
+                const match = txt.match(GROUP_RE);
                 if (match && !txt.toUpperCase().includes("СЕМЕСТР")) {
-                    const groupName = match[0].trim();
+                    const groupName = match[0].trim().replace(/\s*\(\d+\)$/, '');
+                    console.log(`    ✅ Группа найдена: "${groupName}" col=${index}`);
                     const next = safeStr(groupRow[index + 1]).trim();
-                    const isNextGroup = next.match(/[А-ЯЁ]{2,4}[\s-]?\d{3}/i);
+                    const isNextGroup = next.match(GROUP_RE);
                     const colSub = (index + 1 < groupRow.length && !isNextGroup && !next) ? (index + 1) : index;
                     processGroup(data, groupName, index, colSub);
                 }

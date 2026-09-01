@@ -18,7 +18,7 @@ export interface ITeacher {
 
 export interface ILesson {
   name: string;
-  teacher: number;
+  teachers: number[];
   audience: string | number;
   week?: ParityWeek;
   typeOfLesson: TypeOfLesson;
