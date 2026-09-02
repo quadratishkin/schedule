@@ -8,7 +8,7 @@ export const TEACHERS: ITeacher[] = [
       {
         second: [
           {
-            name: "ОСНОВЫ РОССИЙСКОЙ ГОСУДАРСТВЕННОСТИ [БИ-11]",
+            name: "ОСНОВЫ РОССИЙСКОЙ ГОСУДАРСТВЕННОСТИ [ИТ1-БИб-11]",
             teachers: [
               0
             ],
@@ -19,7 +19,7 @@ export const TEACHERS: ITeacher[] = [
         ],
         fifth: [
           {
-            name: "ОСНОВЫ РОССИЙСКОЙ ГОСУДАРСТВЕННОСТИ [ПИ-11]",
+            name: "ОСНОВЫ РОССИЙСКОЙ ГОСУДАРСТВЕННОСТИ [ИТ1-ПИб-11]",
             teachers: [
               0
             ],
@@ -32,7 +32,7 @@ export const TEACHERS: ITeacher[] = [
       {
         third: [
           {
-            name: "ОСНОВЫ РОССИЙСКОЙ ГОСУДАРСТВЕННОСТИ [БИ-11, ПИ-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
+            name: "ОСНОВЫ РОССИЙСКОЙ ГОСУДАРСТВЕННОСТИ [ИТ1-БИб-11, ИТ1-ПИб-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
             teachers: [
               0
             ],
@@ -41,7 +41,7 @@ export const TEACHERS: ITeacher[] = [
             typeOfLesson: TypeOfLesson.LECTURE
           },
           {
-            name: "ПРАВО [БИ-11, ПИ-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
+            name: "ПРАВО [ИТ1-БИб-11, ИТ1-ПИб-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
             teachers: [
               0
             ],
@@ -87,7 +87,7 @@ export const TEACHERS: ITeacher[] = [
       {
         third: [
           {
-            name: "ИНФОРМАТИКА И ПРОГРАММИРОВАНИЕ [БИ-11, ПИ-11]",
+            name: "ИНФОРМАТИКА И ПРОГРАММИРОВАНИЕ [ИТ1-БИб-11, ИТ1-ПИб-11]",
             teachers: [
               1
             ],
@@ -98,7 +98,7 @@ export const TEACHERS: ITeacher[] = [
         ],
         fourth: [
           {
-            name: "ИНФОРМАТИКА И ПРОГРАММИРОВАНИЕ [БИ-11]",
+            name: "ИНФОРМАТИКА И ПРОГРАММИРОВАНИЕ [ИТ1-БИб-11]",
             teachers: [
               1
             ],
@@ -147,7 +147,7 @@ export const TEACHERS: ITeacher[] = [
       {
         fifth: [
           {
-            name: "ИНФОРМАТИКА И ПРОГРАММИРОВАНИЕ [ПИ-11]",
+            name: "ИНФОРМАТИКА И ПРОГРАММИРОВАНИЕ [ИТ1-ПИб-11]",
             teachers: [
               1
             ],
@@ -179,7 +179,7 @@ export const TEACHERS: ITeacher[] = [
       {
         fifth: [
           {
-            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ [БИ-11]",
+            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ [ИТ1-БИб-11]",
             teachers: [
               2
             ],
@@ -263,7 +263,7 @@ export const TEACHERS: ITeacher[] = [
       {
         fourth: [
           {
-            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ [ПИ-11]",
+            name: "ФИЗИЧЕСКАЯ КУЛЬТУРА И СПОРТ [ИТ1-ПИб-11]",
             teachers: [
               2
             ],
@@ -294,7 +294,7 @@ export const TEACHERS: ITeacher[] = [
       {
         fourth: [
           {
-            name: "ЛИНЕЙНАЯ АЛГЕБРА И АНАЛИТИЧЕСКАЯ ГЕОМЕТРИЯ [ПИ-11]",
+            name: "ЛИНЕЙНАЯ АЛГЕБРА И АНАЛИТИЧЕСКАЯ ГЕОМЕТРИЯ [ИТ1-ПИб-11]",
             teachers: [
               3
             ],
@@ -307,7 +307,7 @@ export const TEACHERS: ITeacher[] = [
       {
         second: [
           {
-            name: "ЛИНЕЙНАЯ АЛГЕБРА И АНАЛИТИЧЕСКАЯ ГЕОМЕТРИЯ [БИ-11]",
+            name: "ЛИНЕЙНАЯ АЛГЕБРА И АНАЛИТИЧЕСКАЯ ГЕОМЕТРИЯ [ИТ1-БИб-11]",
             teachers: [
               3
             ],
@@ -377,7 +377,7 @@ export const TEACHERS: ITeacher[] = [
       {
         fourth: [
           {
-            name: "ДИСКРЕТНАЯ МАТЕМАТИКА [БИ-11, ПИ-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
+            name: "ДИСКРЕТНАЯ МАТЕМАТИКА [ИТ1-БИб-11, ИТ1-ПИб-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
             teachers: [
               4
             ],
@@ -430,7 +430,7 @@ export const TEACHERS: ITeacher[] = [
       {
         third: [
           {
-            name: "ДИСКРЕТНАЯ МАТЕМАТИКА [ПИ-11]",
+            name: "ДИСКРЕТНАЯ МАТЕМАТИКА [ИТ1-ПИб-11]",
             teachers: [
               4
             ],
@@ -441,7 +441,7 @@ export const TEACHERS: ITeacher[] = [
         ],
         fourth: [
           {
-            name: "СОВР.ТЕХНОЛОГИИ ПОИСКА И ОБРАБОТКИ ИНФОРМАЦИИ АУД. 132 (9НЕД.) [ПИ-11]",
+            name: "СОВР.ТЕХНОЛОГИИ ПОИСКА И ОБРАБОТКИ ИНФОРМАЦИИ АУД. 132 (9НЕД.) [ИТ1-ПИб-11]",
             teachers: [
               4
             ],
@@ -450,7 +450,7 @@ export const TEACHERS: ITeacher[] = [
             typeOfLesson: TypeOfLesson.PRACTICE
           },
           {
-            name: "ДИСКРЕТНАЯ МАТЕМАТИКА [ПИ-11]",
+            name: "ДИСКРЕТНАЯ МАТЕМАТИКА [ИТ1-ПИб-11]",
             teachers: [
               4
             ],
@@ -484,7 +484,7 @@ export const TEACHERS: ITeacher[] = [
       {
         first: [
           {
-            name: "СОВР.ТЕХНОЛОГИИ ПОИСКА И ОБРАБОТКИ ИНФОРМАЦИИ АУД. А-15 (1НЕД.) [БИ-11, ПИ-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
+            name: "СОВР.ТЕХНОЛОГИИ ПОИСКА И ОБРАБОТКИ ИНФОРМАЦИИ АУД. А-15 (1НЕД.) [ИТ1-БИб-11, ИТ1-ПИб-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
             teachers: [
               4
             ],
@@ -495,7 +495,7 @@ export const TEACHERS: ITeacher[] = [
         ],
         third: [
           {
-            name: "ДИСКРЕТНАЯ МАТЕМАТИКА [БИ-11]",
+            name: "ДИСКРЕТНАЯ МАТЕМАТИКА [ИТ1-БИб-11]",
             teachers: [
               4
             ],
@@ -506,7 +506,7 @@ export const TEACHERS: ITeacher[] = [
         ],
         fourth: [
           {
-            name: "СОВР.ТЕХНОЛОГИИ ПОИСКА И ОБРАБОТКИ ИНФОРМАЦИИ АУД. 132Б (9НЕД.) [БИ-11]",
+            name: "СОВР.ТЕХНОЛОГИИ ПОИСКА И ОБРАБОТКИ ИНФОРМАЦИИ АУД. 132Б (9НЕД.) [ИТ1-БИб-11]",
             teachers: [
               4
             ],
@@ -515,7 +515,7 @@ export const TEACHERS: ITeacher[] = [
             typeOfLesson: TypeOfLesson.PRACTICE
           },
           {
-            name: "ДИСКРЕТНАЯ МАТЕМАТИКА [БИ-11]",
+            name: "ДИСКРЕТНАЯ МАТЕМАТИКА [ИТ1-БИб-11]",
             teachers: [
               4
             ],
@@ -536,7 +536,7 @@ export const TEACHERS: ITeacher[] = [
       {
         fourth: [
           {
-            name: "ИСТОРИЯ РОССИИ [БИ-11, ПИ-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
+            name: "ИСТОРИЯ РОССИИ [ИТ1-БИб-11, ИТ1-ПИб-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
             teachers: [
               5
             ],
@@ -573,7 +573,7 @@ export const TEACHERS: ITeacher[] = [
       {
         first: [
           {
-            name: "ИНОСТРАННЫЙ ЯЗЫК [БИ-11]",
+            name: "ИНОСТРАННЫЙ ЯЗЫК [ИТ1-БИб-11]",
             teachers: [
               6
             ],
@@ -584,7 +584,7 @@ export const TEACHERS: ITeacher[] = [
         ],
         second: [
           {
-            name: "ИНОСТРАННЫЙ ЯЗЫК [БИ-11]",
+            name: "ИНОСТРАННЫЙ ЯЗЫК [ИТ1-БИб-11]",
             teachers: [
               6
             ],
@@ -619,7 +619,7 @@ export const TEACHERS: ITeacher[] = [
       {
         first: [
           {
-            name: "ИСТОРИЯ РОССИИ [БИ-11]",
+            name: "ИСТОРИЯ РОССИИ [ИТ1-БИб-11]",
             teachers: [
               7
             ],
@@ -628,7 +628,7 @@ export const TEACHERS: ITeacher[] = [
             typeOfLesson: TypeOfLesson.PRACTICE
           },
           {
-            name: "ИСТОРИЯ РОССИИ [ПИ-11]",
+            name: "ИСТОРИЯ РОССИИ [ИТ1-ПИб-11]",
             teachers: [
               7
             ],
@@ -663,7 +663,7 @@ export const TEACHERS: ITeacher[] = [
       {
         sixth: [
           {
-            name: "ИСТОРИЯ РОССИИ (ОНЛАЙН-КУРС ЧАСА) [БИ-11, ПИ-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
+            name: "ИСТОРИЯ РОССИИ (ОНЛАЙН-КУРС ЧАСА) [ИТ1-БИб-11, ИТ1-ПИб-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
             teachers: [
               7
             ],
@@ -685,7 +685,7 @@ export const TEACHERS: ITeacher[] = [
       {
         fourth: [
           {
-            name: "ЛИНЕЙНАЯ АЛГЕБРА И АНАЛИТИЧЕСКАЯ ГЕОМЕТРИЯ [БИ-11, ПИ-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
+            name: "ЛИНЕЙНАЯ АЛГЕБРА И АНАЛИТИЧЕСКАЯ ГЕОМЕТРИЯ [ИТ1-БИб-11, ИТ1-ПИб-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
             teachers: [
               8
             ],
@@ -709,7 +709,7 @@ export const TEACHERS: ITeacher[] = [
       {
         fifth: [
           {
-            name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ. ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ АССИСТЕНТ [БИ-11]",
+            name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ. ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ АССИСТЕНТ [ИТ1-БИб-11]",
             teachers: [
               9
             ],
@@ -791,7 +791,7 @@ export const TEACHERS: ITeacher[] = [
       {
         second: [
           {
-            name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ. ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ [БИ-11, ПИ-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
+            name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ. ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ [ИТ1-БИб-11, ИТ1-ПИб-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
             teachers: [
               10
             ],
@@ -802,7 +802,7 @@ export const TEACHERS: ITeacher[] = [
         ],
         third: [
           {
-            name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ. ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ [ПИ-11]",
+            name: "МАТЕМАТИЧЕСКИЙ АНАЛИЗ. ДИФФЕРЕНЦИАЛЬНЫЕ И РАЗНОСТНЫЕ УРАВНЕНИЯ [ИТ1-ПИб-11]",
             teachers: [
               10
             ],
@@ -886,7 +886,7 @@ export const TEACHERS: ITeacher[] = [
       {
         first: [
           {
-            name: "ИНОСТРАННЫЙ ЯЗЫК [ПИ-11]",
+            name: "ИНОСТРАННЫЙ ЯЗЫК [ИТ1-ПИб-11]",
             teachers: [
               11
             ],
@@ -897,7 +897,7 @@ export const TEACHERS: ITeacher[] = [
         ],
         second: [
           {
-            name: "ИНОСТРАННЫЙ ЯЗЫК 2гр [ПИ-11]",
+            name: "ИНОСТРАННЫЙ ЯЗЫК 2гр [ИТ1-ПИб-11]",
             teachers: [
               11
             ],
@@ -910,7 +910,7 @@ export const TEACHERS: ITeacher[] = [
       {
         fifth: [
           {
-            name: "ИНОСТРАННЫЙ ЯЗЫК [ПИ-11]",
+            name: "ИНОСТРАННЫЙ ЯЗЫК [ИТ1-ПИб-11]",
             teachers: [
               11
             ],
@@ -1005,7 +1005,7 @@ export const TEACHERS: ITeacher[] = [
       {
         second: [
           {
-            name: "ИНОСТРАННЫЙ ЯЗЫК 1гр [ПИ-11]",
+            name: "ИНОСТРАННЫЙ ЯЗЫК 1гр [ИТ1-ПИб-11]",
             teachers: [
               12
             ],
@@ -1019,7 +1019,7 @@ export const TEACHERS: ITeacher[] = [
       {
         second: [
           {
-            name: "ИНОСТРАННЫЙ ЯЗЫК [ПИ-11]",
+            name: "ИНОСТРАННЫЙ ЯЗЫК [ИТ1-ПИб-11]",
             teachers: [
               12
             ],
@@ -1039,7 +1039,7 @@ export const TEACHERS: ITeacher[] = [
         ],
         third: [
           {
-            name: "ИНОСТРАННЫЙ ЯЗЫК [ПИ-11]",
+            name: "ИНОСТРАННЫЙ ЯЗЫК [ИТ1-ПИб-11]",
             teachers: [
               12
             ],
@@ -1082,7 +1082,7 @@ export const TEACHERS: ITeacher[] = [
       {
         second: [
           {
-            name: "ФИЗИКА [ПИ-11]",
+            name: "ФИЗИКА [ИТ1-ПИб-11]",
             teachers: [
               13
             ],
@@ -1096,7 +1096,7 @@ export const TEACHERS: ITeacher[] = [
       {
         first: [
           {
-            name: "ФИЗИКА [ПИ-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
+            name: "ФИЗИКА [ИТ1-ПИб-11, ИТ1-ПрИб-11, ИТ1-ПрИб-12]",
             teachers: [
               13
             ],
@@ -2367,7 +2367,7 @@ export const TEACHERS: ITeacher[] = [
   },
   {
     id: 28,
-    name: "Пущев А.А.",
+    name: "Гнедкова Я.Е.",
     schedule: [
       {},
       {
@@ -2402,64 +2402,6 @@ export const TEACHERS: ITeacher[] = [
   },
   {
     id: 29,
-    name: "Булавин Р.С.",
-    schedule: [
-      {},
-      {},
-      {
-        sixth: [
-          {
-            name: "ТЕСТИРОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ [БИ 301]",
-            teachers: [
-              29
-            ],
-            audience: "132Б",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          }
-        ],
-        seventh: [
-          {
-            name: "ТЕСТИРОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ [БИ 301, ПрИ 301]",
-            teachers: [
-              29
-            ],
-            audience: "А-13",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.LECTURE
-          }
-        ]
-      },
-      {},
-      {},
-      {
-        third: [
-          {
-            name: "ТЕСТИРОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ [ПрИ 301]",
-            teachers: [
-              29
-            ],
-            audience: "132",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          }
-        ],
-        fourth: [
-          {
-            name: "ТЕСТИРОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ [ПрИ 301]",
-            teachers: [
-              29
-            ],
-            audience: "132",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: 30,
     name: "Митянина А.В.",
     schedule: [
       {},
@@ -2469,7 +2411,7 @@ export const TEACHERS: ITeacher[] = [
           {
             name: "ИНТЕРНЕТ-ТЕХНОЛОГИИ [БИ 301, ПИ 301]",
             teachers: [
-              30
+              29
             ],
             audience: "132А",
             week: ParityWeek.EVEN,
@@ -2480,7 +2422,7 @@ export const TEACHERS: ITeacher[] = [
           {
             name: "ИНТЕРНЕТ-ТЕХНОЛОГИИ [БИ 301, ПИ 301]",
             teachers: [
-              30
+              29
             ],
             audience: "132А",
             week: ParityWeek.EVEN,
@@ -2491,7 +2433,7 @@ export const TEACHERS: ITeacher[] = [
           {
             name: "ИНТЕРНЕТ-ТЕХНОЛОГИИ [БИ 301, ПИ 301]",
             teachers: [
-              30
+              29
             ],
             audience: "132А",
             week: ParityWeek.EVEN,
@@ -2505,64 +2447,34 @@ export const TEACHERS: ITeacher[] = [
     ]
   },
   {
-    id: 31,
-    name: "Мирасов В.Ф.",
+    id: 30,
+    name: "Булавин Р.С.",
     schedule: [
       {},
       {},
-      {
-        eighth: [
-          {
-            name: "АНАЛИЗ ДАННЫХ [БИ 301, ПИ 301, ПрИ 301]",
-            teachers: [
-              31
-            ],
-            audience: "А-13",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.LECTURE
-          }
-        ]
-      },
+      {},
       {},
       {},
       {
         third: [
           {
-            name: "АНАЛИЗ ДАННЫХ [БИ 301, ПИ 301]",
+            name: "ТЕСТИРОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ [ПрИ 301]",
             teachers: [
-              31
-            ],
-            audience: "132Б",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          },
-          {
-            name: "АНАЛИЗ ДАННЫХ [ПрИ 301]",
-            teachers: [
-              31
+              30
             ],
             audience: "132",
-            week: ParityWeek.EVEN,
+            week: ParityWeek.ODD,
             typeOfLesson: TypeOfLesson.PRACTICE
           }
         ],
         fourth: [
           {
-            name: "АНАЛИЗ ДАННЫХ [БИ 301, ПИ 301]",
+            name: "ТЕСТИРОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ [ПрИ 301]",
             teachers: [
-              31
-            ],
-            audience: "132Б",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          },
-          {
-            name: "АНАЛИЗ ДАННЫХ [ПрИ 301]",
-            teachers: [
-              31
+              30
             ],
             audience: "132",
-            week: ParityWeek.EVEN,
+            week: ParityWeek.ODD,
             typeOfLesson: TypeOfLesson.PRACTICE
           }
         ]
@@ -2570,7 +2482,7 @@ export const TEACHERS: ITeacher[] = [
     ]
   },
   {
-    id: 32,
+    id: 31,
     name: "Гизатулина А.А.",
     schedule: [
       {},
@@ -2581,7 +2493,7 @@ export const TEACHERS: ITeacher[] = [
           {
             name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА [БИ 301, ПИ 301, ПрИ 301]",
             teachers: [
-              32
+              31
             ],
             audience: "",
             week: ParityWeek.EVERYWEEK,
@@ -2594,7 +2506,7 @@ export const TEACHERS: ITeacher[] = [
     ]
   },
   {
-    id: 33,
+    id: 32,
     name: "Новикова М.В.",
     schedule: [
       {},
@@ -2605,7 +2517,7 @@ export const TEACHERS: ITeacher[] = [
           {
             name: "ИНТЕРНЕТ-МАРКЕТИНГ [БИ 301, ПИ 301]",
             teachers: [
-              33
+              32
             ],
             audience: "132Б",
             week: ParityWeek.ODD,
@@ -2616,7 +2528,7 @@ export const TEACHERS: ITeacher[] = [
           {
             name: "ИНТЕРНЕТ-МАРКЕТИНГ [БИ 301, ПИ 301]",
             teachers: [
-              33
+              32
             ],
             audience: "132Б",
             week: ParityWeek.ODD,
@@ -2624,6 +2536,18 @@ export const TEACHERS: ITeacher[] = [
           }
         ]
       },
+      {},
+      {}
+    ]
+  },
+  {
+    id: 33,
+    name: "Мирасов В.Ф.",
+    schedule: [
+      {},
+      {},
+      {},
+      {},
       {},
       {}
     ]
@@ -2709,12 +2633,12 @@ export const TEACHERS: ITeacher[] = [
       {
         seventh: [
           {
-            name: "РАЗРАБОТКА ИНТЕРНЕТ-ПРИЛОЖЕНИЙ [ПИ 301, ПрИ 301]",
+            name: "с 19:00 РАЗРАБОТКА ИНТЕРНЕТ-ПРИЛОЖЕНИЙ [ПИ 301, ПрИ 301]",
             teachers: [
               35
             ],
             audience: "132",
-            week: ParityWeek.EVEN,
+            week: ParityWeek.EVERYWEEK,
             typeOfLesson: TypeOfLesson.LECTURE
           }
         ],
@@ -2743,39 +2667,7 @@ export const TEACHERS: ITeacher[] = [
       {},
       {},
       {},
-      {
-        fifth: [
-          {
-            name: "ТЕХНОЛОГИИ ПРИКЛАД. ПРОГРАМ-ИЯ 1гр [ПИ 301, ПрИ 301]",
-            teachers: [
-              36
-            ],
-            audience: "326",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.LECTURE
-          },
-          {
-            name: "ТЕХНОЛОГИИ ПРИКЛАД. ПРОГРАМ-ИЯ 1гр [ПИ 301, ПрИ 301]",
-            teachers: [
-              36
-            ],
-            audience: "326",
-            week: ParityWeek.EVEN,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          }
-        ],
-        sixth: [
-          {
-            name: "ТЕХНОЛОГИИ ПРИКЛАД. ПРОГРАМ-ИЯ 1гр [ПИ 301, ПрИ 301]",
-            teachers: [
-              36
-            ],
-            audience: "326",
-            week: ParityWeek.EVERYWEEK,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          }
-        ]
-      }
+      {}
     ]
   },
   {

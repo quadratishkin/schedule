@@ -5,7 +5,7 @@ export const GROUPS: IGroup[] = [
     id: 0,
     courseNumber: 1,
     typeOfEducation: "Бакалавриат",
-    groupNumber: "БИ-11",
+    groupNumber: "ИТ1-БИб-11",
     schedule: [
       {
         second: [
@@ -237,7 +237,7 @@ export const GROUPS: IGroup[] = [
     id: 1,
     courseNumber: 1,
     typeOfEducation: "Бакалавриат",
-    groupNumber: "ПИ-11",
+    groupNumber: "ИТ1-ПИб-11",
     schedule: [
       {
         third: [
@@ -2633,18 +2633,9 @@ export const GROUPS: IGroup[] = [
       {
         sixth: [
           {
-            name: "ТЕСТИРОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ",
-            teachers: [
-              29
-            ],
-            audience: "132Б",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          },
-          {
             name: "ИНТЕРНЕТ-ТЕХНОЛОГИИ",
             teachers: [
-              30
+              29
             ],
             audience: "132А",
             week: ParityWeek.EVEN,
@@ -2653,18 +2644,9 @@ export const GROUPS: IGroup[] = [
         ],
         seventh: [
           {
-            name: "ТЕСТИРОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ",
-            teachers: [
-              29
-            ],
-            audience: "А-13",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.LECTURE
-          },
-          {
             name: "ИНТЕРНЕТ-ТЕХНОЛОГИИ",
             teachers: [
-              30
+              29
             ],
             audience: "132А",
             week: ParityWeek.EVEN,
@@ -2673,18 +2655,9 @@ export const GROUPS: IGroup[] = [
         ],
         eighth: [
           {
-            name: "АНАЛИЗ ДАННЫХ",
-            teachers: [
-              31
-            ],
-            audience: "А-13",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.LECTURE
-          },
-          {
             name: "ИНТЕРНЕТ-ТЕХНОЛОГИИ",
             teachers: [
-              30
+              29
             ],
             audience: "132А",
             week: ParityWeek.EVEN,
@@ -2697,7 +2670,7 @@ export const GROUPS: IGroup[] = [
           {
             name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА",
             teachers: [
-              32
+              31
             ],
             audience: "",
             week: ParityWeek.EVERYWEEK,
@@ -2709,7 +2682,7 @@ export const GROUPS: IGroup[] = [
             name: "ИНТЕРНЕТ-МАРКЕТИНГ",
             teachers: [
               19,
-              33
+              32
             ],
             audience: "132Б",
             week: ParityWeek.ODD,
@@ -2721,7 +2694,7 @@ export const GROUPS: IGroup[] = [
             name: "ИНТЕРНЕТ-МАРКЕТИНГ",
             teachers: [
               19,
-              33
+              32
             ],
             audience: "132Б",
             week: ParityWeek.ODD,
@@ -2731,28 +2704,6 @@ export const GROUPS: IGroup[] = [
       },
       {},
       {
-        third: [
-          {
-            name: "АНАЛИЗ ДАННЫХ",
-            teachers: [
-              31
-            ],
-            audience: "132Б",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          }
-        ],
-        fourth: [
-          {
-            name: "АНАЛИЗ ДАННЫХ",
-            teachers: [
-              31
-            ],
-            audience: "132Б",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          }
-        ],
         fifth: [
           {
             name: "СОЗДАНИЕ БИЗНЕС-ПРИЛОЖ. В СИС-МЕ 1С-ПРЕДПРИЯТИЕ",
@@ -2888,7 +2839,7 @@ export const GROUPS: IGroup[] = [
           {
             name: "ИНТЕРНЕТ-ТЕХНОЛОГИИ",
             teachers: [
-              30
+              29
             ],
             audience: "132А",
             week: ParityWeek.EVEN,
@@ -2899,7 +2850,7 @@ export const GROUPS: IGroup[] = [
           {
             name: "ИНТЕРНЕТ-ТЕХНОЛОГИИ",
             teachers: [
-              30
+              29
             ],
             audience: "132А",
             week: ParityWeek.EVEN,
@@ -2908,18 +2859,9 @@ export const GROUPS: IGroup[] = [
         ],
         eighth: [
           {
-            name: "АНАЛИЗ ДАННЫХ",
-            teachers: [
-              31
-            ],
-            audience: "А-13",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.LECTURE
-          },
-          {
             name: "ИНТЕРНЕТ-ТЕХНОЛОГИИ",
             teachers: [
-              30
+              29
             ],
             audience: "132А",
             week: ParityWeek.EVEN,
@@ -2932,7 +2874,7 @@ export const GROUPS: IGroup[] = [
           {
             name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА",
             teachers: [
-              32
+              31
             ],
             audience: "",
             week: ParityWeek.EVERYWEEK,
@@ -2944,7 +2886,7 @@ export const GROUPS: IGroup[] = [
             name: "ИНТЕРНЕТ-МАРКЕТИНГ",
             teachers: [
               19,
-              33
+              32
             ],
             audience: "132Б",
             week: ParityWeek.ODD,
@@ -2956,7 +2898,7 @@ export const GROUPS: IGroup[] = [
             name: "ИНТЕРНЕТ-МАРКЕТИНГ",
             teachers: [
               19,
-              33
+              32
             ],
             audience: "132Б",
             week: ParityWeek.ODD,
@@ -2965,12 +2907,12 @@ export const GROUPS: IGroup[] = [
         ],
         seventh: [
           {
-            name: "РАЗРАБОТКА ИНТЕРНЕТ-ПРИЛОЖЕНИЙ",
+            name: "с 19:00 РАЗРАБОТКА ИНТЕРНЕТ-ПРИЛОЖЕНИЙ",
             teachers: [
               35
             ],
             audience: "132",
-            week: ParityWeek.EVEN,
+            week: ParityWeek.EVERYWEEK,
             typeOfLesson: TypeOfLesson.LECTURE
           }
         ],
@@ -2988,47 +2930,7 @@ export const GROUPS: IGroup[] = [
       },
       {},
       {
-        third: [
-          {
-            name: "АНАЛИЗ ДАННЫХ",
-            teachers: [
-              31
-            ],
-            audience: "132Б",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          }
-        ],
-        fourth: [
-          {
-            name: "АНАЛИЗ ДАННЫХ",
-            teachers: [
-              31
-            ],
-            audience: "132Б",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          }
-        ],
         fifth: [
-          {
-            name: "ТЕХНОЛОГИИ ПРИКЛАД. ПРОГРАМ-ИЯ 1гр",
-            teachers: [
-              36
-            ],
-            audience: "326",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.LECTURE
-          },
-          {
-            name: "ТЕХНОЛОГИИ ПРИКЛАД. ПРОГРАМ-ИЯ 1гр",
-            teachers: [
-              36
-            ],
-            audience: "326",
-            week: ParityWeek.EVEN,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          },
           {
             name: "СОЗДАНИЕ БИЗНЕС-ПРИЛОЖ. В СИС-МЕ 1С-ПРЕДПРИЯТИЕ 2гр",
             teachers: [
@@ -3049,15 +2951,6 @@ export const GROUPS: IGroup[] = [
           }
         ],
         sixth: [
-          {
-            name: "ТЕХНОЛОГИИ ПРИКЛАД. ПРОГРАМ-ИЯ 1гр",
-            teachers: [
-              36
-            ],
-            audience: "326",
-            week: ParityWeek.EVERYWEEK,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          },
           {
             name: "СОЗДАНИЕ БИЗНЕС-ПРИЛОЖ. В СИС-МЕ 1С-ПРЕДПРИЯТИЕ 2гр",
             teachers: [
@@ -3160,36 +3053,13 @@ export const GROUPS: IGroup[] = [
           }
         ]
       },
-      {
-        seventh: [
-          {
-            name: "ТЕСТИРОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ",
-            teachers: [
-              29
-            ],
-            audience: "А-13",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.LECTURE
-          }
-        ],
-        eighth: [
-          {
-            name: "АНАЛИЗ ДАННЫХ",
-            teachers: [
-              31
-            ],
-            audience: "А-13",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.LECTURE
-          }
-        ]
-      },
+      {},
       {
         fourth: [
           {
             name: "ПРИКЛАДНАЯ ФИЗИЧЕСКАЯ КУЛЬТУРА",
             teachers: [
-              32
+              31
             ],
             audience: "",
             week: ParityWeek.EVERYWEEK,
@@ -3198,12 +3068,12 @@ export const GROUPS: IGroup[] = [
         ],
         seventh: [
           {
-            name: "РАЗРАБОТКА ИНТЕРНЕТ-ПРИЛОЖЕНИЙ",
+            name: "с 19:00 РАЗРАБОТКА ИНТЕРНЕТ-ПРИЛОЖЕНИЙ",
             teachers: [
               35
             ],
             audience: "132",
-            week: ParityWeek.EVEN,
+            week: ParityWeek.EVERYWEEK,
             typeOfLesson: TypeOfLesson.LECTURE
           }
         ],
@@ -3257,19 +3127,10 @@ export const GROUPS: IGroup[] = [
           {
             name: "ТЕСТИРОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ",
             teachers: [
-              29
+              30
             ],
             audience: "132",
             week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          },
-          {
-            name: "АНАЛИЗ ДАННЫХ",
-            teachers: [
-              31
-            ],
-            audience: "132",
-            week: ParityWeek.EVEN,
             typeOfLesson: TypeOfLesson.PRACTICE
           }
         ],
@@ -3277,41 +3138,14 @@ export const GROUPS: IGroup[] = [
           {
             name: "ТЕСТИРОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ",
             teachers: [
-              29
+              30
             ],
             audience: "132",
             week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          },
-          {
-            name: "АНАЛИЗ ДАННЫХ",
-            teachers: [
-              31
-            ],
-            audience: "132",
-            week: ParityWeek.EVEN,
             typeOfLesson: TypeOfLesson.PRACTICE
           }
         ],
         fifth: [
-          {
-            name: "ТЕХНОЛОГИИ ПРИКЛАД. ПРОГРАМ-ИЯ 1гр",
-            teachers: [
-              36
-            ],
-            audience: "326",
-            week: ParityWeek.ODD,
-            typeOfLesson: TypeOfLesson.LECTURE
-          },
-          {
-            name: "ТЕХНОЛОГИИ ПРИКЛАД. ПРОГРАМ-ИЯ 1гр",
-            teachers: [
-              36
-            ],
-            audience: "326",
-            week: ParityWeek.EVEN,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          },
           {
             name: "СОЗДАНИЕ БИЗНЕС-ПРИЛОЖ. В СИС-МЕ 1С-ПРЕДПРИЯТИЕ 2гр",
             teachers: [
@@ -3332,15 +3166,6 @@ export const GROUPS: IGroup[] = [
           }
         ],
         sixth: [
-          {
-            name: "ТЕХНОЛОГИИ ПРИКЛАД. ПРОГРАМ-ИЯ 1гр",
-            teachers: [
-              36
-            ],
-            audience: "326",
-            week: ParityWeek.EVERYWEEK,
-            typeOfLesson: TypeOfLesson.PRACTICE
-          },
           {
             name: "СОЗДАНИЕ БИЗНЕС-ПРИЛОЖ. В СИС-МЕ 1С-ПРЕДПРИЯТИЕ 2гр",
             teachers: [
