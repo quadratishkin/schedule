@@ -2124,7 +2124,19 @@ export const TEACHERS: ITeacher[] = [
       {},
       {},
       {},
-      {}
+      {
+        sixth: [
+          {
+            name: "ИНКЛЮЗИВНАЯ КОМПЕТЕНТНОСТЬ В СОЦИАЛЬНОЙ И ПРОФЕССИОНАЛЬНОЙ СФЕРАХ (ОНЛАЙН КУРС) [БИ 201]",
+            teachers: [
+              23
+            ],
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ]
+      }
     ]
   },
   {
@@ -2452,7 +2464,30 @@ export const TEACHERS: ITeacher[] = [
     schedule: [
       {},
       {},
-      {},
+      {
+        seventh: [
+          {
+            name: "ТЕСТИРОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ [БИ 301, ПрИ 301]",
+            teachers: [
+              30
+            ],
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        eighth: [
+          {
+            name: "ТЕСТИРОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ [БИ 301]",
+            teachers: [
+              30
+            ],
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      },
       {},
       {},
       {
@@ -2549,7 +2584,59 @@ export const TEACHERS: ITeacher[] = [
       {},
       {},
       {},
-      {}
+      {
+        first: [
+          {
+            name: "АНАЛИЗ ДАННЫХ [БИ 301, ПИ 301, ПрИ 301]",
+            teachers: [
+              33
+            ],
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        second: [
+          {
+            name: "АНАЛИЗ ДАННЫХ [БИ 301, ПИ 301]",
+            teachers: [
+              33
+            ],
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "АНАЛИЗ ДАННЫХ [ПрИ 301]",
+            teachers: [
+              33
+            ],
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        third: [
+          {
+            name: "АНАЛИЗ ДАННЫХ [БИ 301, ПИ 301]",
+            teachers: [
+              33
+            ],
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "АНАЛИЗ ДАННЫХ [ПрИ 301]",
+            teachers: [
+              33
+            ],
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      }
     ]
   },
   {
@@ -2667,7 +2754,39 @@ export const TEACHERS: ITeacher[] = [
       {},
       {},
       {},
-      {}
+      {
+        fifth: [
+          {
+            name: "ТЕХНОЛОГИИ ПРИКЛАД. ПРОГРАМ-ИЯ 1гр [ПИ 301, ПрИ 301]",
+            teachers: [
+              36
+            ],
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          },
+          {
+            name: "ТЕХНОЛОГИИ ПРИКЛАД. ПРОГРАМ-ИЯ 1гр [ПИ 301, ПрИ 301]",
+            teachers: [
+              36
+            ],
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        sixth: [
+          {
+            name: "ТЕХНОЛОГИИ ПРИКЛАД. ПРОГРАМ-ИЯ 1гр [ПИ 301, ПрИ 301]",
+            teachers: [
+              36
+            ],
+            audience: "",
+            week: ParityWeek.EVERYWEEK,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      }
     ]
   },
   {
@@ -2907,7 +3026,59 @@ export const TEACHERS: ITeacher[] = [
       {},
       {},
       {},
-      {}
+      {
+        third: [
+          {
+            name: "ЗАЩИТА ИНФОРМАЦИИ [ПрИ 401, ПрИ 402]",
+            teachers: [
+              41
+            ],
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.LECTURE
+          }
+        ],
+        fourth: [
+          {
+            name: "ЗАЩИТА ИНФОРМАЦИИ [ПрИ 401]",
+            teachers: [
+              41
+            ],
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ЗАЩИТА ИНФОРМАЦИИ [ПрИ 402]",
+            teachers: [
+              41
+            ],
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ],
+        fifth: [
+          {
+            name: "ЗАЩИТА ИНФОРМАЦИИ [ПрИ 401]",
+            teachers: [
+              41
+            ],
+            audience: "",
+            week: ParityWeek.ODD,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          },
+          {
+            name: "ЗАЩИТА ИНФОРМАЦИИ [ПрИ 402]",
+            teachers: [
+              41
+            ],
+            audience: "",
+            week: ParityWeek.EVEN,
+            typeOfLesson: TypeOfLesson.PRACTICE
+          }
+        ]
+      }
     ]
   }
 ];

@@ -69,6 +69,9 @@ function getLessonType(text) {
     return 0;
 }
 
+// Служебная строка «ДЕНЬ САМОСТОЯТЕЛЬНЫХ ЗАНЯТИЙ» разбита по строкам таблицы — это не предмет
+const isServiceText = t => /^(ДЕНЬ|САМОСТОЯТЕЛЬНЫХ|ЗАНЯТИЙ)$/i.test(safeStr(t).trim());
+
 function createLesson(rawText, weekType) {
     let clean = rawText.replace(/(?:^|\s)[12][НH]\.?/gi, "").trim();
     const lesson = { name: "", teachers: [], audience: "", week: weekType, typeOfLesson: 0 };
@@ -158,8 +161,8 @@ function parseColumnBlock(rows, colIndex) {
         const w1 = /2[НH]\.?/i.test(part1) ? WEEK_TYPES.EVEN : WEEK_TYPES.ODD;
         const w2 = /2[НH]\.?/i.test(part2) ? WEEK_TYPES.EVEN : WEEK_TYPES.ODD;
         
-        result.push(createLesson(part1, w1));
-        result.push(createLesson(part2, w2));
+        if (!isServiceText(part1)) result.push(createLesson(part1, w1));
+        if (!isServiceText(part2)) result.push(createLesson(part2, w2));
     } else {
         let w = WEEK_TYPES.EVERY;
         if (/^1[НH]\./i.test(fullText)) w = WEEK_TYPES.ODD;
@@ -169,7 +172,7 @@ function parseColumnBlock(rows, colIndex) {
         if (hasTwoAuds && w === WEEK_TYPES.EVERY) {
             result.push(createLesson(r[0] + " " + r[1], WEEK_TYPES.ODD));
             result.push(createLesson(r[2] + " " + r[3], WEEK_TYPES.EVEN));
-        } else {
+        } else if (!isServiceText(fullText)) {
             result.push(createLesson(fullText, w));
         }
     }
@@ -213,10 +216,8 @@ function processGroup(data, groupName, colMain, colSub) {
                 subLessons.forEach(l => { if (l.name.trim()) l.name += " 2гр"; });
             }
             const lessons = [...mainLessons, ...subLessons];
-            // Ячейки без аудитории не допускаются, кроме физкультуры и занятий, проводимых по ссылке
-            const isExempt = l => /физич/i.test(l.name) || /https?:\/\/|www\.|ссылк/i.test(l.name);
-            const valid = lessons.filter(l => l.name && l.name.trim().length > 0 &&
-                (String(l.audience || "").trim().length > 0 || isExempt(l)));
+            // Предметы без аудитории выводятся (аудитория остаётся пустой строкой)
+            const valid = lessons.filter(l => l.name && l.name.trim().length > 0);
             if (valid.length > 0) {
                 if (!schedule[currentDay][periodKey]) schedule[currentDay][periodKey] = [];
                 schedule[currentDay][periodKey].push(...valid);
